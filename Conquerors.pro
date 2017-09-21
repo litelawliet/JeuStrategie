@@ -25,9 +25,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    FenPrincipale.cpp
+    FenPrincipale.cpp \
+    myrect.cpp
 
 HEADERS += \
-    FenPrincipale.h
+    FenPrincipale.h \
+    myrect.h
 
 FORMS += \
