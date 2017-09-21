@@ -3,6 +3,7 @@
 FenPrincipale::FenPrincipale()
 {
     setFixedSize(300, 200);
+    this->move(QApplication::desktop()->screen()->rect().center() - this->rect().center());
     QMenu* partie = menuBar()->addMenu("&Partie");
 
     QAction* actionCreerPartie = new QAction("&Créer partie", this);
@@ -22,9 +23,14 @@ FenPrincipale::FenPrincipale()
 }
 
 void FenPrincipale::joinGame() {
-
+    this->showFullScreen();
 }
 
 void FenPrincipale::createGame() {
-
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect  screenGeometry = screen->geometry();
+    int height = screenGeometry.height();
+    int width = screenGeometry.width();
+    setFixedSize(width/2, height/2);
+    this->move(QApplication::desktop()->screen()->rect().center() - this->rect().center());
 }

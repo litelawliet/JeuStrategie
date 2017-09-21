@@ -28,6 +28,6 @@ SOURCES += \
     FenPrincipale.cpp
 
 HEADERS += \
-    FenPrincipal.h
+    FenPrincipale.h
 
 FORMS += \
