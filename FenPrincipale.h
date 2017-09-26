@@ -3,6 +3,12 @@
 
 #include <QtWidgets>
 
+#include "CommunicationProtocols/Sockets.hpp"
+#include "CommunicationProtocols/TCP/Server.hpp"
+#include "CommunicationProtocols/Messages.hpp"
+#include "CommunicationProtocols/Errors.hpp"
+#include "CommunicationProtocols/TCP/Client.hpp"
+
 class FenPrincipale : public QMainWindow
 {
     public:

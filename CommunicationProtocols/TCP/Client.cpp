@@ -4,15 +4,16 @@
 	\author Friday
 */
 
-#include "TCP/Client.hpp"
+#include "../TCP/Client.hpp"
 
-#include "Sockets.hpp"
-#include "Messages.hpp"
-#include "Errors.hpp"
+#include "../Sockets.hpp"
+#include "../Messages.hpp"
+#include "../Errors.hpp"
 
 #include <vector>
 #include <list>
 #include <cassert>
+#include <limits>
 #include <numeric>
 
 
@@ -407,7 +408,7 @@ namespace Network
 			int sent = ::send(mSocket, reinterpret_cast<char*>(mSendingBuffer.data()), static_cast<int>(mSendingBuffer.size()), 0);
 			if (sent > 0)//=> something is sent
 			{
-				if (sent == mSendingBuffer.size())//=> everything is sent
+				if (sent == (int)mSendingBuffer.size())//=> everything is sent
 				{
 					mSendingBuffer.clear();
 					return true;

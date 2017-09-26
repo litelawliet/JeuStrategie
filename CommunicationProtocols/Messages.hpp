@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <stdint.h>
+#include <cstring>
 #include "Enums.hpp"
 #include "Sockets.hpp"
 

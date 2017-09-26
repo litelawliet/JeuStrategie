@@ -26,10 +26,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     FenPrincipale.cpp \
-    myrect.cpp
+    myrect.cpp \
+    CommunicationProtocols/TCP/Client.cpp \
+    CommunicationProtocols/TCP/Server.cpp \
+    CommunicationProtocols/Errors.cpp \
+    CommunicationProtocols/Sockets.cpp \
+    CommunicationProtocols/Messages.cpp
 
 HEADERS += \
     FenPrincipale.h \
-    myrect.h
+    myrect.h \
+    CommunicationProtocols/TCP/Client.hpp \
+    CommunicationProtocols/TCP/Server.hpp \
+    CommunicationProtocols/Enums.hpp \
+    CommunicationProtocols/Errors.hpp \
+    CommunicationProtocols/Messages.hpp \
+    CommunicationProtocols/Sockets.hpp \
+    CommunicationProtocols/Utils.hpp \
 
 FORMS += \

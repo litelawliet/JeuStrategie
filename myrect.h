@@ -3,6 +3,12 @@
 
 #include <QGraphicsRectItem>
 #include <QKeyEvent>
+#include <QPoint>
+#include <QCursor>
+#include <QGraphicsSceneEvent>
+#include <QGraphicsScene>
+
+#include <QDebug>
 
 class MyRect : public QGraphicsRectItem
 {

@@ -1,12 +1,15 @@
-#include "Sockets.hpp"
-#include "TCP/Server.hpp"
-#include "Messages.hpp"
-#include "Errors.hpp"
+#include "Communication/Sockets.hpp"
+#include "Communication/TCP/Server.hpp"
+#include "Communication/Messages.hpp"
+#include "Communication/Errors.hpp"
 
 #include <iostream>
 
-int main()
+int main(int argc, char** argv)
 {
+	if(argc > 1)
+		return EXIT_FAILURE;
+
 	if (!Network::Start())
 	{
 		std::cout << "Erreur initialisation WinSock : " << Network::Errors::Get();
@@ -46,5 +49,5 @@ int main()
 	}
 	server.stop();
 	Network::Release();
-	return 0;
+	return EXIT_SUCCESS;
 }
