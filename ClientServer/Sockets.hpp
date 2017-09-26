@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_SOCKETS_HPP
+#define HEADER_SOCKETS_HPP
 
 /*!
 	\file Sockets.hpp
@@ -112,3 +113,6 @@ namespace Network
 	*/
 	unsigned short GetPort(const sockaddr_in& addr);
 }
+
+#endif
+

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_ENUMS_HPP
+#define HEADER_ENUMS_HPP
 
 /*!
 	\file Enums.hpp
@@ -91,3 +92,5 @@ namespace Game {
 		};
 	}
 }
+#endif
+

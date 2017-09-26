@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_UTILS_HPP
+#define HEADER_UTILS_HPP
 
 /*!
 	\file Utils.hpp
@@ -7,3 +8,5 @@
 */
 
 #define UNUSED(x) (void)(x)
+
+#endif

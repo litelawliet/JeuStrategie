@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_CLIENT_HPP
+#define HEADER_CLIENT_HPP
 
 /*!
 	\file Client.hpp
@@ -6,7 +7,7 @@
 	\author Friday
 */
 
-#include "Sockets.hpp"
+#include "../Sockets.hpp"
 
 #include <string>
 #include <memory>
@@ -139,3 +140,4 @@ namespace Network
 		};
 	}
 }
+#endif

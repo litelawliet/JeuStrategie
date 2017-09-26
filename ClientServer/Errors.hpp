@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_ERRORS_HPP
+#define HEADER_ERRORS_HPP
 
 /*!
 	\file Erros.hpp
@@ -63,3 +64,7 @@ namespace Network
 		};
 	}
 }
+
+#endif
+
+

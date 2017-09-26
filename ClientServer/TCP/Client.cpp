@@ -4,11 +4,11 @@
 	\author Friday
 */
 
-#include "TCP/Client.hpp"
+#include "../TCP/Client.hpp"
 
-#include "Sockets.hpp"
-#include "Messages.hpp"
-#include "Errors.hpp"
+#include "../Sockets.hpp"
+#include "../Messages.hpp"
+#include "../Errors.hpp"
 
 #include <vector>
 #include <list>

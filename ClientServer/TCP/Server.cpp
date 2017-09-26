@@ -6,9 +6,9 @@
 
 #include "Server.hpp"
 
-#include "Sockets.hpp"
-#include "TCP/Client.hpp"
-#include "Messages.hpp"
+#include "../Sockets.hpp"
+#include "../TCP/Client.hpp"
+#include "../Messages.hpp"
 
 #include <map>
 #include <list>

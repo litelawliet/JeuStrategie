@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HEADER_MESSAGES_HPP
+#define HEADER_MESSAGES_HPP
 
 /*!
 	\file Messages.hpp
@@ -7,6 +8,7 @@
 */
 
 #include <vector>
+#include <stdint.h>
 #include "Enums.hpp"
 
 typedef unsigned char uc;
@@ -255,7 +257,7 @@ namespace Network
 
 						//Casting of Quit
 					case (uc)Type::Quit:
-						return Quit();
+                        return Quit();
 					}
 				}
 
@@ -816,7 +818,7 @@ namespace Network
 		void format(vUc* dest,int attr) {
 			char* n_attr = (char*)attr;
 			dest->push_back(strlen(n_attr));
-			for (int i = 0; i < strlen(n_attr); i++) {
+            for (unsigned int i = 0; i < strlen(n_attr); i++) {
 				dest->push_back(n_attr[i]);
 			}
 		}
@@ -833,7 +835,9 @@ namespace Network
 			for (int i = 0; i < size; i++) {
 				preExtract[i] = source->at(i+1+from);
 			}
-			return (int)preExtract;
+			return atoi(preExtract);
 		}
 	}
 }
+
+#endif
