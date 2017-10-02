@@ -7,18 +7,12 @@
 */
 
 #include <vector>
-<<<<<<< Updated upstream
-#include <stdint.h>
-#include <cstring>
-#include "Enums.hpp"
-=======
 #ifdef	_WIN32
 	
 #else
 	#include <stdint.h>
 #endif
 #include "../ServerSide/Game/Enums.hpp"
->>>>>>> Stashed changes
 #include "Sockets.hpp"
 
 typedef unsigned char uc;

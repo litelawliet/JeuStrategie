@@ -223,15 +223,9 @@ namespace Network {
 			case (uc)Type::Quit:
 				return Quit();
 			}
-			return UserData(vUc());
 		}
-<<<<<<< Updated upstream
-		void format(vUc* dest, int attr){
-			char* n_attr = reinterpret_cast<char *>(attr);
-=======
 		void Network::Messages::format(vUc* dest, int attr){
 			char* n_attr = (char*)attr;
->>>>>>> Stashed changes
 			dest->push_back(strlen(n_attr));
 			for (unsigned int i = 0; i < strlen(n_attr); i++) {
 				dest->push_back(n_attr[i]);
@@ -243,7 +237,7 @@ namespace Network {
 			for (int i = 0; i < size; i++) {
 				preExtract[i] = source->at(i + 1 + from);
 			}
-			return atoi(preExtract);
+			return (int)preExtract;
 		}
 	}
 }
