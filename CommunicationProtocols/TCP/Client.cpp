@@ -4,7 +4,11 @@
 	\author Friday
 */
 
+<<<<<<< Updated upstream
 #include "../TCP/Client.hpp"
+=======
+#include "Client.hpp"
+>>>>>>> Stashed changes
 
 #include "../Sockets.hpp"
 #include "../Messages.hpp"

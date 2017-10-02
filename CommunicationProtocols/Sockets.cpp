@@ -1,7 +1,7 @@
 /*!
-\file Sockets.cpp
-\brief definition of sockets' functions
-\author Friday
+	\file Sockets.cpp
+	\brief definition of sockets' functions
+	\author Friday
 */
 
 #include "Sockets.hpp"

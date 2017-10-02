@@ -7,7 +7,11 @@
 #include "Server.hpp"
 
 #include "../Sockets.hpp"
+<<<<<<< Updated upstream
 #include "../TCP/Client.hpp"
+=======
+#include "Client.hpp"
+>>>>>>> Stashed changes
 #include "../Messages.hpp"
 
 #include <map>

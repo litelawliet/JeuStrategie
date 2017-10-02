@@ -7,9 +7,18 @@
 */
 
 #include <vector>
+<<<<<<< Updated upstream
 #include <stdint.h>
 #include <cstring>
 #include "Enums.hpp"
+=======
+#ifdef	_WIN32
+	
+#else
+	#include <stdint.h>
+#endif
+#include "../ServerSide/Game/Enums.hpp"
+>>>>>>> Stashed changes
 #include "Sockets.hpp"
 
 typedef unsigned char uc;
@@ -598,16 +607,16 @@ namespace Network
 		};
 
 		/*!
-		\class UserData Messages.hpp Messages
-		\brief  to send when signing up in game
+			\class UserData Messages.hpp Messages
+			\brief  to send when signing up in game
 		*/
 		class UserData : public Base
 		{
 			DECLARE_MESSAGE(UserData);
 		public:
 			/*!
-			\brief default constructor
-			\param[in] d of type vector<unsigned char>&& which is the datas to send
+				\brief default constructor
+				\param[in] d of type vector<unsigned char>&& which is the datas to send
 			*/
 			UserData(vUc&& d)
 				: Base(Type::UserData)
@@ -615,9 +624,10 @@ namespace Network
 			{}
 
 			/*!
-			\brief to convert userdata into original message type
+				\brief to convert userdata into original message type
+				\return converted message
 			*/
-			Messages::Base toRealType();
+			Messages::Base toRealType() const;
 
 			vUc data;/*!< datas to send*/
 		};
@@ -631,7 +641,7 @@ namespace Network
 			\param[in] attr of type int : the member to format
 			\param[out] dest of type vector<unsigned char> : the destination to save the member
 		*/
-		void format(vUc* dest, int attr);
+		void format(vUc* dest, int attr) ;
 
 		/*
 			\brief to extract a int from a vector<unsigned char> after using format function
@@ -640,6 +650,6 @@ namespace Network
 			\param[in] from of type int : start index of the int
 			\param[in] size of type char : size of int to extract
 		*/
-		int extractInt(vUc* source, int from, char size);
+		int extractInt(const vUc* source, int from, char size);
 	}
 }

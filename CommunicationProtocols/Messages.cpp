@@ -145,7 +145,7 @@ namespace Network {
 			return vUc{ (uc)Type::Quit };
 		}
 
-		Messages::Base UserData::toRealType() {
+		Messages::Base UserData::toRealType() const {
 			switch (data[0]) {
 
 				//Casting of CreateGame
@@ -225,15 +225,20 @@ namespace Network {
 			}
 			return UserData(vUc());
 		}
+<<<<<<< Updated upstream
 		void format(vUc* dest, int attr){
 			char* n_attr = reinterpret_cast<char *>(attr);
+=======
+		void Network::Messages::format(vUc* dest, int attr){
+			char* n_attr = (char*)attr;
+>>>>>>> Stashed changes
 			dest->push_back(strlen(n_attr));
 			for (unsigned int i = 0; i < strlen(n_attr); i++) {
 				dest->push_back(n_attr[i]);
 			}
 		}
 
-		int extractInt(vUc* source, int from, char size) {
+		int Network::Messages::extractInt(const vUc* source, int from, char size) {
 			char* preExtract = new char[size];
 			for (int i = 0; i < size; i++) {
 				preExtract[i] = source->at(i + 1 + from);
