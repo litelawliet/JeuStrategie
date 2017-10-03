@@ -252,7 +252,7 @@ namespace Network
 			}
 			else if (ret == 0)//=>nothing to receive
 			{
-				//!< connexion terminée correctement
+				//!< connexion termin? correctement
 				return std::make_unique<Messages::Disconnection>(Messages::Disconnection::Reason::Disconnected);
 			}
 			else //=> error
