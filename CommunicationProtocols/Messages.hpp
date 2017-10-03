@@ -6,12 +6,11 @@
 	\author Friday
 */
 
-#include <vector>
-#ifdef	_WIN32
-	
-#else
-	#include <stdint.h>
+#ifndef	_WIN32
+    #include <stdint.h>
 #endif
+
+#include <vector>
 #include "../Game/Enums.hpp"
 #include "Sockets.hpp"
 
