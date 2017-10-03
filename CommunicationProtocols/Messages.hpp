@@ -12,7 +12,7 @@
 #else
 	#include <stdint.h>
 #endif
-#include "../ServerSide/Game/Enums.hpp"
+#include "../Game/Enums.hpp"
 #include "Sockets.hpp"
 
 typedef unsigned char uc;

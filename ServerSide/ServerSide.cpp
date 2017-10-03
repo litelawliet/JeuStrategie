@@ -1,8 +1,8 @@
-#include "../../../CommunicationProtocols/Sockets.hpp"
-#include "../../../CommunicationProtocols/TCP/Server.hpp"
-#include "../../../CommunicationProtocols/Messages.hpp"
-#include "../../../CommunicationProtocols/Errors.hpp"
-#include "../../Game/Game.hpp"
+#include "../CommunicationProtocols/Sockets.hpp"
+#include "../CommunicationProtocols/TCP/Server.hpp"
+#include "../CommunicationProtocols/Messages.hpp"
+#include "../CommunicationProtocols/Errors.hpp"
+#include "../Game/Game.hpp"
 
 #include <iostream>
 

@@ -39,6 +39,7 @@
 	#include <unistd.h>  // close
 	#include <cerrno> // errno
 	#include <poll.h> // poll
+	#include <fcntl.h> //fctnl
 	#define SOCKET int
 	#define INVALID_SOCKET ((int)-1)
 	#define SOCKET_ERROR (int(-1))

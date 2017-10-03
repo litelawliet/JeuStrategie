@@ -1,14 +1,13 @@
 #pragma once
 
-#include <map>
-
-#include "../../CommunicationProtocols/TCP/Client.hpp"
-
 /*!
 	\file Game.hpp
 	\brief declaration of classes Game and Player
 	\author Friday
 */
+#include <map>
+
+#include "../CommunicationProtocols/TCP/Client.hpp"
 
 #include "Enums.hpp"
 
