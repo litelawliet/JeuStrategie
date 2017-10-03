@@ -79,7 +79,6 @@ HEADERS += \
     myrect.h \
     CommunicationProtocols/TCP/Client.hpp \
     CommunicationProtocols/TCP/Server.hpp \
-    CommunicationProtocols/Enums.hpp \
     CommunicationProtocols/Errors.hpp \
     CommunicationProtocols/Messages.hpp \
     CommunicationProtocols/Sockets.hpp \
