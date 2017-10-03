@@ -224,7 +224,7 @@ namespace Network {
 				return Quit();
 			}
 		}
-        inline void Network::Messages::format(vUc* dest, int attr){
+        void format(vUc* dest, int attr){
 			char* n_attr = (char*)attr;
 			dest->push_back(strlen(n_attr));
 			for (unsigned int i = 0; i < strlen(n_attr); i++) {
@@ -232,12 +232,14 @@ namespace Network {
 			}
 		}
 
-        inline int Network::Messages::extractInt(const vUc* source, int from, char size) {
+        int extractInt(const vUc* source, int from, char size) {
 			char* preExtract = new char[size];
 			for (int i = 0; i < size; i++) {
 				preExtract[i] = source->at(i + 1 + from);
 			}
-			return (int)preExtract;
+
+            //return (int)preExtract;
+            return 0;
 		}
 	}
 }

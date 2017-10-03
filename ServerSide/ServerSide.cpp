@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-int main()
+/*int main()
 {
 	if (!Network::Start())
 	{
@@ -47,5 +47,5 @@ int main()
 	server.stop();
 	Network::Release();
 	return 0;
-}
+}*/
 
