@@ -1,12 +1,14 @@
+//#include "../CommunicationProtocols/commsock.h"
 #include "../CommunicationProtocols/Sockets.hpp"
 #include "../CommunicationProtocols/TCP/Server.hpp"
 #include "../CommunicationProtocols/Messages.hpp"
 #include "../CommunicationProtocols/Errors.hpp"
 #include "../Game/Game.hpp"
 
+
 #include <iostream>
 
-/*int main()
+int main()
 {
 	if (!Network::Start())
 	{
@@ -40,6 +42,8 @@
 			{
 				auto userdata = msg->as<Network::Messages::UserData>();
 				Network::Messages::Base realmsg = userdata->toRealType();
+
+
 				server.sendToAll(userdata->data.data(), static_cast<unsigned int>(userdata->data.size()));
 			}
 		}
@@ -47,5 +51,5 @@
 	server.stop();
 	Network::Release();
 	return 0;
-}*/
+}
 
