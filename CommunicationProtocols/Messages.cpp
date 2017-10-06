@@ -17,7 +17,7 @@ namespace Network {
 				, mPasswd.data()
 			};
 
-			return vUc;
+			return data;
 		}
 
 		vUc Accept::toUserData() {
@@ -181,7 +181,22 @@ namespace Network {
 				case (uc)Type::UserInfo:
 					int lim = 0;
 					int i = 0;
-					for(i = 0; i < )
+					for(i = 0; i < strlen(data); i++){
+						if(data[i]=='#') break;
+					}
+					char[] pseudo = new char[i];
+					for(int j = 0; j < i; j++){
+						pseudo[j] = data[j];
+					}
+
+					char[] pwd = new char[strlen(data)-i+1];
+					for(int j = 0; j < strlen(data)-i+1; j++){
+						pwd[j]=data[j+i+1];
+					}
+
+					std::string spseudo(pseudo);
+					std::string spwd(pwd);
+					return UserInfo(spseudo,spwd);
 
 				//Casting of Accept
 				case (uc)Type::Accept:
