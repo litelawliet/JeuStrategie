@@ -170,7 +170,7 @@ namespace Network {
 		vUc Quit::toUserData() {
 			return vUc{
 				(uc)Type::Quit,
-
+				(uc)m_ended
 			};
 		}
 
