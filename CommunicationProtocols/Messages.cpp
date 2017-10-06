@@ -161,16 +161,16 @@ namespace Network {
 
 		vUc EndGame::toUserData() {
 			vUc data = {
-				(uc)Type::EndGame,
-				(uc)m_ending
+				(uc)Type::EndGame
+				, (uc)m_ending
 			};
 			return data;
 		}
 
 		vUc Quit::toUserData() {
 			return vUc{
-				(uc)Type::Quit,
-				(uc)m_ended
+				(uc)Type::Quit
+				, (uc)mStatus
 			};
 		}
 
