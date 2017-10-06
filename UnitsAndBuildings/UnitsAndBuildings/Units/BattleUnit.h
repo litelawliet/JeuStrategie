@@ -5,6 +5,6 @@ class BattleUnit :
 {
 public:
 	BattleUnit();
-	virtual ~BattleUnit() = 0;
+	~BattleUnit();
 };
 
