@@ -62,6 +62,7 @@ namespace Network
 					Connection,/*!< connection message */
 					Disconnection,/*!< disconnection message */
 					UserData,/*!< to send user's datas*/
+					UserInfo,/*!< to send user profile's details*/
                     Accept,/*!< to accept identification*/
 					CreateGame,/*!< to ask server to create a new game or inform client that's created well*/
 					JoinGame,/*!< to ask server to join a created game or inform client that's joined well*/
@@ -163,6 +164,28 @@ namespace Network
 				{}
 
 				Reason reason;/*!< disconnection reason*/
+		};
+
+		class UserInfo : public Base
+		{
+			DECLARE_MESSAGE(UserInfo);
+			public:
+
+				/*!
+					\brief default constructor
+					\param[in] pseudo of type std::string : user's pseudo
+					\param[in] password of type std::string : user's password
+				*/
+			UserInfo(std::string pseudo, std::string password)
+				: Base(Type::Accept)
+				, mPseudo(pseudo)
+				, mPasswd(password)
+			{}
+
+			vUc toUserData();
+
+			std::string mPseudo;/*!< user's pseudo*/
+			std::string mPasswd;/*!< user's password*/
 		};
 
         /*!
@@ -629,7 +652,7 @@ namespace Network
 
 			vUc toUserData();
 
-			Status mstatus;/*!< status of game when quitting*/
+			Status mStatus;/*!< status of game when quitting*/
 		};
 
 		/*!
