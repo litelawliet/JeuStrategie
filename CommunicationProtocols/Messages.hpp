@@ -62,6 +62,7 @@ namespace Network
 					Connection,/*!< connection message */
 					Disconnection,/*!< disconnection message */
 					UserData,/*!< to send user's datas*/
+                    Accept,/*!< to accept identification*/
 					CreateGame,/*!< to ask server to create a new game or inform client that's created well*/
 					JoinGame,/*!< to ask server to join a created game or inform client that's joined well*/
 					StartGame,/*!< when game's full, starts it or inform that's started*/
@@ -102,7 +103,7 @@ namespace Network
 					\brief to format messages into linear datas which can be send by TCP
 					\return formated datas
 				*/
-				vUc toUserData() { return vUc{}; };
+                vUc toUserData() { return vUc{}; }
 			private:
 				Type mType;/*!< message's type*/
 		};
@@ -164,6 +165,30 @@ namespace Network
 				Reason reason;/*!< disconnection reason*/
 		};
 
+        /*!
+            \class Accept Messages.hpp Messages
+            \brief to tell client if he can connect to server or not
+         */
+        class Accept : public Base
+        {
+            DECLARE_MESSAGE(Accept);
+			public:
+
+				/*!
+					\brief default constructor
+					\param[in] r of type Result : autorisation result
+				*/
+				Accept(Result r)
+					: Base(Type::Accept)
+					, result(r)
+				{}
+
+				vUc toUserData();
+
+				Result result;/*!< Autorisation result*/
+
+        };
+
 		/*!
 			\class CreateGame Messages.hpp Messages
 			\brief to send to create a game
@@ -172,6 +197,7 @@ namespace Network
 		{
 			DECLARE_MESSAGE(CreateGame);
 			public:
+
 				/*!
 					\brief default constructor
 					\param[in] r of type Result which is the creation's result
@@ -589,14 +615,21 @@ namespace Network
 			DECLARE_MESSAGE(Quit);
 		public:
 
+			enum class Status{
+					Ended,
+					NotEnded,
+			};
 			/*!
 				\brief default constructor
 			*/
-			Quit()
+			Quit(Status s)
 				: Base(Type::Quit)
+				, mStatus(s)
 			{}
 
 			vUc toUserData();
+
+			Status mstatus;/*!< status of game when quitting*/
 		};
 
 		/*!

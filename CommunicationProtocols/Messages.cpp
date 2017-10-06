@@ -3,10 +3,18 @@
 namespace Network {
 	namespace Messages {
 
+		vUc Accept::toUserData() {
+			vUc data = {
+				(uc)Type::Accept
+				, (uc)result
+			};
+			return data;
+		}
+
 		vUc CreateGame::toUserData() {
 			vUc data = {
 				(uc)Type::CreateGame
-				, result == Result::Success ? (uc)Result::Success : (uc)Result::Fail
+				, (uc)result
 			};
 			return data;
 		}
@@ -14,7 +22,7 @@ namespace Network {
 		vUc JoinGame::toUserData() {
 			vUc data = {
 				(uc)Type::JoinGame
-				, result == Result::Success ? (uc)Result::Success : (uc)Result::Fail
+				, (uc)result
 			};
 			return data;
 		}
@@ -22,7 +30,7 @@ namespace Network {
 		vUc StartGame::toUserData() {
 			vUc data = {
 				(uc)Type::StartGame
-				, result == Result::Success ? (uc)Result::Success : (uc)Result::Fail
+				, (uc)result
 			};
 			return data;
 		}
@@ -136,24 +144,31 @@ namespace Network {
 		vUc EndGame::toUserData() {
 			vUc data = {
 				(uc)Type::EndGame,
-				m_ending == State::Win ? (uc)State::Win : (uc)State::Loss
+				(uc)m_ending
 			};
 			return data;
 		}
 
 		vUc Quit::toUserData() {
-			return vUc{ (uc)Type::Quit };
+			return vUc{
+				(uc)Type::Quit,
+
+			};
 		}
 
-		Messages::Base UserData::toRealType() const {
+		Base UserData::toRealType() const {
 			switch (data[0]) {
+
+				//Casting of Accept
+			case (uc)Type::Accept:
+				return Accept((data[1] == (uc)Result::Success ? Result::Success : Result::Fail));
 
 				//Casting of CreateGame
 			case (uc)Type::CreateGame:
 				return CreateGame((data[1] == (uc)Result::Success ? Result::Success : Result::Fail));
 
 				//Casting of JoinGame
-			case (unsigned char)Type::JoinGame:
+			case (uc)Type::JoinGame:
 				return JoinGame((data[1] == (uc)Result::Success ? Result::Success : Result::Fail));
 
 				//Casting of StartGame
@@ -221,7 +236,7 @@ namespace Network {
 
 				//Casting of Quit
 			case (uc)Type::Quit:
-				return Quit();
+				return Quit((data[1] == (uc)Quit::Status::Ended ? Quit::Status::Ended : Quit::Status::NotEnded));
 			}
 		}
         void format(vUc* dest, int attr){
