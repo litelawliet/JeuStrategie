@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PRODUCTION_BUILDING_HPP
+#define PRODUCTION_BUILDING_HPP
+
 #include "Building.h"
 class ProductionBuilding :
 	public Building
@@ -8,3 +10,4 @@ public:
 	virtual ~ProductionBuilding() = 0;
 };
 
+#endif

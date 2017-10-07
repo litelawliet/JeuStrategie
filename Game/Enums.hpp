@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENUMS_HPP
+#define ENUMS_HPP
 
 /*!
 	\file Enums.hpp
@@ -93,3 +94,5 @@ namespace Game {
 		};
 	}
 }
+
+#endif

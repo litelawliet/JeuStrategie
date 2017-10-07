@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DEFENSE_BUILDING_HPP
+#define DEFENSE_BUILDING_HPP
+
 #include "Building.h"
 class DefenseBuilding :
 	public Building
@@ -8,3 +10,4 @@ public:
 	virtual ~DefenseBuilding() = 0;
 };
 
+#endif

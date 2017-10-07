@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_HPP
+#define GAME_HPP
 
 /*!
 	\file Game.hpp
@@ -92,3 +93,5 @@ namespace Game{
 			State state;/*!< game state*/
 	};
 }
+
+#endif

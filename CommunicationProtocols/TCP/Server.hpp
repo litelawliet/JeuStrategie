@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SERVER_HPP
+#define SERVER_HPP
 
 /*!
 	\file Server.hpp
@@ -130,3 +131,5 @@ namespace Network
 		};
 	}
 }
+
+#endif

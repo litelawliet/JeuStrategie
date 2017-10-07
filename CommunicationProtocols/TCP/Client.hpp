@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CLIENT_HPP
+#define CLIENT_HPP
 
 /*!
 	\file Client.hpp
@@ -139,3 +140,5 @@ namespace Network
 		};
 	}
 }
+
+#endif

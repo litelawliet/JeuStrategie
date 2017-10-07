@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MESSAGES_HPP
+#define MESSAGES_HPP
 
 /*!
 	\file Messages.hpp
@@ -702,3 +703,5 @@ namespace Network
 		int extractInt(const vUc* source, int from, char size);
 	}
 }
+
+#endif

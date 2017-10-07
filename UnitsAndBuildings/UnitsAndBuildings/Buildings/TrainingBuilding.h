@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TRAINING_BUILDING
+#define TRAINING_BUILDING
+
 #include "Building.h"
 class TrainingBuilding :
 	public Building
@@ -8,3 +10,4 @@ public:
 	virtual ~TrainingBuilding() = 0;
 };
 
+#endif

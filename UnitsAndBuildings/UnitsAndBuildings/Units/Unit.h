@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UNIT_HPP
+#define UNIT_HPP
 
 #include <iostream>
 
@@ -9,3 +10,4 @@ public:
 	virtual ~Unit() = 0;
 };
 
+#endif

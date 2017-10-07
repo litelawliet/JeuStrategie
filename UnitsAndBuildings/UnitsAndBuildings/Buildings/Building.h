@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BUILDING_HPP
+#define BUILDING_HPP
 
 #include <iostream>
 
@@ -22,3 +23,4 @@ private:
 	//vision field
 };
 
+#endif

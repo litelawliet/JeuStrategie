@@ -1,4 +1,5 @@
-#pragma once
+#ifndef RESEARCH_HPP
+#define RESEARCH_HPP
 
 #include <iostream>
 
@@ -9,3 +10,4 @@ public:
 	virtual ~Research() = 0;
 };
 
+#endif

@@ -73,6 +73,9 @@ SOURCES += \
     UnitsAndBuildings/UnitsAndBuildings/Units/LightVehicle.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.cpp \
+    ServerSide/handler.cpp \
+    ServerSide/Serverside.cpp \
+    Game/game.cpp
 
 HEADERS += \
     FenPrincipale.h \
@@ -126,5 +129,9 @@ HEADERS += \
     UnitsAndBuildings/UnitsAndBuildings/Units/LightVehicle.h \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.h \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.h \
+    ServerSide/handler.h \
+    CommunicationProtocols/commsock.h \
+    ServerSide/Serverside.h \
+    Game/Game.hpp
 
 FORMS += \
