@@ -5,6 +5,7 @@
 	\brief handle functions definition
 	\author Friday
 */
+#include "ServerSide\Serverside.h"
 #include "../CommunicationProtocols/Sockets.hpp"
 #include "../CommunicationProtocols/TCP/Server.hpp"
 #include "../CommunicationProtocols/Messages.hpp"
@@ -14,38 +15,90 @@
 using namespace Network;
 using namespace Network::Messages;
 
+Base handle(ServerSide *s, Base msg);
+
 /*!
 	\brief handle UserInfo message
 	\param[in] msg of type UserData
 	\return an Accept message
  */
-Base handle(ServerSide *s,UserInfo msg);
+Base handle(ServerSide *s,const UserInfo *msg);
 
 /*!
 	\brief handle a CreateGame
 	\param[in] msg of type CreateGame
 	\return a message
  */
-Base handle(ServerSide *s,CreateGame msg);
+Base handle(ServerSide *s,const CreateGame *msg);
 
-Base handle(ServerSide *s,JoinGame msg);
+/*!
+	\brief handle a JoinGaùe
+	\param[in] msg of type JoinGame
+	\return a message
+*/
+Base handle(ServerSide *s,const JoinGame *msg);
 
-Base handle(ServerSide *s,StartGame msg);
+/*!
+	\brief handle a StartGame
+	\param[in] msg of type StartGame
+	\return a message
+*/
+Base handle(ServerSide *s,const StartGame *msg);
 
-Base handle(ServerSide *s,SelectRace msg);
+/*!
+	\brief handle a SelectRace
+	\param[in] msg of type SelectRace
+	\return a message
+*/
+Base handle(ServerSide *s,const SelectRace *msg);
 
-Base handle(ServerSide *s,SelectColor msg);
+/*!
+	\brief handle a SelectColor
+	\param[in] msg of type SelectColor
+	\return a message
+*/
+Base handle(ServerSide *s,const SelectColor *msg);
 
-Base handle(ServerSide *s,MoveUnit msg);
+/*!
+	\brief handle a MoveUnit
+	\param[in] msg of type MoveUnit
+	\return a message
+*/
+Base handle(ServerSide *s,const MoveUnit *msg);
 
-Base handle(ServerSide *s,QueueBuilding msg);
+/*!
+	\brief handle a QueueBuilding
+	\param[in] msg of type QueueBuilding
+	\return a message
+*/
+Base handle(ServerSide *s,const QueueBuilding *msg);
 
-Base handle(ServerSide *s,QueueUnit msg);
+/*!
+	\brief handle a QueueUnit
+	\param[in] msg of type QueueUnit
+	\return a message
+*/
+Base handle(ServerSide *s,const QueueUnit *msg);
 
-Base handle(ServerSide *s,QueueOpti msg);
+/*!
+	\brief handle a QueueOpti
+	\param[in] msg of type QueueOpti
+	\return a message
+*/
+Base handle(ServerSide *s,const QueueOpti *msg);
 
-Base handle(ServerSide *s,Attack msg);
+/*!
+	\brief handle a Attack
+	\param[in] msg of type Attack
+	\return a message
+*/
+Base handle(ServerSide *s,const Attack *msg);
 
-Base handle(ServerSide *s,Quit msg);
+/*!
+	\brief handle a Quit
+	\param[in] msg of type Quit
+	\return a message
+*/
+Base handle(ServerSide *s,const Quit *msg);
 
 #endif // HANDLER_H

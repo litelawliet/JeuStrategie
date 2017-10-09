@@ -97,6 +97,7 @@ namespace Game{
 			void createUnit();
 			void createOpti();
 			void attack(uint64_t keyAttacker, uint64_t keyTarget);
+			void setTargets();
 			void end();
 
 		private:

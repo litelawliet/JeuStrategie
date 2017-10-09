@@ -4,6 +4,7 @@
 #include "../CommunicationProtocols/Messages.hpp"
 #include "../CommunicationProtocols/Errors.hpp"
 #include "../Game/Game.hpp"
+#include "ServerSide\handler.h"
 
 
 #include <iostream>
@@ -21,13 +22,14 @@ int main()
 	std::cin >> port;
 
 	Network::TCP::Server server;
+	ServerSide serverside(&server);
 	if (!server.start(port))
 	{
 		std::cout << "Erreur initialisation serveur : " << Network::Errors::Get();
 		return -2;
 	}
 	while (1) {
-		server.update();
+		serverside.update();
 		while (auto msg = server.poll())
 		{
 			if (msg->is<Network::Messages::Connection>())
@@ -41,8 +43,9 @@ int main()
 			else if (msg->is<Network::Messages::UserData>())
 			{
 				Network::Messages::UserData userdata(*msg->as<Network::Messages::UserData>());
-				auto realmsg = userdata.toRealType();
+				Network::Messages::Base realmsg = userdata.toRealType();
 
+				auto resendmsg = handle(&serverside, realmsg);
 
 				server.sendToAll(userdata.data.data(), static_cast<unsigned int>(userdata.data.size()));
 			}
@@ -52,4 +55,3 @@ int main()
 	Network::Release();
 	return 0;
 }
-

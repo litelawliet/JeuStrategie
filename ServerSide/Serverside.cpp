@@ -12,6 +12,11 @@ ServerSide::~ServerSide(){
 
 void ServerSide::update(){
 	mServer->update();
+	for (auto game : mGames) {
+		game->moveUnits();
+		game->setTargets();
+		game->end();
+	}
 }
 
 Game::Game* ServerSide::addGame(){
