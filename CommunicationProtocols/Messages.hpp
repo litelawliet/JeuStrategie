@@ -63,6 +63,12 @@ namespace Network
 					Fail,
 				};
 
+				/*!
+					\brief to format messages into linear datas which can be send by TCP
+					\return formated datas
+				*/
+				vUc toUserData() { return vUc{}; }
+
 			protected:
 				/*!
 					\enum Type
@@ -101,11 +107,6 @@ namespace Network
 					: mType(type)
 				{}
 
-				/*!
-					\brief to format messages into linear datas which can be send by TCP
-					\return formated datas
-				*/
-                vUc toUserData() { return vUc{}; }
 			private:
 				Type mType;/*!< message's type*/
 		};
