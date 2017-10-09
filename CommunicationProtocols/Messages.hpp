@@ -54,6 +54,15 @@ namespace Network
 				sockaddr_in from;/*!< sender's address*/
 				uint64_t idFrom;/*!< sender's id attributed by the server*/
 
+				/*!
+					\enum Result
+					\brief tell about the action fail or success
+				*/
+				enum class Result {
+					Success,
+					Fail,
+				};
+
 			protected:
 				/*!
 					\enum Type
@@ -82,15 +91,6 @@ namespace Network
 					DestroyBuilding,/*!< to inform about a single building's death*/
 					EndGame,/*!< inform about the end and who win*/
 					Quit,/*!< to stop the game*/
-				};
-
-				/*!
-					\enum Result
-					\brief tell about the action fail or success
-				*/
-				enum class Result {
-					Success,
-					Fail,
 				};
 
 				/*!
@@ -677,7 +677,7 @@ namespace Network
 				\brief to convert userdata into original message type
 				\return converted message
 			*/
-			Messages::Base toRealType() const;
+			Messages::Base toRealType();
 
 			vUc data;/*!< datas to send*/
 		};

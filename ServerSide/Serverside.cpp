@@ -7,89 +7,91 @@
 #include "Serverside.h"
 
 ServerSide::~ServerSide(){
-	delete *mServer;
-	delete mGames;
-	delete mPlayers;
+	delete mServer;
 }
 
 void ServerSide::update(){
 	mServer->update();
 }
 
-uint64_t ServerSide::addGame(){
-	return mGames.insert(Game()).first;
+Game::Game* ServerSide::addGame(){
+	mGames.push_back(&(Game::Game()));
+	return mGames.at(mGames.size()-1);
 }
 
-void ServerSide::addPlayer(uint64_t idClient){
-	mPlayers.insert(Player(mServer->get(idClient)));
+void ServerSide::addPlayer(uint64_t client, std::string pseudo){
+	mPlayers.push_back(&(Game::Player(client,pseudo)));
 }
 
-bool ServerSide::testIdentity(){
+bool ServerSide::verifyIdentity(std::string pseudo, std::string pwd){
 	return true;
 }
 
-void ServerSide::joinGame(uint64_t idPlayer, uint64_t idGame){
-	mGames.at(idGame).addPlayer(&(mPlayers.at(idPlayer)));
+void ServerSide::joinGame(Game::Player* player, Game::Game* game){
+	game->addPlayer(player);
 }
 
-uint64_t ServerSide::getPlayer(uint64_t idClient){
-	for(mPlayers::iterator it=mPlayers.begin(); it!=mPlayers.end(); it++){
-		if(it.second.getClient()==mServer->get(idClient)) return it.first;
+Game::Player* ServerSide::getPlayer(uint64_t idClient){
+	for(auto player : mPlayers){
+		if( mServer->get(player->getClient()) == mServer->get(idClient)) return player;
 	}
-	return NULL;
+	return nullptr;
 }
 
-uint64_t ServerSide::getNotFull(){
-	for(mGames::iterator it=mGames.begin(); it!=mGames.end(); it++){
-		if(!it.second.full()) return it.first;
+Game::Game* ServerSide::getNotFull(){
+	for(auto game : mGames){
+		if(!game->full()) return game;
 	}
-	return NULL;
+	return nullptr;
 }
 
-uint64_t ServerSide::getGame(uint64_t idPlayer){
-	return getGame(mPlayers.at(idPlayer));
+Game::Game* ServerSide::getGame(Game::Player* player){
+	for (auto game : mGames) {
+		if (!game->contains(player)) return game;
+	}
+	return nullptr;
 }
 
-bool ServerSide::readyToStart(uint64_t idGame){
-	return mGames.at(idGame).full();
+bool ServerSide::readyToStart(Game::Game* game){
+	return game->full();
 }
 
-void ServerSide::startGame(uint64_t idGame){
-	mGames.at(idGame).start();
+void ServerSide::startGame(Game::Game* game){
+	game->start();
 }
 
-void ServerSide::changeRace(uint64_t idGame, uint64_t idPlayer, Game::Enums::Races race){
-	mGames.at(idGame).changeRace(idPlayer,race);
+void ServerSide::changeRace(Game::Game* game, Game::Player* player, Game::Enums::Races race){
+	game->changeRace(player,race);
 }
 
-void ServerSide::changeColor(uint64_t idGame, uint64_t idPlayer, Game::Enums::Colors color){
-	mGames.at(idGame).changeColor(idPlayer,color);
+void ServerSide::changeColor(Game::Game* game, Game::Player* player, Game::Enums::Colors color){
+	game->changeColor(player,color);
 }
 
-void ServerSide::moveUnit(uint64_t idGame, uint64_t hashCodeUnit, int x, int y){
-	mGames.at(idGame).moveUnit(hashCodeUnit,x,y);
+void ServerSide::moveUnit(Game::Game* game, uint64_t hashCodeUnit, int x, int y){
+	game->moveUnit(hashCodeUnit,x,y);
 }
 
-void ServerSide::queueBuilding(uint64_t idGame, Game::Enums::Buildings codeBuilding, uint64_t hashCodeBuilding){
-	mGames.at(idGame).queueBuilding(codeBuilding, hashCodeBuilding);
+void ServerSide::queueBuilding(Game::Game* game, Game::Enums::Buildings codeBuilding, uint64_t hashCodeBuilding){
+	game->queueBuilding(codeBuilding, hashCodeBuilding);
 }
 
-void ServerSide::queueUnit(uint64_t idGame, Game::Enums::Units codeUnit, uint64_t hashCodeBuilding){
-	mGames.at(idGame).queueUnit(codeUnit, hashCodeBuilding);
+void ServerSide::queueUnit(Game::Game* game, Game::Enums::Units codeUnit, uint64_t hashCodeBuilding){
+	game->queueUnit(codeUnit, hashCodeBuilding);
 }
 
-void ServerSide::queueOpti(uint64_t idGame, Game::Enums::Opti codeOpti, uint64_t hashCodeBuilding){
-	mGames.at(idGame).queueOpti(codeOpti, hashCodeBuilding);
+void ServerSide::queueOpti(Game::Game* game, Game::Enums::Opti codeOpti, uint64_t hashCodeBuilding){
+	game->queueOpti(codeOpti, hashCodeBuilding);
 }
 
-void ServerSide::attack(uint64_t idGame, uint64_t hashCodeAttacker, uint64_t hashCodeTarget){
-	mGames.at(idGame).attack(hashCodeAttacker, hashCodeTarget);
+void ServerSide::attack(Game::Game* game, uint64_t hashCodeAttacker, uint64_t hashCodeTarget){
+	game->attack(hashCodeAttacker, hashCodeTarget);
 }
 
-void ServerSide::setGameEnd(uint64_t idGame){
-	mGames.at(idGame).end();
+void ServerSide::setGameEnd(Game::Game* game){
+	game->end();
 }
 
-bool ServerSide::ended(uint64_t idGame){
-	return mGames.at(idGame).getState() == Game::Game::State::End;
+bool ServerSide::ended(Game::Game* game){
+	return game->getState() == Game::Game::State::End;
 }

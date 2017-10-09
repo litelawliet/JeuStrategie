@@ -7,7 +7,7 @@ class Building
 {
 public:
 	Building();
-	virtual ~Building() = 0;
+	virtual ~Building();
 
 	int getPV() const;
 	int getMaxPV() const;

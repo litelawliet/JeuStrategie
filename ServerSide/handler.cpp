@@ -4,11 +4,15 @@
 	\author Friday
 */
 
+#include "CommunicationProtocols\Messages.hpp"
+#include "ServerSide\Serverside.h"
 #include "handler.h"
 
+using namespace Network::Messages;
+
 Base handle(ServerSide *s,UserInfo msg){
-	if(s->verifyIdentity(msg.pseudo,msg.mdp)){
-		s->addPlayer(msg.idFrom());
+	if(s->verifyIdentity(msg.mPseudo,msg.mPasswd)){
+		s->addPlayer(msg.idFrom,msg.mPseudo);
 		return Accept(Base::Result::Success);
 	}//s->verifyIdentity(msg.pseudo,msg.mdp)
 	return Accept(Base::Result::Fail);
@@ -17,11 +21,11 @@ Base handle(ServerSide *s,UserInfo msg){
 Base handle(ServerSide *s,CreateGame msg){
 	if(msg.result==Base::Result::Success){
 		try{
-			uint64_t newGame = s->addGame();
+			Game::Game* newGame = s->addGame();
 			s->joinGame(s->getPlayer(msg.idFrom), newGame);
 			return msg;
 		}
-		catch(){
+		catch(int e){
 			return CreateGame(Base::Result::Fail);
 		}
 	}//msg.result==Base::Result::Success
@@ -34,7 +38,7 @@ Base handle(ServerSide *s,JoinGame msg){
 			s->joinGame(s->getPlayer(msg.idFrom), s->getNotFull());
 			return msg;
 		}
-		catch(){
+		catch(int e){
 			return JoinGame(Base::Result::Fail);
 		}
 	}//msg.result==Base::Result::Success
@@ -44,7 +48,7 @@ Base handle(ServerSide *s,JoinGame msg){
 Base handle(ServerSide *s,StartGame msg){
 	if(msg.result==Base::Result::Success){
 		try{
-			uint64_t game = s->getGame(s->getPlayer(msg.idFrom));
+			Game::Game* game = s->getGame(s->getPlayer(msg.idFrom));
 			if(s->readyToStart(game)){
 				s->startGame(game);
 				return msg;
@@ -53,7 +57,7 @@ Base handle(ServerSide *s,StartGame msg){
 				return StartGame(Base::Result::Fail);
 			}//s->readyToStart(game)
 		}
-		catch(){
+		catch(int e){
 			return StartGame(Base::Result::Fail);
 		}
 	}//msg.Result==Base::Result::Success
@@ -96,7 +100,7 @@ Base handle(ServerSide *s,Attack msg){
 }
 
 Base handle(ServerSide *s,Quit msg){
-	uint64_t game = s->getGame(msg.idFrom);
+	Game::Game* game = s->getGame(s->getPlayer(msg.idFrom));
 	s->setGameEnd(game);
 	return Quit(s->ended(game) ? Quit::Status::Ended : Quit::Status::NotEnded);
 }

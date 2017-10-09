@@ -8,44 +8,45 @@
 */
 
 #include "../CommunicationProtocols/TCP/Server.hpp"
+#include "CommunicationProtocols\TCP\Client.hpp"
 #include "../Game/Enums.hpp"
 #include "../Game/Game.hpp"
 
-#include <map>
+#include <vector>
 
 
 class ServerSide
 {
 	public:
-		ServerSide(Server *s)
-			: mServer(&s)
+		ServerSide(Network::TCP::Server *s)
+			: mServer(s)
 		{}
 		~ServerSide();
 		void update();
-		uint64_t addGame();
-		void addPlayer(uint64_t idClient);
-		bool testIdentity();
-		void joinGame(uint64_t idPlayer, uint64_t idGame);
-		uint64_t getPlayer(uint64_t idClient);
-		uint64_t getNotFull();
-		uint64_t getGame(uint64_t idPlayer);
-		bool readyToStart(uint64_t idGame);
-		void startGame(uint64_t idGame);
-		void changeRace(uint64_t idGame, uint64_t idPlayer, Game::Enums::Races race);
-		void changeColor(uint64_t idGame, uint64_t idPlayer, Game::Enums::Colors color);
-		void moveUnit(uint64_t idGame, int hashCodeUnit, int x, int y);
-		void queueBuilding(uint64_t idGame, Game::Enums::Buildings codeBuilding, int hashCodeBuilding);
-		void queueUnit(uint64_t idGame, Game::Enums::Units codeUnit, int hashCodeBuilding);
-		void queueOpti(uint64_t idGame, Game::Enums::Opti codeOpti, int hashCodeBuilding);
-		void attack(uint64_t idGame, int hashCodeAttacker, int hashCodeTarget);
-		void setGameEnd(uint64_t idGame);
-		bool ended(uint64_t idGame);
+		Game::Game* addGame();
+		void addPlayer(uint64_t client, std::string pseudo);
+		bool verifyIdentity(std::string pseudo, std::string pwd);
+		void joinGame(Game::Player* player, Game::Game* game);
+		Game::Player* getPlayer(uint64_t client);
+		Game::Game* getNotFull();
+		Game::Game* getGame(Game::Player* player);
+		bool readyToStart(Game::Game* game);
+		void startGame(Game::Game* game);
+		void changeRace(Game::Game* game, Game::Player* player, Game::Enums::Races race);
+		void changeColor(Game::Game* game, Game::Player* player, Game::Enums::Colors color);
+		void moveUnit(Game::Game* game, uint64_t hashCodeUnit, int x, int y);
+		void queueBuilding(Game::Game* game, Game::Enums::Buildings codeBuilding, uint64_t hashCodeBuilding);
+		void queueUnit(Game::Game* game, Game::Enums::Units codeUnit, uint64_t hashCodeBuilding);
+		void queueOpti(Game::Game* game, Game::Enums::Opti codeOpti, uint64_t hashCodeBuilding);
+		void attack(Game::Game* game, uint64_t hashCodeAttacker, uint64_t hashCodeTarget);
+		void setGameEnd(Game::Game* game);
+		bool ended(Game::Game* game);
 
 
 	private:
-		Server* mServer;
-		std::map<uint64_t, Game> mGames;
-		std::map<uint64_t, Player> mPlayers;
+		Network::TCP::Server* mServer;
+		std::vector<Game::Game*> mGames;
+		std::vector<Game::Player*> mPlayers;
 
 };
 

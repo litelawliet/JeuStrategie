@@ -7,7 +7,7 @@ class Unit
 {
 public:
 	Unit();
-	virtual ~Unit() = 0;
+	virtual ~Unit();
 };
 
 #endif

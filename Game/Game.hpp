@@ -7,8 +7,13 @@
 	\author Friday
 */
 #include <map>
+#include <vector>
 
 #include "../CommunicationProtocols/TCP/Client.hpp"
+
+#include "UnitsAndBuildings/UnitsAndBuildings/BuildingsHeaders.h"
+#include "UnitsAndBuildings/UnitsAndBuildings/UnitsHeaders.h"
+#include "UnitsAndBuildings/UnitsAndBuildings/ResearchHeaders.h"
 
 #include "Enums.hpp"
 
@@ -23,17 +28,23 @@ namespace Game{
 		\brief to play games
 	*/
 	class Player { 
+
+		friend class Game;
+
 		public:
-			Player(uint64_t idClient, std::string pseudo);
-			uint64_t getClient(){return mIdClient;}
-			uint64_t getGame(){return mIdGame;}
+			Player(uint64_t client, std::string pseudo)
+				: mClient(client)
+				, mPseudo(pseudo)
+			{}
+			uint64_t getClient(){return mClient;}
+			Game* getGame(){return mGame;}
 			Enums::Colors getColor(){return mColor;}
 			Enums::Races getRace(){return mRace;}
-			std::string getPseudo(){return pseudo;}
+			std::string getPseudo(){return mPseudo;}
 		private:
-			std::string pseudo;
-			uint64_t mIdClient;
-			uint64_t mIdGame;
+			std::string mPseudo;
+			uint64_t mClient;
+			Game* mGame;
 			Enums::Colors mColor;
 			Enums::Races mRace;
 	};
@@ -48,7 +59,7 @@ namespace Game{
 
 		public : 
 
-			static const byte nbPlayerMax = 2;
+			static const size_t nbPlayerMax = 2;
 
 			/*!
 				\enum State
@@ -72,11 +83,13 @@ namespace Game{
 			*/
 			void addPlayer(Player *p);
 			void start();
-			State getState(){return State;}
+			bool contains(Player *player) const ;
+			State getState(){return state;}
 			bool full();
 			void changeRace(Player *p,Enums::Races race);
 			void changeColor(Player *p, Enums::Colors color);
 			void moveUnit(uint64_t keyUnit, int x, int y);
+			void moveUnits();
 			void queueBuilding(Enums::Buildings codeBuilding, uint64_t keyBuilding);
 			void queueUnit(Enums::Units codeUnit, uint64_t keyBuilding);
 			void queueOpti(Enums::Opti codeOpti, uint64_t keyBuilding);
@@ -87,9 +100,9 @@ namespace Game{
 			void end();
 
 		private:
-			std::vector<Player*> players;/*!< list of players in game*/
-			std::map<uint64_t, Unit> units;
-			std::map<uint64_t, Buildings> buildings;
+			std::vector<Player*> mPlayers;/*!< list of players in game*/
+			std::map<uint64_t, Unit&> mUnits;
+			std::map<uint64_t, Building&> mBuildings;
 			State state;/*!< game state*/
 	};
 }

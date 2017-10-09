@@ -75,6 +75,14 @@ namespace Network
 				*/
 				std::unique_ptr<Messages::Base> poll();
 
+				/*!
+					\brief to get a specific client
+
+					\param[in] idClient of type uint64_t : client id
+					\return a client pointer
+				*/
+				Client* get(uint64_t idClient);
+
 			private:
 				std::map<uint64_t, Client> mClients;/*!< contains all clients with identifier*/
 				std::list<std::unique_ptr<Messages::Base>> mMessages;/*!< contains last 10 received messages*/
@@ -202,6 +210,10 @@ namespace Network
 			mMessages.pop_front();
 			return msg;
 		}
+
+		Client* ServerImpl::get(uint64_t idClient) {
+			return &(mClients.at(idClient));
+		}
 		////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////
 		////////////////////////////////////////////////////////////////////////////////////
@@ -228,5 +240,6 @@ namespace Network
 		bool Server::sendTo(uint64_t clientid, const unsigned char* data, unsigned int len) { return mImpl && mImpl->sendTo(clientid, data, len); }
 		bool Server::sendToAll(const unsigned char* data, unsigned int len) { return mImpl && mImpl->sendToAll(data, len); }
 		std::unique_ptr<Messages::Base> Server::poll() { return mImpl ? mImpl->poll() : nullptr; }
+		Client* Server::get(uint64_t idClient) { return mImpl->get(idClient); }
 	}
 }

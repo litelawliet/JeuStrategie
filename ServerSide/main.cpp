@@ -40,11 +40,11 @@ int main()
 			}
 			else if (msg->is<Network::Messages::UserData>())
 			{
-				auto userdata = msg->as<Network::Messages::UserData>();
-				Network::Messages::Base realmsg = userdata->toRealType();
+				Network::Messages::UserData userdata(*msg->as<Network::Messages::UserData>());
+				auto realmsg = userdata.toRealType();
 
 
-				server.sendToAll(userdata->data.data(), static_cast<unsigned int>(userdata->data.size()));
+				server.sendToAll(userdata.data.data(), static_cast<unsigned int>(userdata.data.size()));
 			}
 		}
 	}

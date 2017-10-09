@@ -6,7 +6,7 @@
 	\brief declaration of Server and ServerImpl
 	\author Friday
 */
-
+#include "Client.hpp"
 #include <memory>
 
 /*!
@@ -125,6 +125,14 @@ namespace Network
 					\return a Message object from the reception buffer or a Disconnection Message if it fails
 				*/
 				std::unique_ptr<Messages::Base> poll();
+
+				/*!
+					\brief to get a specific client
+
+					\param[in] idClient of type uint64_t : client id
+					\return a client pointer
+				*/
+				Client* get(uint64_t idClient);
 
 			private:
 				std::unique_ptr<ServerImpl> mImpl;/*!< an Implement server*/

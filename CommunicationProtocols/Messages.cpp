@@ -12,10 +12,17 @@ namespace Network {
 		vUc UserInfo::toUserData(){
 			vUc data = {
 				(uc)Type::Accept
-				, mPseudo.data()
-				, '#'
-				, mPasswd.data()
 			};
+
+			for (int i = 0; i < mPseudo.size(); i++) {
+				data.push_back(mPseudo.data()[i]);
+			}
+
+			data.push_back((uc)'#');
+
+			for (int i = 0; i < mPasswd.size(); i++) {
+				data.push_back(mPasswd.data()[i]);
+			}
 
 			return data;
 		}
@@ -174,28 +181,31 @@ namespace Network {
 			};
 		}
 
-		Base UserData::toRealType() const {
+		Base UserData::toRealType() {
+			char* pseudo;
+			char* pwd;
+			std::string spseudo;
+			std::string spwd;
+			size_t i;
 			switch (data[0]) {
 
 				//Casting of UserInfo
 				case (uc)Type::UserInfo:
-					int lim = 0;
-					int i = 0;
-					for(i = 0; i < strlen(data); i++){
+					for(i = 0; i < data.size(); i++){
 						if(data[i]=='#') break;
 					}
-					char[] pseudo = new char[i];
-					for(int j = 0; j < i; j++){
+					pseudo = new char[i];
+					for(size_t j = 0; j < i; j++){
 						pseudo[j] = data[j];
 					}
 
-					char[] pwd = new char[strlen(data)-i+1];
-					for(int j = 0; j < strlen(data)-i+1; j++){
+					pwd = new char[data.size()-i+1];
+					for(size_t j = 0; j < data.size()-i+1; j++){
 						pwd[j]=data[j+i+1];
 					}
 
-					std::string spseudo(pseudo);
-					std::string spwd(pwd);
+					spseudo = pseudo;
+					spwd = pwd;
 					return UserInfo(spseudo,spwd);
 
 				//Casting of Accept
@@ -278,16 +288,17 @@ namespace Network {
 					return Quit((data[1] == (uc)Quit::Status::Ended ? Quit::Status::Ended : Quit::Status::NotEnded));
 			}
 		}
+
         void format(vUc* dest, int attr){
 			std::string n_attr = std::to_string(attr);
-			dest->push_back(strlen(n_attr));
-			for (unsigned int i = 0; i < strlen(n_attr); i++) {
+			dest->push_back(strlen(n_attr.c_str()));
+			for (unsigned int i = 0; i < strlen(n_attr.c_str()); i++) {
 				dest->push_back((n_attr.data())[i]);
 			}
 		}
 
         int extractInt(const vUc* source, int from, char size) {
-			const char* preExtract = new char[size];
+			char* preExtract = new char[size];
 			for (int i = 0; i < size; i++) {
 				preExtract[i] = source->at(i + 1 + from);
 			}
