@@ -6,11 +6,14 @@
 #include "../Game/Game.hpp"
 #include "ServerSide/handler.h"
 #include <QtSql\qsqldatabase.h>
+#include <QtSql\qsqlerror.h>
+#include <qcoreapplication.h>
 
 
 #include <iostream>
+#include <climits>
 
-int main()
+int main(int argc, char** argv)
 {
 	//////////////////////
 	//Launching server
@@ -28,12 +31,18 @@ int main()
 	//////////////////////
 	//Initialisation MySQL
 	//////////////////////
+	QCoreApplication app(argc,argv);
 	QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
 	mysql.setHostName("localhost");
 	mysql.setDatabaseName("conquerors");
-	mysql.setUserName("root");
-	mysql.setPassword("root");
-	if (!mysql.open()) return -2;
+	mysql.setUserName("conquerors");
+	mysql.setPassword("game");
+	mysql.setPort(3306);
+	if (!mysql.open()) {
+		std::cout << mysql.lastError().number();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), EOF);
+		return -2;
+	}
 
 	//////////////////////
 	//Initialisation Server
@@ -75,7 +84,6 @@ int main()
 			}
 		}
 	}
-
 	//////////////////////
 	//Stopping Server
 	//////////////////////
