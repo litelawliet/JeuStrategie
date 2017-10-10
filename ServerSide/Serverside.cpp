@@ -8,14 +8,15 @@
 
 ServerSide::~ServerSide(){
 	delete mServer;
+	delete mSQL;
 }
 
 void ServerSide::update(){
-	mServer->update();
+	mServer->update();//receive and send messages
 	for (auto game : mGames) {
-		game->moveUnits();
-		game->setTargets();
-		game->end();
+		game->moveUnits();//move all units
+		game->setTargets();//set all targets
+		game->end();//check all ends
 	}
 }
 
@@ -29,6 +30,10 @@ void ServerSide::addPlayer(uint64_t client, std::string pseudo){
 }
 
 bool ServerSide::verifyIdentity(std::string pseudo, std::string pwd){
+	std::string squery = "SELECT player.id FROM player WHERE " + pseudo + "=player.pseudo AND " + pwd + "=player.password";
+	QSqlQuery query(*mSQL);
+	query.exec(QString(squery.c_str()));
+	if (!query.next()) return false;
 	return true;
 }
 

@@ -7,7 +7,7 @@ class BattleUnit :
 {
 public:
 	BattleUnit();
-	~BattleUnit();
+	virtual ~BattleUnit() = 0;
 };
 
 #endif

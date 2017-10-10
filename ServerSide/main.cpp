@@ -4,13 +4,17 @@
 #include "../CommunicationProtocols/Messages.hpp"
 #include "../CommunicationProtocols/Errors.hpp"
 #include "../Game/Game.hpp"
-#include "ServerSide\handler.h"
+#include "ServerSide/handler.h"
+#include <QtSql\qsqldatabase.h>
 
 
 #include <iostream>
 
 int main()
 {
+	//////////////////////
+	//Launching server
+	//////////////////////
 	if (!Network::Start())
 	{
 		std::cout << "Winsock initialisation error : " << Network::Errors::Get();
@@ -21,13 +25,30 @@ int main()
 	std::cout << "Port ? ";
 	std::cin >> port;
 
+	//////////////////////
+	//Initialisation MySQL
+	//////////////////////
+	QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
+	mysql.setHostName("localhost");
+	mysql.setDatabaseName("conquerors");
+	mysql.setUserName("root");
+	mysql.setPassword("root");
+	if (!mysql.open()) return -2;
+
+	//////////////////////
+	//Initialisation Server
+	//////////////////////
 	Network::TCP::Server server;
-	ServerSide serverside(&server);
+	ServerSide serverside(&server,&mysql);
 	if (!server.start(port))
 	{
 		std::cout << "Server initialisation error : " << Network::Errors::Get();
-		return -2;
+		return -3;
 	}
+
+	//////////////////////
+	//Server loop
+	//////////////////////
 	while (1) {
 		serverside.update();
 		while (auto msg = server.poll())
@@ -54,7 +75,12 @@ int main()
 			}
 		}
 	}
+
+	//////////////////////
+	//Stopping Server
+	//////////////////////
 	server.stop();
+	mysql.close();
 	Network::Release();
 	return 0;
 }
