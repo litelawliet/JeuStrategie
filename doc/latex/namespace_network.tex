@@ -1,0 +1,114 @@
+\hypertarget{namespace_network}{}\section{Network Namespace Reference}
+\label{namespace_network}\index{Network@{Network}}
+
+
+contains all network things  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_network_af8698db2b5ae3d0da4544304cffc3abb}{Start} ()
+\begin{DoxyCompactList}\small\item\em start error handler \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_a676c065de2077bbb8e64ef84dfde1640}\label{namespace_network_a676c065de2077bbb8e64ef84dfde1640}} 
+void \hyperlink{namespace_network_a676c065de2077bbb8e64ef84dfde1640}{Release} ()
+\begin{DoxyCompactList}\small\item\em clean error handler \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_a907c6a68c883d4e7b8d12df59b107a4e}{Set\+Non\+Blocking} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em to set a socket in non-\/blocking mode \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_af60ca5be87dc2bb828053b77586c5db1}{Set\+Reuse\+Addr} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em allows reuse of an address \end{DoxyCompactList}\item 
+void \hyperlink{namespace_network_a709c320df831b3a900af6ae1c8849b00}{Close\+Socket} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em close an open socket \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_network_a0b77e5f397e6738b7e68d51cf0d3e46a}{Get\+Address} (const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em to get ip\+Address from socket addr \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_ac815d49aae02b422d1aae507f9475a72}\label{namespace_network_ac815d49aae02b422d1aae507f9475a72}} 
+unsigned short {\bfseries Get\+Port} (const sockaddr\+\_\+in \&addr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains all network things 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_network_a709c320df831b3a900af6ae1c8849b00}\label{namespace_network_a709c320df831b3a900af6ae1c8849b00}} 
+\index{Network@{Network}!Close\+Socket@{Close\+Socket}}
+\index{Close\+Socket@{Close\+Socket}!Network@{Network}}
+\subsubsection{\texorpdfstring{Close\+Socket()}{CloseSocket()}}
+{\footnotesize\ttfamily void Network\+::\+Close\+Socket (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{socket }\end{DoxyParamCaption})}
+
+
+
+close an open socket 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em socket} & of type struct S\+O\+C\+K\+ET \+: target \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_network_a0b77e5f397e6738b7e68d51cf0d3e46a}\label{namespace_network_a0b77e5f397e6738b7e68d51cf0d3e46a}} 
+\index{Network@{Network}!Get\+Address@{Get\+Address}}
+\index{Get\+Address@{Get\+Address}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Address()}{GetAddress()}}
+{\footnotesize\ttfamily std\+::string Network\+::\+Get\+Address (\begin{DoxyParamCaption}\item[{const sockaddr\+\_\+in \&}]{addr }\end{DoxyParamCaption})}
+
+
+
+to get ip\+Address from socket addr 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & of type sockaddr\+\_\+in\& \+: target addr\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string target\textquotesingle{}s ip\+Address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_network_a907c6a68c883d4e7b8d12df59b107a4e}\label{namespace_network_a907c6a68c883d4e7b8d12df59b107a4e}} 
+\index{Network@{Network}!Set\+Non\+Blocking@{Set\+Non\+Blocking}}
+\index{Set\+Non\+Blocking@{Set\+Non\+Blocking}!Network@{Network}}
+\subsubsection{\texorpdfstring{Set\+Non\+Blocking()}{SetNonBlocking()}}
+{\footnotesize\ttfamily bool Network\+::\+Set\+Non\+Blocking (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{socket }\end{DoxyParamCaption})}
+
+
+
+to set a socket in non-\/blocking mode 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em socket} & of type struct S\+O\+C\+K\+ET \+: target\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if set successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_network_af60ca5be87dc2bb828053b77586c5db1}\label{namespace_network_af60ca5be87dc2bb828053b77586c5db1}} 
+\index{Network@{Network}!Set\+Reuse\+Addr@{Set\+Reuse\+Addr}}
+\index{Set\+Reuse\+Addr@{Set\+Reuse\+Addr}!Network@{Network}}
+\subsubsection{\texorpdfstring{Set\+Reuse\+Addr()}{SetReuseAddr()}}
+{\footnotesize\ttfamily bool Network\+::\+Set\+Reuse\+Addr (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{socket }\end{DoxyParamCaption})}
+
+
+
+allows reuse of an address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em socket} & of type struct S\+O\+C\+K\+ET \+: target\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if deallocation successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_network_af8698db2b5ae3d0da4544304cffc3abb}\label{namespace_network_af8698db2b5ae3d0da4544304cffc3abb}} 
+\index{Network@{Network}!Start@{Start}}
+\index{Start@{Start}!Network@{Network}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily bool Network\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start error handler 
+
+\begin{DoxyReturn}{Returns}
+true if it start well, false otherwise 
+\end{DoxyReturn}

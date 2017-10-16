@@ -1,0 +1,85 @@
+\hypertarget{class_network_1_1_t_c_p_1_1_sending_handler}{}\section{Network\+:\+:T\+CP\+:\+:Sending\+Handler Class Reference}
+\label{class_network_1_1_t_c_p_1_1_sending_handler}\index{Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}}
+
+
+object to handle sending  
+
+
+
+
+{\ttfamily \#include $<$Client$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_ab4f15ba6e368f46c1416acafd8211628}\label{class_network_1_1_t_c_p_1_1_sending_handler_ab4f15ba6e368f46c1416acafd8211628}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_ab4f15ba6e368f46c1416acafd8211628}{Sending\+Handler} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}{init} (S\+O\+C\+K\+ET sckt)
+\begin{DoxyCompactList}\small\item\em initialize sending\+Handler \end{DoxyCompactList}\item 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}{send} (const unsigned char $\ast$data, unsigned int datalen)
+\begin{DoxyCompactList}\small\item\em to send datas \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62}\label{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62}} 
+void \hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62}{update} ()
+\begin{DoxyCompactList}\small\item\em update send state \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}{queue\+Size} () const
+\begin{DoxyCompactList}\small\item\em get size of queued data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+object to handle sending 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}\label{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}} 
+\index{Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}!init@{init}}
+\index{init@{init}!Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Network\+::\+T\+C\+P\+::\+Sending\+Handler\+::init (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{sckt }\end{DoxyParamCaption})}
+
+
+
+initialize sending\+Handler 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sckt} & of type struct S\+O\+C\+K\+ET \+: used socket \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}\label{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}} 
+\index{Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}!queue\+Size@{queue\+Size}}
+\index{queue\+Size@{queue\+Size}!Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}}
+\subsubsection{\texorpdfstring{queue\+Size()}{queueSize()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::\+T\+C\+P\+::\+Sending\+Handler\+::queue\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get size of queued data 
+
+\begin{DoxyReturn}{Returns}
+size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}\label{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}} 
+\index{Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}!send@{send}}
+\index{send@{send}!Network\+::\+T\+C\+P\+::\+Sending\+Handler@{Network\+::\+T\+C\+P\+::\+Sending\+Handler}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Network\+::\+T\+C\+P\+::\+Sending\+Handler\+::send (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{unsigned int}]{datalen }\end{DoxyParamCaption})}
+
+
+
+to send datas 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & of type unsigned char$\ast$ \+: datas to send \\
+\hline
+\mbox{\tt in}  & {\em datalen} & of type unsigned int \+: data to send\textquotesingle{}s length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_client_8cpp}{Client.\+cpp}\end{DoxyCompactItemize}

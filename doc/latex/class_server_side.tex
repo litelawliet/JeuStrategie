@@ -1,0 +1,369 @@
+\hypertarget{class_server_side}{}\section{Server\+Side Class Reference}
+\label{class_server_side}\index{Server\+Side@{Server\+Side}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_server_side_ac92ebebcd1584bad466ef8cf4a82bcb4}\label{class_server_side_ac92ebebcd1584bad466ef8cf4a82bcb4}} 
+{\bfseries Server\+Side} (\hyperlink{class_network_1_1_t_c_p_1_1_server}{Network\+::\+T\+C\+P\+::\+Server} $\ast$s, Q\+Sql\+Database $\ast$sql)
+\item 
+\mbox{\Hypertarget{class_server_side_af75665fbf2ff41dddba59690c70e42d2}\label{class_server_side_af75665fbf2ff41dddba59690c70e42d2}} 
+void \hyperlink{class_server_side_af75665fbf2ff41dddba59690c70e42d2}{update} ()
+\begin{DoxyCompactList}\small\item\em update server and games \end{DoxyCompactList}\item 
+\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ \hyperlink{class_server_side_a5f3536e4bd9f33730fe85fd19869a30e}{add\+Game} ()
+\begin{DoxyCompactList}\small\item\em create a new game \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a7262ec7d1a2574b79879b3d83f16d0e6}{add\+Player} (uint64\+\_\+t client, std\+::string pseudo)
+\begin{DoxyCompactList}\small\item\em create a new player \end{DoxyCompactList}\item 
+bool \hyperlink{class_server_side_a5749ff8a423154031b8fd43ffca84737}{verify\+Identity} (std\+::string pseudo, std\+::string pwd)
+\begin{DoxyCompactList}\small\item\em verify if a player is registered in the database \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a4a6174bdaef5367b91277539fe60bca0}{join\+Game} (\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$player, \hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em allow a player to join a game \end{DoxyCompactList}\item 
+\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$ \hyperlink{class_server_side_a2efe0b51ba110d415b3aa5bad8000bbb}{get\+Player} (uint64\+\_\+t client)
+\begin{DoxyCompactList}\small\item\em get player by his client identifier \end{DoxyCompactList}\item 
+\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ \hyperlink{class_server_side_a014324eeffcf272ed539027e4c2df34b}{get\+Not\+Full} ()
+\begin{DoxyCompactList}\small\item\em find the first non-\/full game available \end{DoxyCompactList}\item 
+\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ \hyperlink{class_server_side_a69f08b4f34448c386d9d204ba8e9ca51}{get\+Game} (\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em get a game by its players \end{DoxyCompactList}\item 
+bool \hyperlink{class_server_side_a9a826521b535f8fcc33c89cebc099442}{ready\+To\+Start} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em say if a game is ready to start \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a88f8b282da2d8eb4175ba9f591198470}{start\+Game} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em start the game \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a35e324591b42afc0ff67323c5e6bb271}{change\+Race} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, \hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$player, Game\+::\+Enums\+::\+Races race)
+\begin{DoxyCompactList}\small\item\em change a player\textquotesingle{}s race \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_abb0e2ff64068223f46dd66b323386a9d}{change\+Color} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, \hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$player, Game\+::\+Enums\+::\+Colors color)
+\begin{DoxyCompactList}\small\item\em change a player\textquotesingle{}s color \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a71bd6a7b163c6a8c23233832fd3bbb63}{move\+Unit} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, uint64\+\_\+t hash\+Code\+Unit, int x, int y)
+\begin{DoxyCompactList}\small\item\em update unit\textquotesingle{}s arrival \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a294f328778629a8e499c5ac87ebbda9f}{queue\+Building} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, Game\+::\+Enums\+::\+Buildings code\+Building, uint64\+\_\+t hash\+Code\+Building)
+\begin{DoxyCompactList}\small\item\em queue a new building \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_ac24547f0638dc01d70dd2bd5ae4eb12c}{queue\+Unit} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, Game\+::\+Enums\+::\+Units code\+Unit, uint64\+\_\+t hash\+Code\+Building)
+\begin{DoxyCompactList}\small\item\em queue a new unit \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_aadcda55d93b27656d41548782e485049}{queue\+Opti} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, Game\+::\+Enums\+::\+Opti code\+Opti, uint64\+\_\+t hash\+Code\+Building)
+\begin{DoxyCompactList}\small\item\em queue a new opti \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_a0ad75fd24a1728a419b945bd2ad170fd}{attack} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game, uint64\+\_\+t hash\+Code\+Attacker, uint64\+\_\+t hash\+Code\+Target)
+\begin{DoxyCompactList}\small\item\em update a target \end{DoxyCompactList}\item 
+void \hyperlink{class_server_side_ad58733f3a8e9be350be5631da88eaeaf}{set\+Game\+End} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em set end of game \end{DoxyCompactList}\item 
+bool \hyperlink{class_server_side_a3c544d9bae62d9fa147c9fb60f9f21f6}{ended} (\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em tell if a game is ended \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_side_a5f3536e4bd9f33730fe85fd19869a30e}\label{class_server_side_a5f3536e4bd9f33730fe85fd19869a30e}} 
+\index{Server\+Side@{Server\+Side}!add\+Game@{add\+Game}}
+\index{add\+Game@{add\+Game}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{add\+Game()}{addGame()}}
+{\footnotesize\ttfamily \hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ Server\+Side\+::add\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create a new game 
+
+\begin{DoxyReturn}{Returns}
+added game of type Game$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_a7262ec7d1a2574b79879b3d83f16d0e6}\label{class_server_side_a7262ec7d1a2574b79879b3d83f16d0e6}} 
+\index{Server\+Side@{Server\+Side}!add\+Player@{add\+Player}}
+\index{add\+Player@{add\+Player}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{add\+Player()}{addPlayer()}}
+{\footnotesize\ttfamily void Server\+Side\+::add\+Player (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{client,  }\item[{std\+::string}]{pseudo }\end{DoxyParamCaption})}
+
+
+
+create a new player 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em client} & of type uint64\+\_\+t \+: client id \\
+\hline
+\mbox{\tt in}  & {\em pseudo} & of type std\+::string \+: player\textquotesingle{}s pseudo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a0ad75fd24a1728a419b945bd2ad170fd}\label{class_server_side_a0ad75fd24a1728a419b945bd2ad170fd}} 
+\index{Server\+Side@{Server\+Side}!attack@{attack}}
+\index{attack@{attack}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void Server\+Side\+::attack (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{uint64\+\_\+t}]{hash\+Code\+Attacker,  }\item[{uint64\+\_\+t}]{hash\+Code\+Target }\end{DoxyParamCaption})}
+
+
+
+update a target 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Attacker} & of type uint64\+\_\+t \+: selected attacker \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Target} & of type uint64\+\_\+t \+: selected target \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_abb0e2ff64068223f46dd66b323386a9d}\label{class_server_side_abb0e2ff64068223f46dd66b323386a9d}} 
+\index{Server\+Side@{Server\+Side}!change\+Color@{change\+Color}}
+\index{change\+Color@{change\+Color}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{change\+Color()}{changeColor()}}
+{\footnotesize\ttfamily void Server\+Side\+::change\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$}]{player,  }\item[{Game\+::\+Enums\+::\+Colors}]{color }\end{DoxyParamCaption})}
+
+
+
+change a player\textquotesingle{}s color 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a35e324591b42afc0ff67323c5e6bb271}\label{class_server_side_a35e324591b42afc0ff67323c5e6bb271}} 
+\index{Server\+Side@{Server\+Side}!change\+Race@{change\+Race}}
+\index{change\+Race@{change\+Race}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{change\+Race()}{changeRace()}}
+{\footnotesize\ttfamily void Server\+Side\+::change\+Race (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$}]{player,  }\item[{Game\+::\+Enums\+::\+Races}]{race }\end{DoxyParamCaption})}
+
+
+
+change a player\textquotesingle{}s race 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a3c544d9bae62d9fa147c9fb60f9f21f6}\label{class_server_side_a3c544d9bae62d9fa147c9fb60f9f21f6}} 
+\index{Server\+Side@{Server\+Side}!ended@{ended}}
+\index{ended@{ended}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{ended()}{ended()}}
+{\footnotesize\ttfamily bool Server\+Side\+::ended (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+tell if a game is ended 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if ended, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_a69f08b4f34448c386d9d204ba8e9ca51}\label{class_server_side_a69f08b4f34448c386d9d204ba8e9ca51}} 
+\index{Server\+Side@{Server\+Side}!get\+Game@{get\+Game}}
+\index{get\+Game@{get\+Game}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{get\+Game()}{getGame()}}
+{\footnotesize\ttfamily \hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ Server\+Side\+::get\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+get a game by its players 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em player} & of type Player$\ast$\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Game$\ast$ or nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_a014324eeffcf272ed539027e4c2df34b}\label{class_server_side_a014324eeffcf272ed539027e4c2df34b}} 
+\index{Server\+Side@{Server\+Side}!get\+Not\+Full@{get\+Not\+Full}}
+\index{get\+Not\+Full@{get\+Not\+Full}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{get\+Not\+Full()}{getNotFull()}}
+{\footnotesize\ttfamily \hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$ Server\+Side\+::get\+Not\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+find the first non-\/full game available 
+
+\begin{DoxyReturn}{Returns}
+a Game$\ast$ or nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_a2efe0b51ba110d415b3aa5bad8000bbb}\label{class_server_side_a2efe0b51ba110d415b3aa5bad8000bbb}} 
+\index{Server\+Side@{Server\+Side}!get\+Player@{get\+Player}}
+\index{get\+Player@{get\+Player}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{get\+Player()}{getPlayer()}}
+{\footnotesize\ttfamily \hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$ Server\+Side\+::get\+Player (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{client }\end{DoxyParamCaption})}
+
+
+
+get player by his client identifier 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em client} & of type uint64\+\_\+t \+: client id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Player$\ast$ or nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_a4a6174bdaef5367b91277539fe60bca0}\label{class_server_side_a4a6174bdaef5367b91277539fe60bca0}} 
+\index{Server\+Side@{Server\+Side}!join\+Game@{join\+Game}}
+\index{join\+Game@{join\+Game}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{join\+Game()}{joinGame()}}
+{\footnotesize\ttfamily void Server\+Side\+::join\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_player}{Game\+::\+Player} $\ast$}]{player,  }\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+allow a player to join a game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em player} & of type Player$\ast$ \+: player who wants to join \\
+\hline
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: game to join \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a71bd6a7b163c6a8c23233832fd3bbb63}\label{class_server_side_a71bd6a7b163c6a8c23233832fd3bbb63}} 
+\index{Server\+Side@{Server\+Side}!move\+Unit@{move\+Unit}}
+\index{move\+Unit@{move\+Unit}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{move\+Unit()}{moveUnit()}}
+{\footnotesize\ttfamily void Server\+Side\+::move\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{uint64\+\_\+t}]{hash\+Code\+Unit,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+update unit\textquotesingle{}s arrival 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Unit} & of type uint64\+\_\+t \+: selected unit \\
+\hline
+\mbox{\tt in}  & {\em x} & of type int \+: new arrival x \\
+\hline
+\mbox{\tt in}  & {\em y} & of type int \+: new arrival y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a294f328778629a8e499c5ac87ebbda9f}\label{class_server_side_a294f328778629a8e499c5ac87ebbda9f}} 
+\index{Server\+Side@{Server\+Side}!queue\+Building@{queue\+Building}}
+\index{queue\+Building@{queue\+Building}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{queue\+Building()}{queueBuilding()}}
+{\footnotesize\ttfamily void Server\+Side\+::queue\+Building (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{Game\+::\+Enums\+::\+Buildings}]{code\+Building,  }\item[{uint64\+\_\+t}]{hash\+Code\+Building }\end{DoxyParamCaption})}
+
+
+
+queue a new building 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em code\+Building} & of type Game\+::\+Enums\+::\+Buildings \+: building to queue \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Building} & of type uint64\+\_\+t \+: queuing building \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_aadcda55d93b27656d41548782e485049}\label{class_server_side_aadcda55d93b27656d41548782e485049}} 
+\index{Server\+Side@{Server\+Side}!queue\+Opti@{queue\+Opti}}
+\index{queue\+Opti@{queue\+Opti}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{queue\+Opti()}{queueOpti()}}
+{\footnotesize\ttfamily void Server\+Side\+::queue\+Opti (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{Game\+::\+Enums\+::\+Opti}]{code\+Opti,  }\item[{uint64\+\_\+t}]{hash\+Code\+Building }\end{DoxyParamCaption})}
+
+
+
+queue a new opti 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em code\+Opti} & of type Game\+::\+Enums\+::\+Opti \+: opti to queue \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Building} & of type uint64\+\_\+t \+: queuing building \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_ac24547f0638dc01d70dd2bd5ae4eb12c}\label{class_server_side_ac24547f0638dc01d70dd2bd5ae4eb12c}} 
+\index{Server\+Side@{Server\+Side}!queue\+Unit@{queue\+Unit}}
+\index{queue\+Unit@{queue\+Unit}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{queue\+Unit()}{queueUnit()}}
+{\footnotesize\ttfamily void Server\+Side\+::queue\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game,  }\item[{Game\+::\+Enums\+::\+Units}]{code\+Unit,  }\item[{uint64\+\_\+t}]{hash\+Code\+Building }\end{DoxyParamCaption})}
+
+
+
+queue a new unit 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\mbox{\tt in}  & {\em code\+Unit} & of type Game\+::\+Enums\+::\+Units \+: unit to queue \\
+\hline
+\mbox{\tt in}  & {\em hash\+Code\+Building} & of type uint64\+\_\+t \+: queuing building \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a9a826521b535f8fcc33c89cebc099442}\label{class_server_side_a9a826521b535f8fcc33c89cebc099442}} 
+\index{Server\+Side@{Server\+Side}!ready\+To\+Start@{ready\+To\+Start}}
+\index{ready\+To\+Start@{ready\+To\+Start}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{ready\+To\+Start()}{readyToStart()}}
+{\footnotesize\ttfamily bool Server\+Side\+::ready\+To\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+say if a game is ready to start 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if ready to start, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_server_side_ad58733f3a8e9be350be5631da88eaeaf}\label{class_server_side_ad58733f3a8e9be350be5631da88eaeaf}} 
+\index{Server\+Side@{Server\+Side}!set\+Game\+End@{set\+Game\+End}}
+\index{set\+Game\+End@{set\+Game\+End}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{set\+Game\+End()}{setGameEnd()}}
+{\footnotesize\ttfamily void Server\+Side\+::set\+Game\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+set end of game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: selected game \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a88f8b282da2d8eb4175ba9f591198470}\label{class_server_side_a88f8b282da2d8eb4175ba9f591198470}} 
+\index{Server\+Side@{Server\+Side}!start\+Game@{start\+Game}}
+\index{start\+Game@{start\+Game}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{start\+Game()}{startGame()}}
+{\footnotesize\ttfamily void Server\+Side\+::start\+Game (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_game}{Game\+::\+Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+start the game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em game} & of type Game$\ast$ \+: game to start \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_server_side_a5749ff8a423154031b8fd43ffca84737}\label{class_server_side_a5749ff8a423154031b8fd43ffca84737}} 
+\index{Server\+Side@{Server\+Side}!verify\+Identity@{verify\+Identity}}
+\index{verify\+Identity@{verify\+Identity}!Server\+Side@{Server\+Side}}
+\subsubsection{\texorpdfstring{verify\+Identity()}{verifyIdentity()}}
+{\footnotesize\ttfamily bool Server\+Side\+::verify\+Identity (\begin{DoxyParamCaption}\item[{std\+::string}]{pseudo,  }\item[{std\+::string}]{pwd }\end{DoxyParamCaption})}
+
+
+
+verify if a player is registered in the database 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pseudo} & of type std\+::string \+: player\textquotesingle{}s pseudo \\
+\hline
+\mbox{\tt in}  & {\em pwd} & of type std\+::string \+: player\textquotesingle{}s password\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if registered, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server\+Side/\hyperlink{_serverside_8h}{Serverside.\+h}\item 
+Server\+Side/Serverside.\+cpp\end{DoxyCompactItemize}

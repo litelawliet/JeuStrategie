@@ -1,0 +1,160 @@
+\hypertarget{class_network_1_1_t_c_p_1_1_client}{}\section{Network\+:\+:T\+CP\+:\+:Client Class Reference}
+\label{class_network_1_1_t_c_p_1_1_client}\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+
+
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} side\textquotesingle{}s communication functions.  
+
+
+
+
+{\ttfamily \#include $<$Client.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}\label{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}{Client} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1}\label{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1}{Client} (const \hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_aeb50212d88c4aa5cac0c5524cb6cd7d3}\label{class_network_1_1_t_c_p_1_1_client_aeb50212d88c4aa5cac0c5524cb6cd7d3}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \& \hyperlink{class_network_1_1_t_c_p_1_1_client_aeb50212d88c4aa5cac0c5524cb6cd7d3}{operator=} (const \hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \&)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a2d3960f6984a5127c8af7eea54409d4d}\label{class_network_1_1_t_c_p_1_1_client_a2d3960f6984a5127c8af7eea54409d4d}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client_a2d3960f6984a5127c8af7eea54409d4d}{Client} (\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \&\&)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_af00b447cfd536ecf168e665d07ef870f}\label{class_network_1_1_t_c_p_1_1_client_af00b447cfd536ecf168e665d07ef870f}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \& \hyperlink{class_network_1_1_t_c_p_1_1_client_af00b447cfd536ecf168e665d07ef870f}{operator=} (\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \&\&)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad}\label{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad}{$\sim$\+Client} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}{init} (S\+O\+C\+K\+ET \&\&sckt, const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em client\textquotesingle{}s initialisation protocol \end{DoxyCompactList}\item 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}{connect} (const std\+::string \&ipaddress, unsigned short port)
+\begin{DoxyCompactList}\small\item\em client\textquotesingle{}s connection protocol \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c}\label{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c}} 
+void \hyperlink{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em client\textquotesingle{}s disconnection protocol \end{DoxyCompactList}\item 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}{send} (const unsigned char $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em client\textquotesingle{}s sending protocol \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base} $>$ \hyperlink{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}{poll} ()
+\begin{DoxyCompactList}\small\item\em client\textquotesingle{}s reception protocol \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}{id} () const
+\begin{DoxyCompactList}\small\item\em to get client\textquotesingle{}s id \end{DoxyCompactList}\item 
+const sockaddr\+\_\+in \& \hyperlink{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}{destination\+Address} () const
+\begin{DoxyCompactList}\small\item\em to get server\textquotesingle{}s address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} side\textquotesingle{}s communication functions. 
+
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} \hyperlink{_client_8hpp}{Client.\+hpp} \hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}\label{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!connect@{connect}}
+\index{connect@{connect}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Network\+::\+T\+C\+P\+::\+Client\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ipaddress,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+client\textquotesingle{}s connection protocol 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ipaddress} & of type string\& \+: server\textquotesingle{}s address \\
+\hline
+\mbox{\tt in}  & {\em port} & of type unsigned short \+: server\textquotesingle{}s port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if connection established, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}\label{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!destination\+Address@{destination\+Address}}
+\index{destination\+Address@{destination\+Address}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{destination\+Address()}{destinationAddress()}}
+{\footnotesize\ttfamily const sockaddr\+\_\+in \& Network\+::\+T\+C\+P\+::\+Client\+::destination\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+to get server\textquotesingle{}s address 
+
+\begin{DoxyReturn}{Returns}
+address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}\label{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!id@{id}}
+\index{id@{id}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+T\+C\+P\+::\+Client\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+to get client\textquotesingle{}s id 
+
+\begin{DoxyReturn}{Returns}
+client\textquotesingle{}s id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}\label{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!init@{init}}
+\index{init@{init}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Network\+::\+T\+C\+P\+::\+Client\+::init (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET \&\&}]{sckt,  }\item[{const sockaddr\+\_\+in \&}]{addr }\end{DoxyParamCaption})}
+
+
+
+client\textquotesingle{}s initialisation protocol 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sckt} & of type struct S\+O\+C\+K\+ET\&\& \+: client\textquotesingle{}s connection socket \\
+\hline
+\mbox{\tt in}  & {\em addr} & of type sockaddr\+\_\+in\& \+: client\textquotesingle{}s IP address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initiation successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}\label{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!poll@{poll}}
+\index{poll@{poll}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base} $>$ Network\+::\+T\+C\+P\+::\+Client\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+client\textquotesingle{}s reception protocol 
+
+\begin{DoxyReturn}{Returns}
+Message object from reception buffer or a Disconnection Message object if it fails 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}\label{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}} 
+\index{Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}!send@{send}}
+\index{send@{send}!Network\+::\+T\+C\+P\+::\+Client@{Network\+::\+T\+C\+P\+::\+Client}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Network\+::\+T\+C\+P\+::\+Client\+::send (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+client\textquotesingle{}s sending protocol 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & of type unsigned char$\ast$ \+: data to send \\
+\hline
+\mbox{\tt in}  & {\em len} & of type unsigned int \+: data length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if send successful, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_client_8hpp}{Client.\+hpp}\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_client_8cpp}{Client.\+cpp}\end{DoxyCompactItemize}

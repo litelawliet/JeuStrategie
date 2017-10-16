@@ -5,8 +5,8 @@
 #include "../CommunicationProtocols/Errors.hpp"
 #include "../Game/Game.hpp"
 #include "ServerSide/handler.h"
-#include <QtSql\qsqldatabase.h>
-#include <QtSql\qsqlerror.h>
+#include <QtSql/qsqldatabase.h>
+#include <QtSql/qsqlerror.h>
 #include <qcoreapplication.h>
 
 
@@ -32,23 +32,23 @@ int main(int argc, char** argv)
 	//Initialisation MySQL
 	//////////////////////
 	QCoreApplication app(argc,argv);
-	QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
+    /*QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
 	mysql.setHostName("localhost");
 	mysql.setDatabaseName("conquerors");
 	mysql.setUserName("conquerors");
-	mysql.setPassword("game");
+    mysql.setPassword("Game_n");
 	mysql.setPort(3306);
 	if (!mysql.open()) {
 		std::cout << mysql.lastError().number();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), EOF);
 		return -2;
 	}
-
+    */
 	//////////////////////
 	//Initialisation Server
 	//////////////////////
 	Network::TCP::Server server;
-	ServerSide serverside(&server,&mysql);
+    ServerSide serverside(&server);
 	if (!server.start(port))
 	{
 		std::cout << "Server initialisation error : " << Network::Errors::Get();
@@ -59,7 +59,7 @@ int main(int argc, char** argv)
 	//Server loop
 	//////////////////////
 	while (1) {
-		serverside.update();
+        serverside.update();
 		while (auto msg = server.poll())
 		{
 			if (msg->is<Network::Messages::Connection>())
@@ -88,7 +88,7 @@ int main(int argc, char** argv)
 	//Stopping Server
 	//////////////////////
 	server.stop();
-	mysql.close();
+//	mysql.close();
 	Network::Release();
 	return 0;
 }

@@ -35,7 +35,7 @@ namespace Network {
 			return data;
 		}
 
-		vUc CreateGame::toUserData() {
+        vUc CreateGame::toUserData() {
 			vUc data = {
 				(uc)Type::CreateGame
 				, (uc)result
@@ -44,7 +44,7 @@ namespace Network {
 			return data;
 		}
 
-		vUc JoinGame::toUserData() {
+        vUc JoinGame::toUserData() {
 			vUc data = {
 				(uc)Type::JoinGame
 				, (uc)result
@@ -52,7 +52,7 @@ namespace Network {
 			return data;
 		}
 
-		vUc StartGame::toUserData() {
+        vUc StartGame::toUserData() {
 			vUc data = {
 				(uc)Type::StartGame
 				, (uc)result
@@ -166,7 +166,7 @@ namespace Network {
 			return data;
 		}
 
-		vUc EndGame::toUserData() {
+        vUc EndGame::toUserData() {
 			vUc data = {
 				(uc)Type::EndGame
 				, (uc)m_ending
@@ -226,11 +226,11 @@ namespace Network {
 
 				//Casting of SelectRace
 				case (uc)Type::SelectRace:
-					return SelectRace((Game::Enums::Races)data[1]);
+                    return SelectRace((Game_n::Enums::Races)data[1]);
 
 				//Casting of SelectColor
 				case (uc)Type::SelectColor:
-					return SelectColor((Game::Enums::Colors)data[1]);
+                    return SelectColor((Game_n::Enums::Colors)data[1]);
 
 				//Casting of MoveUnit
 				case (uc)Type::MoveUnit:
@@ -240,31 +240,31 @@ namespace Network {
 
 				//Casting of CreateUnit
 				case (uc)Type::CreateUnit:
-					return CreateUnit((Game::Enums::Units)data[1]
+                    return CreateUnit((Game_n::Enums::Units)data[1]
 						, extractInt(&data, 3, data[2])
 						, extractInt(&data, data[2] + 3 + 1, data[data[2] + 3]));
 
 				//Casting of CreateOpti
 				case (uc)Type::CreateOpti:
-					return CreateOpti((Game::Enums::Opti)data[1]);
+                    return CreateOpti((Game_n::Enums::Opti)data[1]);
 
 				//Casting of CreateBuilding
 				case (uc)Type::CreateBuilding:
-					return CreateBuilding((Game::Enums::Buildings)data[1]
+                    return CreateBuilding((Game_n::Enums::Buildings)data[1]
 						, extractInt(&data, 3, data[2])
 						, extractInt(&data, data[2] + 3 + 1, data[data[2] + 3]));
 
 				//Casting of QueueBuilding
 				case (uc)Type::QueueBuilding:
-					return QueueBuilding((Game::Enums::Buildings)data[1], extractInt(&data, 3, data[2]));
+                    return QueueBuilding((Game_n::Enums::Buildings)data[1], extractInt(&data, 3, data[2]));
 
 				//Casting of QueueUnit
 				case (uc)Type::QueueUnit:
-					return QueueUnit((Game::Enums::Units)data[1], extractInt(&data, 3, data[2]));
+                    return QueueUnit((Game_n::Enums::Units)data[1], extractInt(&data, 3, data[2]));
 
 				//Casting of QueueOpti
 				case (uc)Type::QueueOpti:
-					return QueueOpti((Game::Enums::Opti)data[1], extractInt(&data, 3, data[2]));
+                    return QueueOpti((Game_n::Enums::Opti)data[1], extractInt(&data, 3, data[2]));
 
 				//Casting of Attack
 				case (uc)Type::Attack:
@@ -281,7 +281,7 @@ namespace Network {
 
 				//Casting of EndGame
 				case (uc)Type::EndGame:
-					return EndGame((data[1] == (uc)Messages::EndGame::State::Win ? Messages::EndGame::State::Win : Messages::EndGame::State::Loss));
+                    return EndGame((data[1] == (uc)Messages::EndGame::State::Win ? Messages::EndGame::State::Win : Messages::EndGame::State::Loss));
 
 				//Casting of Quit
 				case (uc)Type::Quit:

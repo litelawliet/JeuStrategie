@@ -18,12 +18,12 @@ FenPrincipale::FenPrincipale()
     actionCreerPartie->setShortcut(QKeySequence("Ctrl+C"));
     actionQuitter->setShortcut(QKeySequence("Ctrl+Q"));
 
-    connect(actionCreerPartie, &QAction::triggered, this, &FenPrincipale::createGame);
-    connect(actionJoindrePartie, &QAction::triggered, this, &FenPrincipale::joinGame);
+    connect(actionCreerPartie, &QAction::triggered, this, &FenPrincipale::createGame_n);
+    connect(actionJoindrePartie, &QAction::triggered, this, &FenPrincipale::joinGame_n);
     connect(actionQuitter, SIGNAL(triggered()), qApp, SLOT(quit()));
 }
 
-void FenPrincipale::joinGame() {
+void FenPrincipale::joinGame_n() {
     if ( !Network::Start() )
         {
             std::cout << "Error starting sockets : " << Network::Errors::Get() << std::endl;
@@ -68,13 +68,14 @@ void FenPrincipale::joinGame() {
                     }
                     else if (msg->is<Network::Messages::UserData>())
                     {
-                        auto userdata = msg->as<Network::Messages::UserData>();
-                        std::string reply(reinterpret_cast<const char*>(userdata->data.data()), userdata->data.size());
-                        std::cout << "Reponse du serveur : " << reply << std::endl;
-                        std::cout << ">";
-                        std::string phrase;
-                        std::getline(std::cin, phrase);
-                        if (!client.send(reinterpret_cast<const unsigned char*>(phrase.c_str()), static_cast<unsigned int>(phrase.length())))
+                        Network::Messages::UserData userdata(*msg->as<Network::Messages::UserData>());
+                        std::cout << "Reception of [" << Network::GetAddress(userdata.from) << ":" << Network::GetPort(userdata.from) << "] with id[" << userdata.idFrom << "] of type[" << userdata.data[0] << "]\n";
+                        Network::Messages::Base realmsg = userdata.toRealType();
+
+                        Network::Messages::Base resendmsg = handle(&serverside, realmsg);
+
+                        Network::Messages::UserData datas = resendmsg.toUserData();
+                        if (!client.send(reinterpret_cast<const unsigned char*>(datas.data.data()), static_cast<unsigned int>(datas.data.data().length())))
                         {
                             std::cout << "Erreur envoi : " << Network::Errors::Get() << std::endl;
                             break;
@@ -92,6 +93,6 @@ void FenPrincipale::joinGame() {
         Network::Release();
 }
 
-void FenPrincipale::createGame() {
+void FenPrincipale::createGame_n() {
 
 }

@@ -294,16 +294,16 @@ namespace Network
 
 				/*
 					\brief default constructor
-					\param[in] codeRace of type Game::Enums::Races
+                    \param[in] codeRace of type Game_n::Enums::Races
 				*/
-				SelectRace(Game::Enums::Races codeRace)
+                SelectRace(Game_n::Enums::Races codeRace)
 					:Base(Type::SelectRace)
 					, m_codeRace(codeRace)
 				{}
 
 				vUc toUserData();
 
-				Game::Enums::Races m_codeRace;/*!< race's code*/
+                Game_n::Enums::Races m_codeRace;/*!< race's code*/
 		};
 
 		/*!
@@ -317,16 +317,16 @@ namespace Network
 
 				/*!
 					\brief default constructor
-					\param[in] codeColor of type Game::Enums::Colors
+                    \param[in] codeColor of type Game_n::Enums::Colors
 				*/
-				SelectColor(Game::Enums::Colors codeColor)
+                SelectColor(Game_n::Enums::Colors codeColor)
 					: Base(Type::SelectColor)
 					, m_codeColor(codeColor)
 				{}
 
 				vUc toUserData();
 
-				Game::Enums::Colors m_codeColor;/*!< color's code*/
+                Game_n::Enums::Colors m_codeColor;/*!< color's code*/
 		};
 
 		/*!
@@ -370,12 +370,12 @@ namespace Network
 
 				/*!
 					\brief default constructor
-					\param[in] codeUnit of type Game::Enums::Units : code of the unit to create
+                    \param[in] codeUnit of type Game_n::Enums::Units : code of the unit to create
 					\param[in] x of type int : x position
 					\param[in] y of type int : y position
 					\deprecated
 				*/
-				CreateUnit(Game::Enums::Units codeUnit, int x, int y)
+                CreateUnit(Game_n::Enums::Units codeUnit, int x, int y)
 					: Base(Type::CreateUnit)
 					, m_codeUnit(codeUnit)
 					, m_x(x)
@@ -384,7 +384,7 @@ namespace Network
 
 				vUc toUserData();
 
-				Game::Enums::Units m_codeUnit;/*!< unit's code to create*/
+                Game_n::Enums::Units m_codeUnit;/*!< unit's code to create*/
 				int m_x;/*!< x position*/
 				int m_y;/*!< y position*/
 		};
@@ -400,10 +400,10 @@ namespace Network
 
 				/*!
 					\brief default constructor
-					\param[in] codeUnit of type Game::Enums::Units : the unit to queue
+                    \param[in] codeUnit of type Game_n::Enums::Units : the unit to queue
 					\param[in] hashCodeBuilding of type int : the building which has to queue the unit
 				*/
-				QueueUnit(Game::Enums::Units codeUnit, int hashCodeBuilding)
+                QueueUnit(Game_n::Enums::Units codeUnit, int hashCodeBuilding)
 					: Base(Type::QueueUnit)
 					, m_codeUnit(codeUnit)
 					, m_hashCodeBuilding(hashCodeBuilding)
@@ -411,7 +411,7 @@ namespace Network
 
 				vUc toUserData();
 
-				Game::Enums::Units m_codeUnit;/*!< unit's code to queue*/
+                Game_n::Enums::Units m_codeUnit;/*!< unit's code to queue*/
 				int m_hashCodeBuilding;/*!< the building which has to queue the unit*/
 		};
 
@@ -476,11 +476,11 @@ namespace Network
 				/*!
 					\brief default constructor
 
-					\param[in] codeBuilding of type Game::Enums::Buildings : building type identifier
+                    \param[in] codeBuilding of type Game_n::Enums::Buildings : building type identifier
 					\param[in] x of type int : x position
 					\param[in] y of type int : y position
 				*/
-				CreateBuilding(Game::Enums::Buildings codeBuilding, int x, int y)
+                CreateBuilding(Game_n::Enums::Buildings codeBuilding, int x, int y)
 					: Base(Type::CreateBuilding)
 					, m_codeBuilding(codeBuilding)
 					, m_x(x)
@@ -489,7 +489,7 @@ namespace Network
 
 				vUc toUserData();
 
-				Game::Enums::Buildings m_codeBuilding;/*!< building type's id*/
+                Game_n::Enums::Buildings m_codeBuilding;/*!< building type's id*/
 				int m_x;/*!< x position*/
 				int m_y;/*!< y position*/
 		};
@@ -506,16 +506,16 @@ namespace Network
 			/*!
 				\brief default constructor
 
-				\param[in] codeOpti of type Game::Enums::Opti : optimisation type identifier
+                \param[in] codeOpti of type Game_n::Enums::Opti : optimisation type identifier
 			*/
-			CreateOpti(Game::Enums::Opti codeOpti)
+            CreateOpti(Game_n::Enums::Opti codeOpti)
 				: Base(Type::CreateOpti)
 				, m_codeOpti(codeOpti)
 			{}
 
 			vUc toUserData();
 
-			Game::Enums::Opti m_codeOpti;/*!< opti type's id*/
+            Game_n::Enums::Opti m_codeOpti;/*!< opti type's id*/
 		};
 
 		/*!
@@ -530,10 +530,10 @@ namespace Network
 				/*!
 					\brief default constructor
 
-					\param[in] codeBuilding of type Game::Buildings : building to create's id
+                    \param[in] codeBuilding of type Game_n::Buildings : building to create's id
 					\param[in] hashCodeBuilding of type int : identifier of the building which has to queue this building ////Maybe will it be a unit hash code////
 				*/
-				QueueBuilding(Game::Enums::Buildings codeBuilding, int hashCodeBuilding)
+                QueueBuilding(Game_n::Enums::Buildings codeBuilding, int hashCodeBuilding)
 					: Base(Type::QueueBuilding)
 					, m_codeBuilding(codeBuilding)
 					, m_hashCodeBuilding(hashCodeBuilding)
@@ -541,7 +541,7 @@ namespace Network
 
 				vUc toUserData();
 
-				Game::Enums::Buildings m_codeBuilding;/*!< building type to queue id*/
+                Game_n::Enums::Buildings m_codeBuilding;/*!< building type to queue id*/
 				int m_hashCodeBuilding;/*!< source building id*/
 		};
 
@@ -557,10 +557,10 @@ namespace Network
 			/*!
 				\brief default constructor
 
-				\param[in] codeOpti of type Game::Buildings : optimisation to create's id
+                \param[in] codeOpti of type Game_n::Buildings : optimisation to create's id
 				\param[in] hashCodeBuilding of type int : identifier of the building which has to queue this optimisation
 			*/
-			QueueOpti(Game::Enums::Opti codeOpti, int hashCodeBuilding)
+            QueueOpti(Game_n::Enums::Opti codeOpti, int hashCodeBuilding)
 				: Base(Type::QueueOpti)
 				, m_codeOpti(codeOpti)
 				, m_hashCodeBuilding(hashCodeBuilding)
@@ -568,7 +568,7 @@ namespace Network
 
 			vUc toUserData();
 
-			Game::Enums::Opti m_codeOpti;/*!< optimisation type to queue id*/
+            Game_n::Enums::Opti m_codeOpti;/*!< optimisation type to queue id*/
 			int m_hashCodeBuilding;/*!< source building id*/
 		};
 

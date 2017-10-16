@@ -1,0 +1,4 @@
+<map id="UltimateWeapon" name="UltimateWeapon">
+<area shape="rect" id="node2" href="$class_defense_building.html" title="DefenseBuilding" alt="" coords="6,80,123,107"/>
+<area shape="rect" id="node3" href="$class_building.html" title="Building" alt="" coords="31,5,99,32"/>
+</map>

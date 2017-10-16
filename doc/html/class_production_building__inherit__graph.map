@@ -1,0 +1,5 @@
+<map id="ProductionBuilding" name="ProductionBuilding">
+<area shape="rect" id="node3" href="$class_drilling_machine.html" title="DrillingMachine" alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node4" href="$class_refueling.html" title="Refueling" alt="" coords="141,155,218,181"/>
+<area shape="rect" id="node2" href="$class_building.html" title="Building" alt="" coords="85,5,153,32"/>
+</map>

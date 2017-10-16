@@ -21,11 +21,11 @@ class FenPrincipale : public QMainWindow
         /**
          * @brief slot qui rejoint une partie préalablement créée
          */
-        void joinGame();
+        void joinGame_n();
         /**
          * @brief slot qui créé une partie
          */
-        void createGame();
+        void createGame_n();
 
 };
 

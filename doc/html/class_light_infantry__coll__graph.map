@@ -1,0 +1,4 @@
+<map id="LightInfantry" name="LightInfantry">
+<area shape="rect" id="node2" href="$class_battle_unit.html" title="BattleUnit" alt="" coords="13,80,93,107"/>
+<area shape="rect" id="node3" href="$class_unit.html" title="Unit" alt="" coords="29,5,76,32"/>
+</map>

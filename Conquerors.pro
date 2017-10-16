@@ -74,8 +74,9 @@ SOURCES += \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.cpp \
     ServerSide/handler.cpp \
+    ServerSide/main.cpp
     ServerSide/Serverside.cpp \
-    Game/game.cpp
+    Game_n/Game_n.cpp
 
 HEADERS += \
     FenPrincipale.h \
@@ -86,8 +87,8 @@ HEADERS += \
     CommunicationProtocols/Messages.hpp \
     CommunicationProtocols/Sockets.hpp \
     CommunicationProtocols/Utils.hpp \
-    Game/Enums.hpp \
-    Game/Game.hpp \
+    Game_n/Enums.hpp \
+    Game_n/Game_n.hpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Airport.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/AirTurret.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Armory.h \
@@ -132,6 +133,6 @@ HEADERS += \
     ServerSide/handler.h \
     CommunicationProtocols/commsock.h \
     ServerSide/Serverside.h \
-    Game/Game.hpp
+    Game_n/Game_n.hpp
 
 FORMS += \

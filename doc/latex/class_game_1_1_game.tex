@@ -1,0 +1,129 @@
+\hypertarget{class_game_1_1_game}{}\section{Game\+:\+:Game Class Reference}
+\label{class_game_1_1_game}\index{Game\+::\+Game@{Game\+::\+Game}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_game_1_1_game_a372bbb1ac29108132252ef735f03867f}{State} \{ \hyperlink{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fae599161956d626eda4cb0a5ffb85271c}{State\+::\+Idle}, 
+\hyperlink{class_game_1_1_game_a372bbb1ac29108132252ef735f03867faa6122a65eaa676f700ae68d393054a37}{State\+::\+Start}, 
+\hyperlink{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fa87557f11575c0ad78e4e28abedc13b6e}{State\+::\+End}
+ \}\begin{DoxyCompactList}\small\item\em different states of game \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_1_1_game_a8686480ec3d4c7bfcd3ad291dd9b0e68}{add\+Player} (\hyperlink{class_game_1_1_player}{Player} $\ast$p)
+\begin{DoxyCompactList}\small\item\em add player to game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_1_1_game_a38bc10d6ea07e82ca028938bc0e7513c}\label{class_game_1_1_game_a38bc10d6ea07e82ca028938bc0e7513c}} 
+void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a21f12dbd350321ad6ca85bc64313881f}\label{class_game_1_1_game_a21f12dbd350321ad6ca85bc64313881f}} 
+bool {\bfseries contains} (\hyperlink{class_game_1_1_player}{Player} $\ast$player) const
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_af1aebf44eed584e43f07bd48badb5e0d}\label{class_game_1_1_game_af1aebf44eed584e43f07bd48badb5e0d}} 
+\hyperlink{class_game_1_1_game_a372bbb1ac29108132252ef735f03867f}{State} {\bfseries get\+State} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a93b334fe6fb3aef6e628b3646046857d}\label{class_game_1_1_game_a93b334fe6fb3aef6e628b3646046857d}} 
+bool {\bfseries full} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a43436c805ad02a9112c3ca660fdfc5e1}\label{class_game_1_1_game_a43436c805ad02a9112c3ca660fdfc5e1}} 
+void {\bfseries change\+Race} (\hyperlink{class_game_1_1_player}{Player} $\ast$p, \hyperlink{_enums_8hpp_a04ca481553f9a4e7ed98901dbf50951f}{Enums\+::\+Races} race)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a548d44529ffae4bd7f29225a183a043a}\label{class_game_1_1_game_a548d44529ffae4bd7f29225a183a043a}} 
+void {\bfseries change\+Color} (\hyperlink{class_game_1_1_player}{Player} $\ast$p, \hyperlink{_enums_8hpp_abb0511074ee3233e3e580a22e3890526}{Enums\+::\+Colors} color)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_ac3627a87d68d0d0006447fd38bd3f864}\label{class_game_1_1_game_ac3627a87d68d0d0006447fd38bd3f864}} 
+void {\bfseries move\+Unit} (uint64\+\_\+t key\+Unit, int x, int y)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a6712efb840aa776ba5770163c27a7dd6}\label{class_game_1_1_game_a6712efb840aa776ba5770163c27a7dd6}} 
+void {\bfseries move\+Units} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_ad89f16336d45ddeb1c67f3ff5bc27622}\label{class_game_1_1_game_ad89f16336d45ddeb1c67f3ff5bc27622}} 
+void {\bfseries queue\+Building} (\hyperlink{_enums_8hpp_add4fc5f0dd1a3afd564cd9461448b5fb}{Enums\+::\+Buildings} code\+Building, uint64\+\_\+t key\+Building)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a0c2bc1cd31e26c1cc9fb92d975383357}\label{class_game_1_1_game_a0c2bc1cd31e26c1cc9fb92d975383357}} 
+void {\bfseries queue\+Unit} (\hyperlink{_enums_8hpp_a5de90297f23c12d88e6896fd4283a864}{Enums\+::\+Units} code\+Unit, uint64\+\_\+t key\+Building)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a3b142537750834388cc8b87d6b188d56}\label{class_game_1_1_game_a3b142537750834388cc8b87d6b188d56}} 
+void {\bfseries queue\+Opti} (\hyperlink{_enums_8hpp_aa338eae1354a35329bd6005bab3fbecb}{Enums\+::\+Opti} code\+Opti, uint64\+\_\+t key\+Building)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_af3ba47ba9d3d39f2a57c71eb3fff3a22}\label{class_game_1_1_game_af3ba47ba9d3d39f2a57c71eb3fff3a22}} 
+void {\bfseries create\+Building} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_ac66074f6d88c1cea957db601e51ca347}\label{class_game_1_1_game_ac66074f6d88c1cea957db601e51ca347}} 
+void {\bfseries create\+Unit} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_abeb9c37475334253553ed185d6c13782}\label{class_game_1_1_game_abeb9c37475334253553ed185d6c13782}} 
+void {\bfseries create\+Opti} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_ad045a3ff5b78a783285ef99900584dd4}\label{class_game_1_1_game_ad045a3ff5b78a783285ef99900584dd4}} 
+void {\bfseries attack} (uint64\+\_\+t key\+Attacker, uint64\+\_\+t key\+Target)
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_af3b493de18bab3335abea9a17a083a3d}\label{class_game_1_1_game_af3b493de18bab3335abea9a17a083a3d}} 
+void {\bfseries set\+Targets} ()
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a9b5e9af4775817c9f898fa459f9ef2b6}\label{class_game_1_1_game_a9b5e9af4775817c9f898fa459f9ef2b6}} 
+void {\bfseries end} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a25b31adb532e32c26c291b7f2a0dab9f}\label{class_game_1_1_game_a25b31adb532e32c26c291b7f2a0dab9f}} 
+static const size\+\_\+t {\bfseries nb\+Player\+Max} = 2
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_1_1_game_a7f4241aa9ecc051c75f779af132a52ed}\label{class_game_1_1_game_a7f4241aa9ecc051c75f779af132a52ed}} 
+class {\bfseries Player}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_game_1_1_game_a372bbb1ac29108132252ef735f03867f}\label{class_game_1_1_game_a372bbb1ac29108132252ef735f03867f}} 
+\index{Game\+::\+Game@{Game\+::\+Game}!State@{State}}
+\index{State@{State}!Game\+::\+Game@{Game\+::\+Game}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum Game\+::\+Game\+::\+State\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+different states of game 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!Game\+::\+Game@{Game\+::\+Game}}\index{Game\+::\+Game@{Game\+::\+Game}!Idle@{Idle}}}\mbox{\Hypertarget{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fae599161956d626eda4cb0a5ffb85271c}\label{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fae599161956d626eda4cb0a5ffb85271c}} 
+Idle&waiting players \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!Game\+::\+Game@{Game\+::\+Game}}\index{Game\+::\+Game@{Game\+::\+Game}!Start@{Start}}}\mbox{\Hypertarget{class_game_1_1_game_a372bbb1ac29108132252ef735f03867faa6122a65eaa676f700ae68d393054a37}\label{class_game_1_1_game_a372bbb1ac29108132252ef735f03867faa6122a65eaa676f700ae68d393054a37}} 
+Start&in progress \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End@{End}!Game\+::\+Game@{Game\+::\+Game}}\index{Game\+::\+Game@{Game\+::\+Game}!End@{End}}}\mbox{\Hypertarget{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fa87557f11575c0ad78e4e28abedc13b6e}\label{class_game_1_1_game_a372bbb1ac29108132252ef735f03867fa87557f11575c0ad78e4e28abedc13b6e}} 
+End&end of match \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_game_a8686480ec3d4c7bfcd3ad291dd9b0e68}\label{class_game_1_1_game_a8686480ec3d4c7bfcd3ad291dd9b0e68}} 
+\index{Game\+::\+Game@{Game\+::\+Game}!add\+Player@{add\+Player}}
+\index{add\+Player@{add\+Player}!Game\+::\+Game@{Game\+::\+Game}}
+\subsubsection{\texorpdfstring{add\+Player()}{addPlayer()}}
+{\footnotesize\ttfamily void Game\+::\+Game\+::add\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_1_1_player}{Player} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+add player to game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & of type \hyperlink{class_game_1_1_player}{Player} \+: player to add \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game/\hyperlink{_game_8hpp}{Game.\+hpp}\item 
+Game/\hyperlink{game_8cpp}{game.\+cpp}\end{DoxyCompactItemize}

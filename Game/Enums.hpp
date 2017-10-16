@@ -10,13 +10,13 @@
 typedef unsigned char uc;
 
 /*!
-	\namespace Game
+    \namespace Game_n
 	\brief contains all game's things
 */
-namespace Game {
+namespace Game_n {
 
 	/*!
-		\namespace Game
+        \namespace Enums
 		\brief contains all enums of Game
 	*/
 	namespace Enums {

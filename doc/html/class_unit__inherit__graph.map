@@ -1,0 +1,12 @@
+<map id="Unit" name="Unit">
+<area shape="rect" id="node2" href="$class_battle_unit.html" title="BattleUnit" alt="" coords="100,183,180,209"/>
+<area shape="rect" id="node11" href="$class_harvester.html" title="Harvester" alt="" coords="101,233,179,260"/>
+<area shape="rect" id="node3" href="$class_cleaning_infantry.html" title="CleaningInfantry" alt="" coords="228,5,345,32"/>
+<area shape="rect" id="node4" href="$class_heavy_aviation.html" title="HeavyAviation" alt="" coords="233,56,340,83"/>
+<area shape="rect" id="node5" href="$class_heavy_infantry.html" title="HeavyInfantry" alt="" coords="235,107,339,133"/>
+<area shape="rect" id="node6" href="$class_heavy_vehicle.html" title="HeavyVehicle" alt="" coords="235,157,338,184"/>
+<area shape="rect" id="node7" href="$class_light_aviation.html" title="LightAviation" alt="" coords="238,208,335,235"/>
+<area shape="rect" id="node8" href="$class_light_infantry.html" title="LightInfantry" alt="" coords="239,259,334,285"/>
+<area shape="rect" id="node9" href="$class_light_vehicle.html" title="LightVehicle" alt="" coords="240,309,333,336"/>
+<area shape="rect" id="node10" href="$class_medic.html" title="Medic" alt="" coords="258,360,315,387"/>
+</map>

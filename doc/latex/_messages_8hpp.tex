@@ -1,0 +1,115 @@
+\hypertarget{_messages_8hpp}{}\section{Communication\+Protocols/\+Messages.hpp File Reference}
+\label{_messages_8hpp}\index{Communication\+Protocols/\+Messages.\+hpp@{Communication\+Protocols/\+Messages.\+hpp}}
+
+
+\hyperlink{namespace_messages}{Messages}\textquotesingle{} class definition.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Game/\+Enums.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sockets.\+hpp\char`\"{}}\newline
+Include dependency graph for Messages.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_messages_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_messages_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}
+\begin{DoxyCompactList}\small\item\em reference class for all messages \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_connection}{Network\+::\+Messages\+::\+Connection}
+\begin{DoxyCompactList}\small\item\em to send when connecting \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_disconnection}{Network\+::\+Messages\+::\+Disconnection}
+\begin{DoxyCompactList}\small\item\em to send when disconnecting \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_user_info}{Network\+::\+Messages\+::\+User\+Info}
+\item 
+class \hyperlink{class_network_1_1_messages_1_1_accept}{Network\+::\+Messages\+::\+Accept}
+\begin{DoxyCompactList}\small\item\em to tell client if he can connect to server or not \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_create_game}{Network\+::\+Messages\+::\+Create\+Game}
+\begin{DoxyCompactList}\small\item\em to send to create a game \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_join_game}{Network\+::\+Messages\+::\+Join\+Game}
+\begin{DoxyCompactList}\small\item\em to send to join an existing game \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_start_game}{Network\+::\+Messages\+::\+Start\+Game}
+\begin{DoxyCompactList}\small\item\em to send when the game is ready and can start \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_select_race}{Network\+::\+Messages\+::\+Select\+Race}
+\begin{DoxyCompactList}\small\item\em to send when a player is selecting a race \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_select_color}{Network\+::\+Messages\+::\+Select\+Color}
+\begin{DoxyCompactList}\small\item\em to send when a player is selecting a color \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_move_unit}{Network\+::\+Messages\+::\+Move\+Unit}
+\begin{DoxyCompactList}\small\item\em to send when a player move a unit \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_create_unit}{Network\+::\+Messages\+::\+Create\+Unit}
+\begin{DoxyCompactList}\small\item\em to send when a unit is created \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_queue_unit}{Network\+::\+Messages\+::\+Queue\+Unit}
+\begin{DoxyCompactList}\small\item\em to send when queueing units \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_attack}{Network\+::\+Messages\+::\+Attack}
+\begin{DoxyCompactList}\small\item\em to send when something is attacking something else \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_destroy_unit}{Network\+::\+Messages\+::\+Destroy\+Unit}
+\begin{DoxyCompactList}\small\item\em to send when a unit is supposed to die \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_create_building}{Network\+::\+Messages\+::\+Create\+Building}
+\begin{DoxyCompactList}\small\item\em to send when a building is created \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_create_opti}{Network\+::\+Messages\+::\+Create\+Opti}
+\begin{DoxyCompactList}\small\item\em to send when an optimisation is created \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_queue_building}{Network\+::\+Messages\+::\+Queue\+Building}
+\begin{DoxyCompactList}\small\item\em to send when queueing a building \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_queue_opti}{Network\+::\+Messages\+::\+Queue\+Opti}
+\begin{DoxyCompactList}\small\item\em to send when queueing an optimisation \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_destroy_building}{Network\+::\+Messages\+::\+Destroy\+Building}
+\begin{DoxyCompactList}\small\item\em to send when a building is supposed to die \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_end_game}{Network\+::\+Messages\+::\+End\+Game}
+\begin{DoxyCompactList}\small\item\em to send the the game ends \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_quit}{Network\+::\+Messages\+::\+Quit}
+\begin{DoxyCompactList}\small\item\em to send when a player leaves the game \end{DoxyCompactList}\item 
+class \hyperlink{class_network_1_1_messages_1_1_user_data}{Network\+::\+Messages\+::\+User\+Data}
+\begin{DoxyCompactList}\small\item\em to send when signing up in game \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_network}{Network}
+\begin{DoxyCompactList}\small\item\em contains all network things \end{DoxyCompactList}\item 
+ \hyperlink{namespace_messages}{Messages}
+\begin{DoxyCompactList}\small\item\em contains all message things \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_messages_8hpp_ae7f714408b598d79937a1d4fe0b2081f}\label{_messages_8hpp_ae7f714408b598d79937a1d4fe0b2081f}} 
+\#define {\bfseries D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+S\+S\+A\+GE}(name)~friend class Base; static const Base\+::\+Type Static\+Type = Base\+::\+Type\+::name
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_messages_8hpp_af8ecdd9d7d0f3cdced7f9a83dc659959}\label{_messages_8hpp_af8ecdd9d7d0f3cdced7f9a83dc659959}} 
+typedef unsigned char {\bfseries uc}
+\item 
+\mbox{\Hypertarget{_messages_8hpp_a47977a45c4bbe91a91b3ea91778872aa}\label{_messages_8hpp_a47977a45c4bbe91a91b3ea91778872aa}} 
+typedef std\+::vector$<$ unsigned char $>$ {\bfseries v\+Uc}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_messages_8cpp_a14eaed27c058c65ca73609b2a6aae547}\label{_messages_8cpp_a14eaed27c058c65ca73609b2a6aae547}} 
+void {\bfseries Network\+::\+Messages\+::format} (v\+Uc $\ast$dest, int attr)
+\item 
+\mbox{\Hypertarget{_messages_8cpp_ada7707259ea1e275059cbd83321a6ca4}\label{_messages_8cpp_ada7707259ea1e275059cbd83321a6ca4}} 
+int {\bfseries Network\+::\+Messages\+::extract\+Int} (const v\+Uc $\ast$source, int from, char size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_messages}{Messages}\textquotesingle{} class definition. 
+
+\begin{DoxyAuthor}{Author}
+Friday 
+\end{DoxyAuthor}
