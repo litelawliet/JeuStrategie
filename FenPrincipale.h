@@ -52,8 +52,8 @@ class FenPrincipale : public QMainWindow
 		QQueue<Network::Messages::UserData> receivingQueue;/*!< Received messages queue*/
 		QMutex* comMutex;/*!< global mutex*/
 		HandlerThread* ht;
-		ReceptionThread rt;
-		SendingThread st;
+		ReceptionThread* rt;
+		SendingThread* st;
 };
 
 #endif

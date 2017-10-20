@@ -28,7 +28,6 @@ SOURCES += \
     FenPrincipale.cpp \
     myrect.cpp \
     CommunicationProtocols/TCP/Client.cpp \
-    CommunicationProtocols/TCP/Server.cpp \
     CommunicationProtocols/Errors.cpp \
     CommunicationProtocols/Sockets.cpp \
     CommunicationProtocols/Messages.cpp \
@@ -75,14 +74,12 @@ SOURCES += \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.cpp \
     ServerSide/handler.cpp \
     ServerSide/main.cpp
-    ServerSide/Serverside.cpp \
     Game_n/Game_n.cpp
 
 HEADERS += \
     FenPrincipale.h \
     myrect.h \
     CommunicationProtocols/TCP/Client.hpp \
-    CommunicationProtocols/TCP/Server.hpp \
     CommunicationProtocols/Errors.hpp \
     CommunicationProtocols/Messages.hpp \
     CommunicationProtocols/Sockets.hpp \
@@ -132,7 +129,6 @@ HEADERS += \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.h \
     ServerSide/handler.h \
     CommunicationProtocols/commsock.h \
-    ServerSide/Serverside.h \
     Game_n/Game_n.hpp
 
 FORMS += \
