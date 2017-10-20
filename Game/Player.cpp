@@ -22,6 +22,11 @@ namespace Game_n {
 		return mPseudo;
 	}
 
+	Game * Player::getGame() const
+	{
+		return mGame;
+	}
+
 	void Player::setPseudo(std::string pseudo)
 	{
 		mPseudo = pseudo;
@@ -40,6 +45,11 @@ namespace Game_n {
 	void Player::setClient(uint64_t client)
 	{
 		mClient = client;
+	}
+
+	void Player::setGame(Game * g)
+	{
+		mGame = g;
 	}
 
 	uint64_t Game_n::Player::getClient() const

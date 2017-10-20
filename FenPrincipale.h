@@ -1,6 +1,7 @@
 #ifndef HEADER_FENPRINCIPALE
 #define HEADER_FENPRINCIPALE
 
+#include "CommunicationProtocols/commsock.h"
 #include <QtWidgets>
 
 #include "CommunicationProtocols/Sockets.hpp"

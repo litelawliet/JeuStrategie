@@ -5,6 +5,7 @@
 #include "Enums.hpp"
 
 namespace Game_n {
+	class Game;
 	/*!
 	\class Player Game.hpp Game
 	\brief to play Games
@@ -18,18 +19,21 @@ namespace Game_n {
 			Enums::Colors getColor() const;
 			Enums::Races getRace() const;
 			std::string getPseudo() const;
+			Game* getGame() const;
 			
 			// SET
 			void setPseudo(std::string pseudo);
 			void setRace(Enums::Races race);
 			void setColor(Enums::Colors color);
 			void setClient(uint64_t client);
+			void setGame(Game* g);
 
 		private:
 			uint64_t mClient;
 			std::string mPseudo;
 			Enums::Colors mColor;
 			Enums::Races mRace;
+			Game* mGame;
 		};
 }
 
