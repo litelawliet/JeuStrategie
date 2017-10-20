@@ -9,13 +9,22 @@
 #include "CommunicationProtocols/Errors.hpp"
 #include "CommunicationProtocols/TCP/Client.hpp"
 
+#include <QQueue>
+#include <QThread>
+#include <QMutex>
+
+class ReceptionThread;
+class SendingThread;
+
 class FenPrincipale : public QMainWindow
 {
     public:
     /**
      * @brief Constructeur par défaut
      */
-    FenPrincipale();
+    FenPrincipale(std::string add, int port);
+
+	~FenPrincipale();
 
     public slots:
         /**
@@ -27,6 +36,20 @@ class FenPrincipale : public QMainWindow
          */
         void createGame();
 
+		Network::TCP::Client* getClient() { return &mClient; }
+
+		QMutex* getComMutex() { return comMutex; }
+
+		QQueue<Network::Messages::UserData>* getSendingQueue() { return &sendingQueue; }
+
+		QQueue<Network::Messages::UserData>* getReceivingQueue() { return &receivingQueue; }
+
+	private:
+
+		Network::TCP::Client mClient;/*!< client to communicate with the server*/
+		QQueue<Network::Messages::UserData> sendingQueue;/*!< Messages to send queue*/
+		QQueue<Network::Messages::UserData> receivingQueue;/*!< Received messages queue*/
+		QMutex* comMutex;/*!< global mutex*/
 };
 
 #endif

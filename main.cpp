@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    FenPrincipale fenetre;
+    FenPrincipale fenetre("127.0.0.1",9999);
     fenetre.show();
 
 

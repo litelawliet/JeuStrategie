@@ -12,7 +12,7 @@ namespace Game {
 	}
 
 	void Game::start() {
-		//thread
+		state = State::Start;
 	}
 
 	bool Game::contains(Player *player) const{
@@ -62,7 +62,7 @@ namespace Game {
 		//Creating unit
 	}
 
-	void Game::createOpti() {
+	void Game::createOpti(Research research, Player* owner) {
 		//Creating opti
 	}
 
@@ -72,6 +72,23 @@ namespace Game {
 
 	void Game::setTargets() {
 		//set targets of all units
+	}
+
+	void Game::upQueues() {
+		for (auto it = mQueueBuildings.begin(); it != mQueueBuildings.end(); it++) {
+			it->second--;
+			if (!it->second) mBuildings[mBuildings.end()->first+1] = it->first;
+		}
+
+		for (auto it = mQueueUnits.begin(); it != mQueueUnits.end(); it++) {
+			it->second--;
+			if (!it->second) mUnits[mUnits.end()->first + 1] = it->first;
+		}
+
+		for (auto it = mQueueResearchs.begin(); it != mQueueResearchs.end(); it++) {
+			it->second--;
+			if (!it->second) createOpti(it->first, it->first.getOwner());
+		}
 	}
 
 	void Game::end() {

@@ -95,15 +95,19 @@ namespace Game{
 			void queueOpti(Enums::Opti codeOpti, uint64_t keyBuilding);
 			void createBuilding();
 			void createUnit();
-			void createOpti();
+			void createOpti(Research research, Player* owner);
 			void attack(uint64_t keyAttacker, uint64_t keyTarget);
 			void setTargets();
 			void end();
+			void upQueues();
 
 		private:
 			std::vector<Player*> mPlayers;/*!< list of players in game*/
 			std::map<uint64_t, Unit&> mUnits;
 			std::map<uint64_t, Building&> mBuildings;
+			std::map<Building&, unsigned int> mQueueBuildings;
+			std::map<Unit&, unsigned int> mQueueUnits;
+			std::map<Research&, unsigned int> mQueueResearchs;
 			State state;/*!< game state*/
 	};
 }

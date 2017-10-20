@@ -12,3 +12,7 @@ Research::~Research()
 {
 	std::cout << "RESEARCH destructor\n";
 }
+
+Game::Player* Research::getOwner() {
+	return owner;
+}

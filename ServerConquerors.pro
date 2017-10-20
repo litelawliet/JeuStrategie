@@ -20,7 +20,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     CommunicationProtocols/Errors.cpp \
     CommunicationProtocols/Messages.cpp \
-    CommunicationProtocols/ServerTestMain.cpp \
     CommunicationProtocols/Sockets.cpp \
     CommunicationProtocols/TCP/Client.cpp \
     CommunicationProtocols/TCP/Server.cpp \

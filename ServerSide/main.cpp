@@ -7,6 +7,7 @@
 #include "ServerSide/handler.h"
 #include <QtSql\qsqldatabase.h>
 #include <QtSql\qsqlerror.h>
+#include <QtSql\qsqldriver.h>
 #include <qcoreapplication.h>
 
 
@@ -32,7 +33,7 @@ int main(int argc, char** argv)
 	//Initialisation MySQL
 	//////////////////////
 	QCoreApplication app(argc,argv);
-	QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
+	QSqlDatabase mysql = QSqlDatabase::addDatabase("QSQLITE");
 	mysql.setHostName("localhost");
 	mysql.setDatabaseName("conquerors");
 	mysql.setUserName("conquerors");
