@@ -6,7 +6,7 @@
 
 #include "CommunicationProtocols/Messages.hpp"
 #include "ServerSide/Serverside.h"
-#include "handler.h"
+#include "Handler.h"
 
 using namespace Network::Messages;
 

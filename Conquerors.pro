@@ -27,8 +27,8 @@ SOURCES += \
         main.cpp \
     FenPrincipale.cpp \
 	Game/Game.cpp \
-	Game/player.cpp \
-	ServerSide/handler.cpp \
+	Game/Player.cpp \
+	ServerSide/Handler.cpp \
     CommunicationProtocols/Errors.cpp \
     CommunicationProtocols/Sockets.cpp \
     CommunicationProtocols/Messages.cpp \
@@ -80,8 +80,8 @@ HEADERS += \
     FenPrincipale.h \
     Game/Enums.hpp \
     Game/Game.hpp \
-	Game/player.hpp \
-	 ServerSide/handler.h \
+	Game/Player.hpp \
+	ServerSide/Handler.h \
     CommunicationProtocols/commsock.h \
 	CommunicationProtocols/TCP/Client.hpp \
     CommunicationProtocols/Errors.hpp \
