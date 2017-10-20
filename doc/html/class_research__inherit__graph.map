@@ -1,0 +1,7 @@
+<map id="Research" name="Research">
+<area shape="rect" id="node2" href="$class_charged_weapon.html" title="ChargedWeapon" alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node3" href="$class_cyber_suspension.html" title="CyberSuspension" alt="" coords="149,80,274,107"/>
+<area shape="rect" id="node4" href="$class_health_improvement.html" title="HealthImprovement" alt="" coords="298,80,434,107"/>
+<area shape="rect" id="node5" href="$class_stim_pistol.html" title="StimPistol" alt="" coords="458,80,541,107"/>
+<area shape="rect" id="node6" href="$class_tungsten_ammunition.html" title="TungstenAmmunition" alt="" coords="565,80,711,107"/>
+</map>

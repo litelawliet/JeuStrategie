@@ -4,8 +4,8 @@
 	\author Friday
 */
 
-#include "CommunicationProtocols\Messages.hpp"
-#include "ServerSide\Serverside.h"
+#include "CommunicationProtocols/Messages.hpp"
+#include "ServerSide/Serverside.h"
 #include "handler.h"
 
 using namespace Network::Messages;
@@ -29,7 +29,7 @@ Base handle(ServerSide *s,const UserInfo *msg){
 Base handle(ServerSide *s,const CreateGame *msg){
 	if(msg->result==Base::Result::Success){
 		try{
-			Game::Game* newGame = s->addGame();
+            Game_n::Game* newGame = s->addGame();
 			s->joinGame(s->getPlayer(msg->idFrom), newGame);
 			return CreateGame(*msg);
 		}
@@ -56,7 +56,7 @@ Base handle(ServerSide *s,const JoinGame *msg){
 Base handle(ServerSide *s, const StartGame *msg){
 	if(msg->result==Base::Result::Success){
 		try{
-			Game::Game* game = s->getGame(s->getPlayer(msg->idFrom));
+            Game_n::Game* game = s->getGame(s->getPlayer(msg->idFrom));
 			if(s->readyToStart(game)){
 				s->startGame(game);
 				return StartGame(*msg);
@@ -108,7 +108,7 @@ Base handle(ServerSide *s, const Attack *msg){
 }
 
 Base handle(ServerSide *s, const Quit *msg){
-	Game::Game* game = s->getGame(s->getPlayer(msg->idFrom));
+    Game_n::Game* game = s->getGame(s->getPlayer(msg->idFrom));
 	s->setGameEnd(game);
 	return Quit(s->ended(game) ? Quit::Status::Ended : Quit::Status::NotEnded);
 }

@@ -1,0 +1,4 @@
+<map id="Barricade" name="Barricade">
+<area shape="rect" id="node2" href="$class_protection_building.html" title="ProtectionBuilding" alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$class_building.html" title="Building" alt="" coords="35,5,103,32"/>
+</map>

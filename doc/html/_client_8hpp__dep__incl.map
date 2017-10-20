@@ -1,0 +1,11 @@
+<map id="CommunicationProtocols/TCP/Client.hpp" name="CommunicationProtocols/TCP/Client.hpp">
+<area shape="rect" id="node2" href="$_client_8cpp.html" title="definition of Client, ReceptionHandler, SendingHandler, ConnectionHandler and ClientImpl ..." alt="" coords="5,95,173,136"/>
+<area shape="rect" id="node3" href="$_server_8hpp.html" title="declaration of Server and ServerImpl " alt="" coords="299,95,467,136"/>
+<area shape="rect" id="node4" href="$_server_8cpp.html" title="definition of Server and ServerImpl methods " alt="" coords="13,184,181,225"/>
+<area shape="rect" id="node5" href="$_fen_principale_8h_source.html" title="FenPrincipale.h" alt="" coords="205,191,317,218"/>
+<area shape="rect" id="node9" href="$_game_8hpp.html" title="declaration of classes Game and Player " alt="" coords="515,102,637,129"/>
+<area shape="rect" id="node6" href="$handler_8h.html" title="handle functions definition " alt="" coords="529,191,671,218"/>
+<area shape="rect" id="node8" href="$_serverside_8h.html" title="definition of Server and ServerImpl methods " alt="" coords="341,191,504,218"/>
+<area shape="rect" id="node7" href="$handler_8cpp.html" title="handle functions definition " alt="" coords="521,273,679,300"/>
+<area shape="rect" id="node10" href="$game_8cpp.html" title="definition of Game&#39;s methods " alt="" coords="695,191,814,218"/>
+</map>

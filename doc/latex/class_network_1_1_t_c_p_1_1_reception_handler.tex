@@ -1,0 +1,66 @@
+\hypertarget{class_network_1_1_t_c_p_1_1_reception_handler}{}\section{Network\+:\+:T\+CP\+:\+:Reception\+Handler Class Reference}
+\label{class_network_1_1_t_c_p_1_1_reception_handler}\index{Network\+::\+T\+C\+P\+::\+Reception\+Handler@{Network\+::\+T\+C\+P\+::\+Reception\+Handler}}
+
+
+to receive messages  
+
+
+
+
+{\ttfamily \#include $<$Client$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_reception_handler_a36514d3785313fee4feb3d0b70d2b57a}\label{class_network_1_1_t_c_p_1_1_reception_handler_a36514d3785313fee4feb3d0b70d2b57a}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler_a36514d3785313fee4feb3d0b70d2b57a}{Reception\+Handler} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_network_1_1_t_c_p_1_1_reception_handler_a2c14a1b0489719aaa194daf67f2bf47f}{init} (S\+O\+C\+K\+ET sckt)
+\begin{DoxyCompactList}\small\item\em initialize \hyperlink{class_network_1_1_t_c_p_1_1_reception_handler}{Reception\+Handler} \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base} $>$ \hyperlink{class_network_1_1_t_c_p_1_1_reception_handler_a2b872cdd7bd5ac78f8b7a6d2c3380289}{recv} ()
+\begin{DoxyCompactList}\small\item\em to receive messages \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+to receive messages 
+
+; 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_reception_handler_a2c14a1b0489719aaa194daf67f2bf47f}\label{class_network_1_1_t_c_p_1_1_reception_handler_a2c14a1b0489719aaa194daf67f2bf47f}} 
+\index{Network\+::\+T\+C\+P\+::\+Reception\+Handler@{Network\+::\+T\+C\+P\+::\+Reception\+Handler}!init@{init}}
+\index{init@{init}!Network\+::\+T\+C\+P\+::\+Reception\+Handler@{Network\+::\+T\+C\+P\+::\+Reception\+Handler}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Network\+::\+T\+C\+P\+::\+Reception\+Handler\+::init (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{sckt }\end{DoxyParamCaption})}
+
+
+
+initialize \hyperlink{class_network_1_1_t_c_p_1_1_reception_handler}{Reception\+Handler} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sckt} & of type struct S\+O\+C\+K\+ET \+: target \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_reception_handler_a2b872cdd7bd5ac78f8b7a6d2c3380289}\label{class_network_1_1_t_c_p_1_1_reception_handler_a2b872cdd7bd5ac78f8b7a6d2c3380289}} 
+\index{Network\+::\+T\+C\+P\+::\+Reception\+Handler@{Network\+::\+T\+C\+P\+::\+Reception\+Handler}!recv@{recv}}
+\index{recv@{recv}!Network\+::\+T\+C\+P\+::\+Reception\+Handler@{Network\+::\+T\+C\+P\+::\+Reception\+Handler}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base} $>$ Network\+::\+T\+C\+P\+::\+Reception\+Handler\+::recv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+to receive messages 
+
+\begin{DoxyReturn}{Returns}
+received message 
+\end{DoxyReturn}
+$<$ if already available, datas are send
+
+$<$ connexion termin? correctement
+
+$<$ error handling 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_client_8cpp}{Client.\+cpp}\end{DoxyCompactItemize}

@@ -15,13 +15,13 @@ class ReceptionThread : public QThread
 {
 	Q_OBJECT
 public:
-	ReceptionThread(FenPrincipale* parent);
+	ReceptionThread(FenPrincipale& parent);
 	~ReceptionThread();
 protected:
 	void run();
 private:
 	QMutex* mMutex;
-	Network::TCP::Client* mClient;/*!< client to use*/
-	FenPrincipale* mParent;/*!< thread's parent*/
+	Network::TCP::Client& mClient;/*!< client to use*/
+	FenPrincipale& mParent;/*!< thread's parent*/
 };
 

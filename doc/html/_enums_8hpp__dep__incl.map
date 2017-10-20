@@ -1,0 +1,11 @@
+<map id="Game/Enums.hpp" name="Game/Enums.hpp">
+<area shape="rect" id="node2" href="$_messages_8hpp.html" title="Messages&#39; class definition. " alt="" coords="361,80,529,121"/>
+<area shape="rect" id="node8" href="$_game_8hpp.html" title="declaration of classes Game and Player " alt="" coords="690,87,811,114"/>
+<area shape="rect" id="node10" href="$_serverside_8h.html" title="definition of Server and ServerImpl methods " alt="" coords="835,177,997,203"/>
+<area shape="rect" id="node3" href="$_client_8cpp.html" title="definition of Client, ReceptionHandler, SendingHandler, ConnectionHandler and ClientImpl ..." alt="" coords="5,169,173,211"/>
+<area shape="rect" id="node4" href="$_server_8cpp.html" title="definition of Server and ServerImpl methods " alt="" coords="197,169,365,211"/>
+<area shape="rect" id="node5" href="$_fen_principale_8h_source.html" title="FenPrincipale.h" alt="" coords="389,177,501,203"/>
+<area shape="rect" id="node6" href="$handler_8h.html" title="handle functions definition " alt="" coords="525,177,667,203"/>
+<area shape="rect" id="node7" href="$handler_8cpp.html" title="handle functions definition " alt="" coords="517,259,675,285"/>
+<area shape="rect" id="node9" href="$game_8cpp.html" title="definition of Game&#39;s methods " alt="" coords="691,177,810,203"/>
+</map>

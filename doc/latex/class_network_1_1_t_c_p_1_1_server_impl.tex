@@ -1,0 +1,66 @@
+\hypertarget{class_network_1_1_t_c_p_1_1_server_impl}{}\section{Network\+:\+:T\+CP\+:\+:Server\+Impl Class Reference}
+\label{class_network_1_1_t_c_p_1_1_server_impl}\index{Network\+::\+T\+C\+P\+::\+Server\+Impl@{Network\+::\+T\+C\+P\+::\+Server\+Impl}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a403326bc1862f1666931d7552e5d73dd}\label{class_network_1_1_t_c_p_1_1_server_impl_a403326bc1862f1666931d7552e5d73dd}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a403326bc1862f1666931d7552e5d73dd}{Server\+Impl} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a5f24accaf0c35e6bca1944310d6d365b}\label{class_network_1_1_t_c_p_1_1_server_impl_a5f24accaf0c35e6bca1944310d6d365b}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a5f24accaf0c35e6bca1944310d6d365b}{$\sim$\+Server\+Impl} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}\label{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}} 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}{start} (unsigned short \+\_\+port)
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee}\label{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee}} 
+void \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee}{stop} ()
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+void \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}{update} ()
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}\label{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}} 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}{send\+To} (uint64\+\_\+t clientid, const unsigned char $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}\label{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}} 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}{send\+To\+All} (const unsigned char $\ast$data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}\label{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base} $>$ \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}{poll} ()
+\begin{DoxyCompactList}\small\item\em cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} $\ast$ \hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a962a14d824fdd5aec78eacb0643b206d}{get} (uint64\+\_\+t id\+Client)
+\begin{DoxyCompactList}\small\item\em to get a specific client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a962a14d824fdd5aec78eacb0643b206d}\label{class_network_1_1_t_c_p_1_1_server_impl_a962a14d824fdd5aec78eacb0643b206d}} 
+\index{Network\+::\+T\+C\+P\+::\+Server\+Impl@{Network\+::\+T\+C\+P\+::\+Server\+Impl}!get@{get}}
+\index{get@{get}!Network\+::\+T\+C\+P\+::\+Server\+Impl@{Network\+::\+T\+C\+P\+::\+Server\+Impl}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_t_c_p_1_1_client}{Client} $\ast$ Network\+::\+T\+C\+P\+::\+Server\+Impl\+::get (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{id\+Client }\end{DoxyParamCaption})}
+
+
+
+to get a specific client 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em id\+Client} & of type uint64\+\_\+t \+: client id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a client pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}\label{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}} 
+\index{Network\+::\+T\+C\+P\+::\+Server\+Impl@{Network\+::\+T\+C\+P\+::\+Server\+Impl}!update@{update}}
+\index{update@{update}!Network\+::\+T\+C\+P\+::\+Server\+Impl@{Network\+::\+T\+C\+P\+::\+Server\+Impl}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Network\+::\+T\+C\+P\+::\+Server\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+cf. class \hyperlink{class_network_1_1_t_c_p_1_1_server}{Server} 
+
+$<$ accepts 10 next connections 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_server_8cpp}{Server.\+cpp}\end{DoxyCompactItemize}

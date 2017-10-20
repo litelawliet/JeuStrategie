@@ -1,0 +1,7 @@
+<map id="CommunicationProtocols/TCP/Server.cpp" name="CommunicationProtocols/TCP/Server.cpp">
+<area shape="rect" id="node2" href="$_server_8hpp.html" title="declaration of Server and ServerImpl " alt="" coords="162,95,247,121"/>
+<area shape="rect" id="node3" href="$_client_8hpp.html" title="declaration of Client and ClientImpl " alt="" coords="164,169,245,196"/>
+<area shape="rect" id="node4" href="$_sockets_8hpp.html" title="declaration of some function related to sockets " alt="" coords="409,244,515,271"/>
+<area shape="rect" id="node17" href="$_messages_8hpp.html" title="Messages&#39; class definition. " alt="" coords="457,95,576,121"/>
+<area shape="rect" id="node20" href="$_enums_8hpp.html" title="definition of enums needed in game " alt="" coords="321,169,459,196"/>
+</map>

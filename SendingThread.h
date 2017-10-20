@@ -13,13 +13,13 @@ class FenPrincipale;
 class SendingThread : public QThread
 {
 public:
-	SendingThread(FenPrincipale* parent);
+	SendingThread(FenPrincipale& parent);
 	~SendingThread();
 protected:
 	void run();
 private:
 	QMutex* mMutex;
-	Network::TCP::Client* mClient;/*!< client to use*/
-	FenPrincipale* mParent;/*!< thread's parent*/
+	Network::TCP::Client& mClient;/*!< client to use*/
+	FenPrincipale& mParent;/*!< thread's parent*/
 };
 

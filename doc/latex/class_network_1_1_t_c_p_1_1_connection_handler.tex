@@ -1,0 +1,82 @@
+\hypertarget{class_network_1_1_t_c_p_1_1_connection_handler}{}\section{Network\+:\+:T\+CP\+:\+:Connection\+Handler Class Reference}
+\label{class_network_1_1_t_c_p_1_1_connection_handler}\index{Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}}
+
+
+object to handle connection  
+
+
+
+
+{\ttfamily \#include $<$Client$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_af393160b127321472c05855b1c9cecd6}\label{class_network_1_1_t_c_p_1_1_connection_handler_af393160b127321472c05855b1c9cecd6}} 
+\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_af393160b127321472c05855b1c9cecd6}{Connection\+Handler} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+bool \hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}{connect} (S\+O\+C\+K\+ET sckt, const std\+::string \&address, unsigned short port)
+\begin{DoxyCompactList}\small\item\em to connect a socket to a server \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_connection}{Messages\+::\+Connection} $>$ \hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}{poll} ()
+\begin{DoxyCompactList}\small\item\em receive confirmation about connection \end{DoxyCompactList}\item 
+const sockaddr\+\_\+in \& \hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_a1a52c94072d1b0563b0398f53ec3e8d4}{connected\+Address} () const
+\begin{DoxyCompactList}\small\item\em get connection address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+object to handle connection 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}\label{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}} 
+\index{Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}!connect@{connect}}
+\index{connect@{connect}!Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Network\+::\+T\+C\+P\+::\+Connection\+Handler\+::connect (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{sckt,  }\item[{const std\+::string \&}]{address,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+to connect a socket to a server 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sckt} & of type struct S\+O\+C\+K\+ET \+: connection socket \\
+\hline
+\mbox{\tt in}  & {\em address} & of type string\& \+: server\textquotesingle{}s ip address \\
+\hline
+\mbox{\tt in}  & {\em port} & of type unsigned short \+: server\textquotesingle{}s port\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if connection successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_a1a52c94072d1b0563b0398f53ec3e8d4}\label{class_network_1_1_t_c_p_1_1_connection_handler_a1a52c94072d1b0563b0398f53ec3e8d4}} 
+\index{Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}!connected\+Address@{connected\+Address}}
+\index{connected\+Address@{connected\+Address}!Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{connected\+Address()}{connectedAddress()}}
+{\footnotesize\ttfamily const sockaddr\+\_\+in\& Network\+::\+T\+C\+P\+::\+Connection\+Handler\+::connected\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get connection address 
+
+\begin{DoxyReturn}{Returns}
+connected address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}\label{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}} 
+\index{Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}!poll@{poll}}
+\index{poll@{poll}!Network\+::\+T\+C\+P\+::\+Connection\+Handler@{Network\+::\+T\+C\+P\+::\+Connection\+Handler}}
+\subsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{class_network_1_1_messages_1_1_connection}{Messages\+::\+Connection} $>$ Network\+::\+T\+C\+P\+::\+Connection\+Handler\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+receive confirmation about connection 
+
+\begin{DoxyReturn}{Returns}
+a Connection Message object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\+T\+C\+P/\hyperlink{_client_8cpp}{Client.\+cpp}\end{DoxyCompactItemize}

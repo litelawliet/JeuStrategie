@@ -1,6 +1,7 @@
 #include "FenPrincipale.h"
 #include "ReceptionThread.h"
 #include "SendingThread.h"
+#include "HandlerThread.h"
 #include <iostream>
 
 FenPrincipale::FenPrincipale(std::string addr, int port)
@@ -36,14 +37,22 @@ FenPrincipale::FenPrincipale(std::string addr, int port)
 		qApp->quit();
 	}
 	comMutex=new QMutex(QMutex::RecursionMode::NonRecursive);
-	ReceptionThread reception(this);
-	reception.start();
-	SendingThread sending(this);
-	sending.start();
+	rt = new ReceptionThread(*this);
+	rt->start();
+	st = new SendingThread(*this);
+	st->start();
+	ht = new HandlerThread(*this);
+	ht->start();
 
 }
 
 FenPrincipale::~FenPrincipale() {
+	rt->disconnect();
+	st->disconnect();
+	ht->disconnect();
+	delete rt;
+	delete st;
+	delete ht;
 	delete comMutex;
 	Network::Release();
 }

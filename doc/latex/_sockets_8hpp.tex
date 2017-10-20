@@ -1,0 +1,78 @@
+\hypertarget{_sockets_8hpp}{}\section{Communication\+Protocols/\+Sockets.hpp File Reference}
+\label{_sockets_8hpp}\index{Communication\+Protocols/\+Sockets.\+hpp@{Communication\+Protocols/\+Sockets.\+hpp}}
+
+
+declaration of some function related to sockets  
+
+
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$cerrno$>$}\newline
+{\ttfamily \#include $<$poll.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Sockets.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sockets_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sockets_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_network}{Network}
+\begin{DoxyCompactList}\small\item\em contains all network things \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_sockets_8hpp_aff55fe551a9992a54ec54621c524d0a4}\label{_sockets_8hpp_aff55fe551a9992a54ec54621c524d0a4}} 
+\#define {\bfseries S\+O\+C\+K\+ET}~int
+\item 
+\mbox{\Hypertarget{_sockets_8hpp_a26769957ec1a2beaf223f33b66ee64ab}\label{_sockets_8hpp_a26769957ec1a2beaf223f33b66ee64ab}} 
+\#define {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET}~((int)-\/1)
+\item 
+\mbox{\Hypertarget{_sockets_8hpp_a633b0396ff93d336a088412a190a5072}\label{_sockets_8hpp_a633b0396ff93d336a088412a190a5072}} 
+\#define {\bfseries S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}~(int(-\/1))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_network_af8698db2b5ae3d0da4544304cffc3abb}{Network\+::\+Start} ()
+\begin{DoxyCompactList}\small\item\em start error handler \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_a676c065de2077bbb8e64ef84dfde1640}\label{namespace_network_a676c065de2077bbb8e64ef84dfde1640}} 
+void \hyperlink{namespace_network_a676c065de2077bbb8e64ef84dfde1640}{Network\+::\+Release} ()
+\begin{DoxyCompactList}\small\item\em clean error handler \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_a907c6a68c883d4e7b8d12df59b107a4e}{Network\+::\+Set\+Non\+Blocking} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em to set a socket in non-\/blocking mode \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_af60ca5be87dc2bb828053b77586c5db1}{Network\+::\+Set\+Reuse\+Addr} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em allows reuse of an address \end{DoxyCompactList}\item 
+void \hyperlink{namespace_network_a709c320df831b3a900af6ae1c8849b00}{Network\+::\+Close\+Socket} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em close an open socket \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_network_a0b77e5f397e6738b7e68d51cf0d3e46a}{Network\+::\+Get\+Address} (const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em to get ip\+Address from socket addr \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_ac815d49aae02b422d1aae507f9475a72}\label{namespace_network_ac815d49aae02b422d1aae507f9475a72}} 
+unsigned short {\bfseries Network\+::\+Get\+Port} (const sockaddr\+\_\+in \&addr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+declaration of some function related to sockets 
+
+\begin{DoxyAuthor}{Author}
+Friday 
+\end{DoxyAuthor}

@@ -5,7 +5,7 @@
 	\brief handle functions definition
 	\author Friday
 */
-#include "ServerSide\Serverside.h"
+#include "ServerSide/Serverside.h"
 #include "../CommunicationProtocols/Sockets.hpp"
 #include "../CommunicationProtocols/TCP/Server.hpp"
 #include "../CommunicationProtocols/Messages.hpp"
@@ -25,22 +25,22 @@ Base handle(ServerSide *s, Base msg);
 Base handle(ServerSide *s,const UserInfo *msg);
 
 /*!
-	\brief handle a CreateGame
-	\param[in] msg of type CreateGame
+    \brief handle a CreateGame_n
+    \param[in] msg of type CreateGame_n
 	\return a message
  */
 Base handle(ServerSide *s,const CreateGame *msg);
 
 /*!
-	\brief handle a JoinGaùe
-	\param[in] msg of type JoinGame
+	\brief handle a JoinGaï¿½e
+    \param[in] msg of type JoinGame_n
 	\return a message
 */
 Base handle(ServerSide *s,const JoinGame *msg);
 
 /*!
-	\brief handle a StartGame
-	\param[in] msg of type StartGame
+    \brief handle a StartGame_n
+    \param[in] msg of type StartGame_n
 	\return a message
 */
 Base handle(ServerSide *s,const StartGame *msg);

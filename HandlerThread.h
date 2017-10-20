@@ -13,13 +13,13 @@ class FenPrincipale;
 class HandlerThread : public QThread
 {
 public:
-	HandlerThread(FenPrincipale* parent);
+	HandlerThread(FenPrincipale& parent);
 	~HandlerThread();
 protected:
 	void run();
 private:
 	QMutex* mMutex;
-	Network::TCP::Client* mClient;/*!< client to use*/
-	FenPrincipale* mParent;/*!< thread's parent*/
+	Network::TCP::Client& mClient;/*!< client to use*/
+	FenPrincipale& mParent;/*!< thread's parent*/
 };
 

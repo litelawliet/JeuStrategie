@@ -1,0 +1,47 @@
+<map id="Game/Game.hpp" name="Game/Game.hpp">
+<area shape="rect" id="node4" href="$_client_8hpp.html" title="declaration of Client and ClientImpl " alt="" coords="774,80,954,121"/>
+<area shape="rect" id="node8" href="$_buildings_headers_8h_source.html" title="UnitsAndBuildings/UnitsAnd\lBuildings/BuildingsHeaders.h" alt="" coords="1715,80,1907,121"/>
+<area shape="rect" id="node33" href="$_units_headers_8h_source.html" title="UnitsAndBuildings/UnitsAnd\lBuildings/UnitsHeaders.h" alt="" coords="3819,80,4005,121"/>
+<area shape="rect" id="node45" href="$_research_headers_8h_source.html" title="UnitsAndBuildings/UnitsAnd\lBuildings/ResearchHeaders.h" alt="" coords="4757,80,4952,121"/>
+<area shape="rect" id="node50" href="$_enums_8hpp.html" title="definition of enums needed in game " alt="" coords="4976,87,5064,114"/>
+<area shape="rect" id="node5" href="$_sockets_8hpp.html" title="declaration of some function related to sockets " alt="" coords="5,169,112,196"/>
+<area shape="rect" id="node9" href="$_building_8h_source.html" title="Buildings/Building.h" alt="" coords="1996,319,2132,345"/>
+<area shape="rect" id="node10" href="$_air_turret_8h_source.html" title="Buildings/AirTurret.h" alt="" coords="1059,169,1199,196"/>
+<area shape="rect" id="node11" href="$_defense_building_8h_source.html" title="DefenseBuilding.h" alt="" coords="1363,244,1491,271"/>
+<area shape="rect" id="node12" href="$_airport_8h_source.html" title="Buildings/Airport.h" alt="" coords="331,169,459,196"/>
+<area shape="rect" id="node13" href="$_training_building_8h_source.html" title="TrainingBuilding.h" alt="" coords="539,244,664,271"/>
+<area shape="rect" id="node14" href="$_armory_8h_source.html" title="Buildings/Armory.h" alt="" coords="851,169,983,196"/>
+<area shape="rect" id="node15" href="$_research_building_8h_source.html" title="ResearchBuilding.h" alt="" coords="954,244,1089,271"/>
+<area shape="rect" id="node16" href="$_barrack_8h_source.html" title="Buildings/Barrack.h" alt="" coords="534,169,669,196"/>
+<area shape="rect" id="node17" href="$_barricade_8h_source.html" title="Buildings/Barricade.h" alt="" coords="1833,169,1978,196"/>
+<area shape="rect" id="node18" href="$_protection_building_8h_source.html" title="ProtectionBuilding.h" alt="" coords="1995,244,2133,271"/>
+<area shape="rect" id="node19" href="$_bunker_8h_source.html" title="Buildings/Bunker.h" alt="" coords="1275,169,1405,196"/>
+<area shape="rect" id="node20" href="$_cyber_factory_8h_source.html" title="Buildings/CyberFactory.h" alt="" coords="2337,169,2506,196"/>
+<area shape="rect" id="node21" href="$_training_n_research_building_8h_source.html" title="TrainingNResearchBuilding.h" alt="" coords="2387,244,2578,271"/>
+<area shape="rect" id="node22" href="$_drilling_machine_8h_source.html" title="Buildings/DrillingMachine.h" alt="" coords="2757,169,2936,196"/>
+<area shape="rect" id="node23" href="$_production_building_8h_source.html" title="ProductionBuilding.h" alt="" coords="2685,244,2827,271"/>
+<area shape="rect" id="node24" href="$_factory_8h_source.html" title="Buildings/Factory.h" alt="" coords="693,169,827,196"/>
+<area shape="rect" id="node25" href="$_gate_8h_source.html" title="Buildings/Gate.h" alt="" coords="2054,169,2173,196"/>
+<area shape="rect" id="node26" href="$_ground_turret_8h_source.html" title="Buildings/GroundTurret.h" alt="" coords="1430,169,1597,196"/>
+<area shape="rect" id="node27" href="$_headquarter_8h_source.html" title="Buildings/Headquarter.h" alt="" coords="2851,244,3013,271"/>
+<area shape="rect" id="node28" href="$_laboratory_8h_source.html" title="Buildings/Laboratory.h" alt="" coords="2582,169,2733,196"/>
+<area shape="rect" id="node29" href="$_refueling_8h_source.html" title="Buildings/Refueling.h" alt="" coords="3011,169,3157,196"/>
+<area shape="rect" id="node30" href="$_secondary_headquarter_8h_source.html" title="Buildings/SecondaryHeadquarter.h" alt="" coords="3037,244,3259,271"/>
+<area shape="rect" id="node31" href="$_ultimate_weapon_8h_source.html" title="Buildings/UltimateWeapon.h" alt="" coords="1621,169,1808,196"/>
+<area shape="rect" id="node32" href="$_wall_8h_source.html" title="Buildings/Wall.h" alt="" coords="2197,169,2313,196"/>
+<area shape="rect" id="node34" href="$_unit_8h_source.html" title="Units/Unit.h" alt="" coords="3953,319,4045,345"/>
+<area shape="rect" id="node35" href="$_battle_unit_8h_source.html" title="Units/BattleUnit.h" alt="" coords="3935,244,4062,271"/>
+<area shape="rect" id="node36" href="$_cleaning_infantry_8h_source.html" title="Units/CleaningInfantry.h" alt="" coords="3384,169,3547,196"/>
+<area shape="rect" id="node37" href="$_harvester_8h_source.html" title="Units/Harvester.h" alt="" coords="4379,244,4504,271"/>
+<area shape="rect" id="node38" href="$_heavy_aviation_8h_source.html" title="Units/HeavyAviation.h" alt="" coords="3571,169,3725,196"/>
+<area shape="rect" id="node39" href="$_heavy_infantry_8h_source.html" title="Units/HeavyInfantry.h" alt="" coords="3749,169,3899,196"/>
+<area shape="rect" id="node40" href="$_heavy_vehicle_8h_source.html" title="Units/HeavyVehicle.h" alt="" coords="3924,169,4073,196"/>
+<area shape="rect" id="node41" href="$_light_aviation_8h_source.html" title="Units/LightAviation.h" alt="" coords="4098,169,4241,196"/>
+<area shape="rect" id="node42" href="$_light_infantry_8h_source.html" title="Units/LightInfantry.h" alt="" coords="4265,169,4405,196"/>
+<area shape="rect" id="node43" href="$_light_vehicle_8h_source.html" title="Units/LightVehicle.h" alt="" coords="4429,169,4568,196"/>
+<area shape="rect" id="node44" href="$_medic_8h_source.html" title="Units/Medic.h" alt="" coords="4593,169,4695,196"/>
+<area shape="rect" id="node46" href="$_research_8h_source.html" title="Researches/Research.h" alt="" coords="4959,244,5121,271"/>
+<area shape="rect" id="node47" href="$_charged_weapon_8h_source.html" title="Researches/ChargedWeapon.h" alt="" coords="4822,169,5026,196"/>
+<area shape="rect" id="node48" href="$_cyber_suspension_8h_source.html" title="Researches/CyberSuspension.h" alt="" coords="5051,169,5261,196"/>
+<area shape="rect" id="node49" href="$_health_improvement_8h_source.html" title="Researches/HealthImprovement.h" alt="" coords="5285,169,5507,196"/>
+</map>

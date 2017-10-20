@@ -1,0 +1,275 @@
+\hypertarget{handler_8cpp}{}\section{Server\+Side/handler.cpp File Reference}
+\label{handler_8cpp}\index{Server\+Side/handler.\+cpp@{Server\+Side/handler.\+cpp}}
+
+
+handle functions definition  
+
+
+{\ttfamily \#include \char`\"{}Communication\+Protocols\textbackslash{}\+Messages.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Server\+Side\textbackslash{}\+Serverside.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}handler.\+h\char`\"{}}\newline
+Include dependency graph for handler.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{handler_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{handler_8cpp_a6bb0027a3cb7d505facd2bb0126f8400}\label{handler_8cpp_a6bb0027a3cb7d505facd2bb0126f8400}} 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} {\bfseries handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, \hyperlink{class_network_1_1_messages_1_1_base}{Base} msg)
+\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a65fe802ced0e272548863cf90bead5a1}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_user_info}{User\+Info} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle User\+Info message \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_ae986baaafdc8c17950e958373d707cba}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_create_game}{Create\+Game} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Create\+Game \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_aa2a9ab1a94987a3f66796d8236093342}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_join_game}{Join\+Game} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Join\+Gaùe \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a0f5dd382b2ed0535bcae6e46dce3fb2d}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_start_game}{Start\+Game} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Start\+Game \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a1345ed2831f7ebf342d52a79e872f715}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_select_race}{Select\+Race} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Select\+Race \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a2cbab051f261dbe7b75bae4d5ec747ce}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_select_color}{Select\+Color} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Select\+Color \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a11d84b947b0f100a75079f4e72ddfed0}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_move_unit}{Move\+Unit} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Move\+Unit \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a5ede4ecae4f3f119f5c21a457262498e}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_queue_building}{Queue\+Building} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Queue\+Building \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a4363a506a85c34518b9a336589877f0c}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_queue_unit}{Queue\+Unit} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Queue\+Unit \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a3fb3c3269d4831c19eacf606c9a335f8}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_queue_opti}{Queue\+Opti} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Queue\+Opti \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_ae87b2361672b74e9a0b7522e3d015ae7}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_attack}{Attack} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Attack \end{DoxyCompactList}\item 
+\hyperlink{class_network_1_1_messages_1_1_base}{Base} \hyperlink{handler_8cpp_a58b39526fc230e115662bdd2afe84f9d}{handle} (\hyperlink{class_server_side}{Server\+Side} $\ast$s, const \hyperlink{class_network_1_1_messages_1_1_quit}{Quit} $\ast$msg)
+\begin{DoxyCompactList}\small\item\em handle a Quit \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+handle functions definition 
+
+\begin{DoxyAuthor}{Author}
+Friday 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{handler_8cpp_a65fe802ced0e272548863cf90bead5a1}\label{handler_8cpp_a65fe802ced0e272548863cf90bead5a1}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_user_info}{User\+Info} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle User\+Info message 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type User\+Data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Accept message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_ae986baaafdc8c17950e958373d707cba}\label{handler_8cpp_ae986baaafdc8c17950e958373d707cba}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_create_game}{Create\+Game} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Create\+Game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Create\+Game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_aa2a9ab1a94987a3f66796d8236093342}\label{handler_8cpp_aa2a9ab1a94987a3f66796d8236093342}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_join_game}{Join\+Game} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Join\+Gaùe 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Join\+Game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a0f5dd382b2ed0535bcae6e46dce3fb2d}\label{handler_8cpp_a0f5dd382b2ed0535bcae6e46dce3fb2d}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_start_game}{Start\+Game} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Start\+Game 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Start\+Game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a1345ed2831f7ebf342d52a79e872f715}\label{handler_8cpp_a1345ed2831f7ebf342d52a79e872f715}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_select_race}{Select\+Race} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Select\+Race 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Select\+Race \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a2cbab051f261dbe7b75bae4d5ec747ce}\label{handler_8cpp_a2cbab051f261dbe7b75bae4d5ec747ce}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_select_color}{Select\+Color} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Select\+Color 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Select\+Color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a11d84b947b0f100a75079f4e72ddfed0}\label{handler_8cpp_a11d84b947b0f100a75079f4e72ddfed0}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_move_unit}{Move\+Unit} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Move\+Unit 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Move\+Unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a5ede4ecae4f3f119f5c21a457262498e}\label{handler_8cpp_a5ede4ecae4f3f119f5c21a457262498e}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_queue_building}{Queue\+Building} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Queue\+Building 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Queue\+Building \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a4363a506a85c34518b9a336589877f0c}\label{handler_8cpp_a4363a506a85c34518b9a336589877f0c}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_queue_unit}{Queue\+Unit} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Queue\+Unit 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Queue\+Unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a3fb3c3269d4831c19eacf606c9a335f8}\label{handler_8cpp_a3fb3c3269d4831c19eacf606c9a335f8}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_queue_opti}{Queue\+Opti} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Queue\+Opti 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Queue\+Opti \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_ae87b2361672b74e9a0b7522e3d015ae7}\label{handler_8cpp_ae87b2361672b74e9a0b7522e3d015ae7}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_attack}{Attack} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Attack 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{handler_8cpp_a58b39526fc230e115662bdd2afe84f9d}\label{handler_8cpp_a58b39526fc230e115662bdd2afe84f9d}} 
+\index{handler.\+cpp@{handler.\+cpp}!handle@{handle}}
+\index{handle@{handle}!handler.\+cpp@{handler.\+cpp}}
+\subsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily \hyperlink{class_network_1_1_messages_1_1_base}{Base} handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_server_side}{Server\+Side} $\ast$}]{s,  }\item[{const \hyperlink{class_network_1_1_messages_1_1_quit}{Quit} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+handle a Quit 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & of type Quit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a message 
+\end{DoxyReturn}

@@ -1,0 +1,267 @@
+\hypertarget{class_network_1_1_messages_1_1_base}{}\section{Network\+:\+:Messages\+:\+:Base Class Reference}
+\label{class_network_1_1_messages_1_1_base}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+
+
+reference class for all messages  
+
+
+
+
+{\ttfamily \#include $<$Messages$>$}
+
+
+
+Inheritance diagram for Network\+:\+:Messages\+:\+:Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_network_1_1_messages_1_1_base__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a646d774928c7dfac987228f26ab5d46a}\label{class_network_1_1_messages_1_1_base_a646d774928c7dfac987228f26ab5d46a}} 
+enum \hyperlink{class_network_1_1_messages_1_1_base_a646d774928c7dfac987228f26ab5d46a}{Result} \{ {\bfseries Success}, 
+{\bfseries Fail}
+ \}\begin{DoxyCompactList}\small\item\em tell about the action fail or success \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool \hyperlink{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}{is} () const
+\begin{DoxyCompactList}\small\item\em assert if a message is an instance of a type M \end{DoxyCompactList}\item 
+{\footnotesize template$<$class M $>$ }\\const M $\ast$ \hyperlink{class_network_1_1_messages_1_1_base_a37110b6d836ed5f17e7ee77d9dca5932}{as} () const
+\begin{DoxyCompactList}\small\item\em cast a message into another type M \end{DoxyCompactList}\item 
+v\+Uc \hyperlink{class_network_1_1_messages_1_1_base_a3e344e224eab58146feb8c0136cce46f}{to\+User\+Data} ()
+\begin{DoxyCompactList}\small\item\em to format messages into linear datas which can be send by \hyperlink{namespace_t_c_p}{T\+CP} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sockaddr\+\_\+in \hyperlink{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}{from}
+\item 
+uint64\+\_\+t \hyperlink{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}{id\+From}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type} \{ \newline
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Type\+::\+Connection}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Type\+::\+Disconnection}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{Type\+::\+User\+Data}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a21d23644baa10e1eba75fdd29e179288}{Type\+::\+User\+Info}, 
+\newline
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac4408d335012a56ff58937d78050efad}{Type\+::\+Accept}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a3a760cce1a448a2670c31d19b4d2f75a}{Type\+::\+Create\+Game}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a18a6c2f10d6ea5bf747a280849e36456}{Type\+::\+Join\+Game}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8a7b88cd602849e993a8ba3cdef39462}{Type\+::\+Start\+Game}, 
+\newline
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8c810ff10a4a2ed7f5146c8461958ae7}{Type\+::\+Select\+Race}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad236167075bf2e3e80940619f134a2de}{Type\+::\+Select\+Color}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a10408f2259f48d9ff7b4c303aa681f6a}{Type\+::\+Move\+Unit}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a1a6e3dee21335cf2b57e298c38d7ecb0}{Type\+::\+Create\+Unit}, 
+\newline
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a7da2c9980284c5277aa9f04b4e28d4a3}{Type\+::\+Create\+Building}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a710d11003cdc52ad123ac0061b65f196}{Type\+::\+Create\+Opti}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0993af8fd90d95bfa7d1265e1d5b709}{Type\+::\+Queue\+Building}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ae1880e17b8745164efdf5fec711dba9a}{Type\+::\+Queue\+Unit}, 
+\newline
+{\bfseries Queue\+Opti}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4adcfafcb4323b102c7e204555d313ba0a}{Type\+::\+Attack}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a68e5a7f6b4e8e7ae3093c440d9a5a8e3}{Type\+::\+Destroy\+Unit}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad6d262c44ee8adf1a229256b71452063}{Type\+::\+Destroy\+Building}, 
+\newline
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0f29c4900d44c9e32d203ca799163e1}{Type\+::\+End\+Game}, 
+\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a0d82790b0612935992bd564a17ce37d6}{Type\+::\+Quit}
+ \}\begin{DoxyCompactList}\small\item\em define each type of message \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}{Base} (\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type} type)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+reference class for all messages 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Type@{Type}}
+\index{Type@{Type}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Network\+::\+Messages\+::\+Base\+::\+Type}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+
+
+define each type of message 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Connection@{Connection}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Connection@{Connection}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}} 
+Connection&connection message \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disconnection@{Disconnection}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Disconnection@{Disconnection}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}} 
+Disconnection&disconnection message \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{User\+Data@{User\+Data}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!User\+Data@{User\+Data}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}} 
+User\+Data&to send user\textquotesingle{}s datas \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{User\+Info@{User\+Info}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!User\+Info@{User\+Info}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a21d23644baa10e1eba75fdd29e179288}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a21d23644baa10e1eba75fdd29e179288}} 
+User\+Info&to send user profile\textquotesingle{}s details \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Accept@{Accept}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Accept@{Accept}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac4408d335012a56ff58937d78050efad}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac4408d335012a56ff58937d78050efad}} 
+Accept&to accept identification \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create\+Game@{Create\+Game}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Create\+Game@{Create\+Game}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a3a760cce1a448a2670c31d19b4d2f75a}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a3a760cce1a448a2670c31d19b4d2f75a}} 
+Create\+Game&to ask server to create a new game or inform client that\textquotesingle{}s created well \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Join\+Game@{Join\+Game}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Join\+Game@{Join\+Game}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a18a6c2f10d6ea5bf747a280849e36456}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a18a6c2f10d6ea5bf747a280849e36456}} 
+Join\+Game&to ask server to join a created game or inform client that\textquotesingle{}s joined well \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start\+Game@{Start\+Game}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Start\+Game@{Start\+Game}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8a7b88cd602849e993a8ba3cdef39462}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8a7b88cd602849e993a8ba3cdef39462}} 
+Start\+Game&when game\textquotesingle{}s full, starts it or inform that\textquotesingle{}s started \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Select\+Race@{Select\+Race}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Select\+Race@{Select\+Race}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8c810ff10a4a2ed7f5146c8461958ae7}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a8c810ff10a4a2ed7f5146c8461958ae7}} 
+Select\+Race&to inform server about the race choice \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Select\+Color@{Select\+Color}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Select\+Color@{Select\+Color}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad236167075bf2e3e80940619f134a2de}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad236167075bf2e3e80940619f134a2de}} 
+Select\+Color&to inform server about the color choice \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move\+Unit@{Move\+Unit}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Move\+Unit@{Move\+Unit}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a10408f2259f48d9ff7b4c303aa681f6a}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a10408f2259f48d9ff7b4c303aa681f6a}} 
+Move\+Unit&to move a single unit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create\+Unit@{Create\+Unit}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Create\+Unit@{Create\+Unit}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a1a6e3dee21335cf2b57e298c38d7ecb0}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a1a6e3dee21335cf2b57e298c38d7ecb0}} 
+Create\+Unit&to create a single unit \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create\+Building@{Create\+Building}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Create\+Building@{Create\+Building}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a7da2c9980284c5277aa9f04b4e28d4a3}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a7da2c9980284c5277aa9f04b4e28d4a3}} 
+Create\+Building&to create a single building \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create\+Opti@{Create\+Opti}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Create\+Opti@{Create\+Opti}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a710d11003cdc52ad123ac0061b65f196}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a710d11003cdc52ad123ac0061b65f196}} 
+Create\+Opti&to create a single optimisation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Queue\+Building@{Queue\+Building}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Queue\+Building@{Queue\+Building}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0993af8fd90d95bfa7d1265e1d5b709}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0993af8fd90d95bfa7d1265e1d5b709}} 
+Queue\+Building&to queue a single building in construction queue \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Queue\+Unit@{Queue\+Unit}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Queue\+Unit@{Queue\+Unit}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ae1880e17b8745164efdf5fec711dba9a}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ae1880e17b8745164efdf5fec711dba9a}} 
+Queue\+Unit&to queue a single unit in unit queue \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Attack@{Attack}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Attack@{Attack}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4adcfafcb4323b102c7e204555d313ba0a}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4adcfafcb4323b102c7e204555d313ba0a}} 
+Attack&to queue a single optimisation to attack \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Destroy\+Unit@{Destroy\+Unit}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Destroy\+Unit@{Destroy\+Unit}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a68e5a7f6b4e8e7ae3093c440d9a5a8e3}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a68e5a7f6b4e8e7ae3093c440d9a5a8e3}} 
+Destroy\+Unit&to inform about a single unit\textquotesingle{}s death \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Destroy\+Building@{Destroy\+Building}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Destroy\+Building@{Destroy\+Building}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad6d262c44ee8adf1a229256b71452063}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ad6d262c44ee8adf1a229256b71452063}} 
+Destroy\+Building&to inform about a single building\textquotesingle{}s death \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End\+Game@{End\+Game}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!End\+Game@{End\+Game}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0f29c4900d44c9e32d203ca799163e1}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4af0f29c4900d44c9e32d203ca799163e1}} 
+End\+Game&inform about the end and who win \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Quit@{Quit}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Quit@{Quit}}}\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a0d82790b0612935992bd564a17ce37d6}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a0d82790b0612935992bd564a17ce37d6}} 
+Quit&to stop the game \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}\label{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!Base@{Base}}
+\index{Base@{Base}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{Base()}{Base()}}
+{\footnotesize\ttfamily Network\+::\+Messages\+::\+Base\+::\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+default constructor 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em type} & variable of type Type which is the message\textquotesingle{}s type \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a37110b6d836ed5f17e7ee77d9dca5932}\label{class_network_1_1_messages_1_1_base_a37110b6d836ed5f17e7ee77d9dca5932}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!as@{as}}
+\index{as@{as}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{as()}{as()}}
+{\footnotesize\ttfamily template$<$class M $>$ \\
+const M$\ast$ Network\+::\+Messages\+::\+Base\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+cast a message into another type M 
+
+\begin{DoxyReturn}{Returns}
+casted message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}\label{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!is@{is}}
+\index{is@{is}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily template$<$class M $>$ \\
+bool Network\+::\+Messages\+::\+Base\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+assert if a message is an instance of a type M 
+
+\begin{DoxyReturn}{Returns}
+true if the message is an instance of type M, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a3e344e224eab58146feb8c0136cce46f}\label{class_network_1_1_messages_1_1_base_a3e344e224eab58146feb8c0136cce46f}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!to\+User\+Data@{to\+User\+Data}}
+\index{to\+User\+Data@{to\+User\+Data}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{to\+User\+Data()}{toUserData()}}
+{\footnotesize\ttfamily v\+Uc Network\+::\+Messages\+::\+Base\+::to\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+to format messages into linear datas which can be send by \hyperlink{namespace_t_c_p}{T\+CP} 
+
+\begin{DoxyReturn}{Returns}
+formated datas 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}\label{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!from@{from}}
+\index{from@{from}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily sockaddr\+\_\+in Network\+::\+Messages\+::\+Base\+::from}
+
+sender\textquotesingle{}s address \mbox{\Hypertarget{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}\label{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}} 
+\index{Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}!id\+From@{id\+From}}
+\index{id\+From@{id\+From}!Network\+::\+Messages\+::\+Base@{Network\+::\+Messages\+::\+Base}}
+\subsubsection{\texorpdfstring{id\+From}{idFrom}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+Messages\+::\+Base\+::id\+From}
+
+sender\textquotesingle{}s id attributed by the server 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Communication\+Protocols/\hyperlink{_messages_8hpp}{Messages.\+hpp}\end{DoxyCompactItemize}

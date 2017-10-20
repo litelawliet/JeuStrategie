@@ -3,10 +3,10 @@
 
 
 
-ReceptionThread::ReceptionThread(FenPrincipale* parent)
+ReceptionThread::ReceptionThread(FenPrincipale& parent)
 	: mParent(parent)
-	, mMutex(parent->getComMutex())
-	, mClient(mParent->getClient())
+	, mMutex(parent.getComMutex())
+	, mClient(parent.getClient())
 {
 	setParent(0);
 	moveToThread(this);
@@ -15,15 +15,13 @@ ReceptionThread::ReceptionThread(FenPrincipale* parent)
 
 ReceptionThread::~ReceptionThread()
 {
-	delete mClient;
 	delete mMutex;
-	delete mClient;
 }
 
 void ReceptionThread::run() {
 	while (1)
 	{
-		while (auto msg = mClient->poll())
+		while (auto msg = mClient.poll())
 		{
 			if (msg->is<Network::Messages::Connection>())
 			{
@@ -41,7 +39,7 @@ void ReceptionThread::run() {
 			{
 				auto userdata = msg->as<Network::Messages::UserData>();
 				mMutex->lock();
-				mParent->getReceivingQueue()->push_back(*userdata);
+				mParent.getReceivingQueue()->push_back(*userdata);
 				mMutex->unlock();
 			}
 			else if (msg->is<Network::Messages::Disconnection>())

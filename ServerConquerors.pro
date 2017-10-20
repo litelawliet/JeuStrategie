@@ -67,7 +67,7 @@ SOURCES += \
     ServerSide/main.cpp \
     ServerSide/handler.cpp \
     ServerSide/Serverside.cpp \
-    Game/game.cpp
+    Game/Game.cpp \
 
 HEADERS += \
     CommunicationProtocols/Errors.hpp \
@@ -78,6 +78,7 @@ HEADERS += \
     CommunicationProtocols/TCP/Server.hpp \
     Game/Enums.hpp \
     Game/Game.hpp \
+    Game/player.hpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Airport.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/AirTurret.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Armory.h \
@@ -120,5 +121,3 @@ HEADERS += \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.h \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.h \
     CommunicationProtocols/commsock.h \
-    ServerSide/handler.h \
-    ServerSide/Serverside.h

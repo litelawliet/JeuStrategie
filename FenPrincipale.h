@@ -15,6 +15,7 @@
 
 class ReceptionThread;
 class SendingThread;
+class HandlerThread;
 
 class FenPrincipale : public QMainWindow
 {
@@ -36,7 +37,7 @@ class FenPrincipale : public QMainWindow
          */
         void createGame();
 
-		Network::TCP::Client* getClient() { return &mClient; }
+		Network::TCP::Client& getClient() { return mClient; }
 
 		QMutex* getComMutex() { return comMutex; }
 
@@ -50,6 +51,9 @@ class FenPrincipale : public QMainWindow
 		QQueue<Network::Messages::UserData> sendingQueue;/*!< Messages to send queue*/
 		QQueue<Network::Messages::UserData> receivingQueue;/*!< Received messages queue*/
 		QMutex* comMutex;/*!< global mutex*/
+		HandlerThread* ht;
+		ReceptionThread rt;
+		SendingThread st;
 };
 
 #endif

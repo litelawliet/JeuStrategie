@@ -1,0 +1,49 @@
+\hypertarget{_sockets_8cpp}{}\section{Communication\+Protocols/\+Sockets.cpp File Reference}
+\label{_sockets_8cpp}\index{Communication\+Protocols/\+Sockets.\+cpp@{Communication\+Protocols/\+Sockets.\+cpp}}
+
+
+definition of sockets\textquotesingle{} functions  
+
+
+{\ttfamily \#include \char`\"{}Sockets.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Utils.\+hpp\char`\"{}}\newline
+Include dependency graph for Sockets.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_sockets_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_network}{Network}
+\begin{DoxyCompactList}\small\item\em contains all network things \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespace_network_af8698db2b5ae3d0da4544304cffc3abb}{Network\+::\+Start} ()
+\begin{DoxyCompactList}\small\item\em start error handler \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_a676c065de2077bbb8e64ef84dfde1640}\label{namespace_network_a676c065de2077bbb8e64ef84dfde1640}} 
+void \hyperlink{namespace_network_a676c065de2077bbb8e64ef84dfde1640}{Network\+::\+Release} ()
+\begin{DoxyCompactList}\small\item\em clean error handler \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_a907c6a68c883d4e7b8d12df59b107a4e}{Network\+::\+Set\+Non\+Blocking} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em to set a socket in non-\/blocking mode \end{DoxyCompactList}\item 
+bool \hyperlink{namespace_network_af60ca5be87dc2bb828053b77586c5db1}{Network\+::\+Set\+Reuse\+Addr} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em allows reuse of an address \end{DoxyCompactList}\item 
+void \hyperlink{namespace_network_a709c320df831b3a900af6ae1c8849b00}{Network\+::\+Close\+Socket} (S\+O\+C\+K\+ET socket)
+\begin{DoxyCompactList}\small\item\em close an open socket \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespace_network_a0b77e5f397e6738b7e68d51cf0d3e46a}{Network\+::\+Get\+Address} (const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em to get ip\+Address from socket addr \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_network_ac815d49aae02b422d1aae507f9475a72}\label{namespace_network_ac815d49aae02b422d1aae507f9475a72}} 
+unsigned short {\bfseries Network\+::\+Get\+Port} (const sockaddr\+\_\+in \&addr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+definition of sockets\textquotesingle{} functions 
+
+\begin{DoxyAuthor}{Author}
+Friday 
+\end{DoxyAuthor}
