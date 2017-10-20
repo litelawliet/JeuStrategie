@@ -11,8 +11,8 @@
  * Created on 6 octobre 2017, 10:37
  */
 
-#ifndef RESEARCHHEADERS_H
-#define RESEARCHHEADERS_H
+#ifndef RESEARCHESHEADERS_H
+#define RESEARCHESHEADERS_H
 
 #include "Researches/Research.h"
 

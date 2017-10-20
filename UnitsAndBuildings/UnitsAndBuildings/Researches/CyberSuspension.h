@@ -2,11 +2,12 @@
 #define CYBER_SUSPENSION_HPP
 
 #include "Research.h"
+
 class CyberSuspension :
 	public Research
 {
 public:
-	CyberSuspension();
+	CyberSuspension(Game_n::Player* p);
 	~CyberSuspension();
 };
 

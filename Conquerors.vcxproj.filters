@@ -81,6 +81,9 @@
     <ClCompile Include="FenPrincipale.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Gate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -171,19 +174,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="myrect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HandlerThread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ReceptionThread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SendingThread.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Game.cpp">
+    <ClCompile Include="Game\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -341,19 +332,16 @@
     <ClInclude Include="ServerSide\handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="myrect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HandlerThread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SendingThread.h">
+    <ClInclude Include="Game\Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ReceptionThread.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

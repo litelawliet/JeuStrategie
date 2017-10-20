@@ -5,19 +5,24 @@
 */
 
 #include "Game.hpp"
-#include "player.hpp"
 
 namespace Game_n {
 
-	void Game::addPlayer(Player *p) {
+	Game::Game()
+		:state(Enums::State::Idle)
+	{}
+	
+	Game::~Game() {}
+
+	void Game::addPlayer(Player* p) {
 		mPlayers.push_back(p);
 	}
 
 	void Game::start() {
-		state = State::Start;
+		state = Enums::State::Start;
 	}
 
-	bool Game::contains(Player *player) const{
+	bool Game::contains(Player* player) const{
 		for (auto p : mPlayers) {
 			if (p == player) return true;
 		}
@@ -26,15 +31,15 @@ namespace Game_n {
 	}
 
 	bool Game::full() {
-		return nbPlayerMax == mPlayers.size();
+		return NB_PLAYER_MAX == mPlayers.size();
 	}
 
-	void Game::changeRace(Player *p, Enums::Races race) {
-		p->mRace = race;
+	void Game::changeRace(Player& p, Enums::Races race) {
+		p.setRace(race);
 	}
 
-	void Game::changeColor(Player *p, Enums::Colors color) {
-		p->mColor = color;
+	void Game::changeColor(Player& p, Enums::Colors color) {
+		p.setColor(color);
 	}
 
 	void Game::moveUnit(uint64_t keyUnit, int x, int y) {
@@ -64,7 +69,7 @@ namespace Game_n {
 		//Creating unit
 	}
 
-	void Game::createOpti(Research research, Player* owner) {
+	void Game::createOpti(Research& research, Player& owner) {
 		//Creating opti
 	}
 
@@ -76,20 +81,26 @@ namespace Game_n {
 		//set targets of all units
 	}
 
+	// !!!!! Erreur avec l'utilisation de mBuildings et mQueueBuildings (it) lors de l'affectation (typage)
 	void Game::upQueues() {
-		for (auto it = mQueueBuildings.begin(); it != mQueueBuildings.end(); it++) {
-			it->second--;
-			if (!it->second) mBuildings[mBuildings.end()->first+1] = it->first;
+		for (QMap<Building*, int>::iterator it = mQueueBuildings.begin(); it != mQueueBuildings.end(); it++) {
+			it.value()--;
+			if (!it.value()) 
+				mBuildings[mBuildings.end().key() + 1] = *it.key();
 		}
 
-		for (auto it = mQueueUnits.begin(); it != mQueueUnits.end(); it++) {
-			it->second--;
-			if (!it->second) mUnits[mUnits.end()->first + 1] = it->first;
+		for (QMap<Unit*, int>::iterator it = mQueueUnits.begin(); it != mQueueUnits.end(); it++) {
+			it.value()--;
+			if (!it.value())
+				mUnits[mUnits.end().key() + 1] = it.key();
 		}
 
-		for (auto it = mQueueResearchs.begin(); it != mQueueResearchs.end(); it++) {
-			it->second--;
-			if (!it->second) createOpti(it->first, it->first.getOwner());
+		for (QMap<Research*, int>::iterator it = mQueueResearchs.begin(); it != mQueueResearchs.end(); it++) {
+			it.value()--;
+			if (!it.value())
+				// !!!!! Deuxième paramètre doit être de type Game_n::Player& et non Game_n::Research& (*it.key() étant de type Game_n::Research&).
+				//createOpti(*it.key(), *it.key());
+				;
 		}
 	}
 

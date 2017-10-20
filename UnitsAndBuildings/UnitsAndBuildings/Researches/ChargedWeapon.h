@@ -6,7 +6,7 @@ class ChargedWeapon :
 	public Research
 {
 public:
-	ChargedWeapon();
+	ChargedWeapon(Game_n::Player* p);
 	~ChargedWeapon();
 };
 

@@ -2,9 +2,10 @@
 
 
 
-ChargedWeapon::ChargedWeapon()
+ChargedWeapon::ChargedWeapon(Game_n::Player* p)
 {
 	std::cout << "CHARGED WEAPON constructor\n";
+	mOwner = p;
 }
 
 

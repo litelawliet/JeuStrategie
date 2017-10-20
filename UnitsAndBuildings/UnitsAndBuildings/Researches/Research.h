@@ -2,17 +2,19 @@
 #define RESEARCH_HPP
 
 #include <iostream>
-#include "../../../Game/Game.hpp"
+#include "../../../Game/Player.hpp"
 
 class Research
 {
-public:
-	Research();
-	virtual ~Research();
-	Game_n::Player& getOwner() { return mOwner; }
+	public:
+		Research();
+		Research(Game_n::Player* p);
+		virtual ~Research();
 
-private:
-	Game_n::Player& mOwner;
+		Game_n::Player& getOwner();
+
+	protected:
+		Game_n::Player* mOwner;
 };
 
 #endif

@@ -22,6 +22,17 @@ namespace Game_n {
 	namespace Enums {
 
 		/*!
+		\enum State
+
+		\brief different states of Game
+		*/
+		enum class State {
+			Idle,/*!< waiting players*/
+			Start,/*!< in progress*/
+			End,/*!< end of match*/
+		};
+
+		/*!
 			\enum Buildings
 			\brief contains all buildings in game
 		*/

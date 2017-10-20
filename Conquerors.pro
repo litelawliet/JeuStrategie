@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     FenPrincipale.cpp \
-    myrect.cpp \
-    CommunicationProtocols/TCP/Client.cpp \
+	Game/Game.cpp \
+	Game/player.cpp \
+	ServerSide/handler.cpp \
     CommunicationProtocols/Errors.cpp \
     CommunicationProtocols/Sockets.cpp \
     CommunicationProtocols/Messages.cpp \
+    CommunicationProtocols/TCP/Client.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Airport.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/AirTurret.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Armory.cpp \
@@ -72,20 +74,20 @@ SOURCES += \
     UnitsAndBuildings/UnitsAndBuildings/Units/LightVehicle.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.cpp \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.cpp \
-    ServerSide/handler.cpp \
-    ServerSide/main.cpp
-    Game_n/Game_n.cpp
+    
 
 HEADERS += \
     FenPrincipale.h \
-    myrect.h \
-    CommunicationProtocols/TCP/Client.hpp \
+    Game/Enums.hpp \
+    Game/Game.hpp \
+	Game/player.hpp \
+	 ServerSide/handler.h \
+    CommunicationProtocols/commsock.h \
+	CommunicationProtocols/TCP/Client.hpp \
     CommunicationProtocols/Errors.hpp \
     CommunicationProtocols/Messages.hpp \
     CommunicationProtocols/Sockets.hpp \
     CommunicationProtocols/Utils.hpp \
-    Game_n/Enums.hpp \
-    Game_n/Game_n.hpp \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Airport.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/AirTurret.h \
     UnitsAndBuildings/UnitsAndBuildings/Buildings/Armory.h \
@@ -127,8 +129,6 @@ HEADERS += \
     UnitsAndBuildings/UnitsAndBuildings/Units/LightVehicle.h \
     UnitsAndBuildings/UnitsAndBuildings/Units/Medic.h \
     UnitsAndBuildings/UnitsAndBuildings/Units/Unit.h \
-    ServerSide/handler.h \
-    CommunicationProtocols/commsock.h \
-    Game_n/Game_n.hpp
+   
 
 FORMS += \

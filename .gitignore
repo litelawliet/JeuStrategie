@@ -1,5 +1,14 @@
-ServerConquerors.vcxproj.filters
+./MSVC_LIB
+/MSVC_LIB
+MSVC_LIB
+Conquerors.sln
+Conquerors.vcxproj
+Conquerors.vcxproj.filters
+Conquerors.vcxproj.user
+ServerConquerors.sln
 ServerConquerors.vcxproj
+ServerConquerors.vcxproj.filters
+ServerConquerors.vcxproj.user
 # C++ objects and libs
 
 *.slo

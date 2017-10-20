@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conquerors", "Conquerors.vcxproj", "{29E9B1E9-7C7D-31AE-AB6F-0F114F922576}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conquerors", "Conquerors.vcxproj", "{5AEA7483-760D-3A28-8EC1-275BAB8DFA61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29E9B1E9-7C7D-31AE-AB6F-0F114F922576}.Debug|x64.ActiveCfg = Debug|x64
-		{29E9B1E9-7C7D-31AE-AB6F-0F114F922576}.Debug|x64.Build.0 = Debug|x64
-		{29E9B1E9-7C7D-31AE-AB6F-0F114F922576}.Release|x64.ActiveCfg = Release|x64
-		{29E9B1E9-7C7D-31AE-AB6F-0F114F922576}.Release|x64.Build.0 = Release|x64
+		{5AEA7483-760D-3A28-8EC1-275BAB8DFA61}.Debug|x64.ActiveCfg = Debug|x64
+		{5AEA7483-760D-3A28-8EC1-275BAB8DFA61}.Debug|x64.Build.0 = Debug|x64
+		{5AEA7483-760D-3A28-8EC1-275BAB8DFA61}.Release|x64.ActiveCfg = Release|x64
+		{5AEA7483-760D-3A28-8EC1-275BAB8DFA61}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {84CAD026-18D6-4712-BBC6-C32B8C5AD62B}
+		SolutionGuid = {630C5261-5D2D-4C79-BEA7-A7A8A9102F1A}
 	EndGlobalSection
 EndGlobal
