@@ -90,6 +90,9 @@
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\GroundTurret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ServerSide\Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Units\Harvester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -124,6 +127,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CommunicationProtocols\Messages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProductionBuilding.cpp">
@@ -168,13 +174,7 @@
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Wall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ServerSide\handler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -245,6 +245,9 @@
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\GroundTurret.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ServerSide\Handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Units\Harvester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -279,6 +282,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommunicationProtocols\Messages.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProductionBuilding.h">
@@ -327,12 +333,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommunicationProtocols\commsock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ServerSide\handler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

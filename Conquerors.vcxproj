@@ -137,7 +137,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\AirTurret.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Airport.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Armory.cpp" />
@@ -159,6 +158,7 @@
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Gate.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\GroundTurret.cpp" />
+    <ClCompile Include="ServerSide\Handler.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Units\Harvester.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Headquarter.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Researches\HealthImprovement.cpp" />
@@ -171,6 +171,7 @@
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Units\LightVehicle.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Units\Medic.cpp" />
     <ClCompile Include="CommunicationProtocols\Messages.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProductionBuilding.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProtectionBuilding.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Refueling.cpp" />
@@ -185,11 +186,9 @@
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\UltimateWeapon.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Units\Unit.cpp" />
     <ClCompile Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Wall.cpp" />
-    <ClCompile Include="ServerSide\handler.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game\Player.hpp" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\AirTurret.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Airport.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Armory.h" />
@@ -212,6 +211,7 @@
     <ClInclude Include="Game\Game.hpp" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Gate.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\GroundTurret.h" />
+    <ClInclude Include="ServerSide\Handler.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Units\Harvester.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Headquarter.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Researches\HealthImprovement.h" />
@@ -224,6 +224,7 @@
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Units\LightVehicle.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Units\Medic.h" />
     <ClInclude Include="CommunicationProtocols\Messages.hpp" />
+    <ClInclude Include="Game\Player.hpp" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProductionBuilding.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\ProtectionBuilding.h" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Refueling.h" />
@@ -240,7 +241,6 @@
     <ClInclude Include="CommunicationProtocols\Utils.hpp" />
     <ClInclude Include="UnitsAndBuildings\UnitsAndBuildings\Buildings\Wall.h" />
     <ClInclude Include="CommunicationProtocols\commsock.h" />
-    <ClInclude Include="ServerSide\handler.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">

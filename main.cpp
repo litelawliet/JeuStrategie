@@ -1,3 +1,4 @@
+#include "CommunicationProtocols\commsock.h"
 #include <QApplication>
 #include <QtWidgets>
 #include "FenPrincipale.h"
