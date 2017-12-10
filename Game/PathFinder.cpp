@@ -126,7 +126,8 @@ Node::Node(int x_pos, int y_pos, Node* node_parent, Node* from, Node* to)
 	y = y_pos;
 	parent = node_parent;
 
-	cost = distManhattan(from, this) + distManhattan(this, to);
+	if(from != nullptr && to != nullptr) cost = distManhattan(from, this) + distManhattan(this, to);
+	else cost = 0;
 }
 
 Node::~Node()
