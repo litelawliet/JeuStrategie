@@ -42,7 +42,7 @@ std::vector<Node*> PathFinder::getNodesFromTo(int** map, int map_witdh, int map_
 
 	Node* n = to;
 	while (n != from) {
-		result.insert(0, n); // TODO insert 
+		result.insert(result.begin(), n);
 		n = n->getParent();
 	}
 }
@@ -78,7 +78,7 @@ void PathFinder::getNeighbors(Node* current, std::vector<Node*> visited, std::ve
 			if(!contains(visited, n)) to_explore.push_back(n);
 		}
 	}
-	to_explore.erase(); // TODO erase on enlève "current" de la liste to_explore
+	visiterNode(to_explore, current);
 	visited.push_back(current);
 
 }
@@ -92,7 +92,7 @@ bool PathFinder::contains(std::vector<Node*> v, Node* n)
 	return false;
 }
 
-// chope le nœud ayant le coût le moins élevé dans la liste des à explorer
+// Chope le nœud ayant le coût le moins élevé dans la liste des à explorer
 Node* PathFinder::getBestNode(std::vector<Node*> v) 
 {
 	Node* n = v[0];
@@ -102,6 +102,20 @@ Node* PathFinder::getBestNode(std::vector<Node*> v)
 	}
 
 	return n;
+}
+
+// Retire un nœud exploré de la liste to_explore
+void PathFinder::visiterNode(std::vector<Node*> to_explore, Node* n)
+{
+	int pos = -1;
+	int i = 0;
+	while (pos == -1) {
+		if (i >= to_explore.size()) return;
+		if (to_explore[i] == n) pos = i;
+		i++;
+	}
+
+	to_explore.erase(to_explore.begin(), to_explore.begin() + pos)
 }
 
 //*************** Partie Node

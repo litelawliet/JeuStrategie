@@ -18,6 +18,7 @@ private:
 	void getNeighbors(Node* current, std::vector<Node*> visited, std::vector<Node*> to_explore);
 	bool contains(std::vector<Node*> v, Node* n); // ...
 	Node* getBestNode(std::vector<Node*> v);
+	void visiterNode(std::vector<Node*> to_explore, Node* n);
 };
 
 class Node
