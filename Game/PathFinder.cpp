@@ -75,7 +75,7 @@ void PathFinder::getNeighbors(Node* current, std::vector<Node*> visited, std::ve
 
 			Node* n = new Node(x+i, y+j, current, from, to);
 
-			if(!contains(visited, n)) to_explore.push_back(n);
+			if(!contains(visited, n) && !contains(to_explore, n)) to_explore.push_back(n);
 		}
 	}
 	visiterNode(to_explore, current);
