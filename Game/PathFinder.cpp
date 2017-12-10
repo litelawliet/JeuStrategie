@@ -87,6 +87,7 @@ bool PathFinder::contains(std::vector<Node*> v, Node* n)
 {
 	for (int i = 0; i < v.size(); i++) {
 		if (v[i] == n) return true;
+		if (v[i]->getX() == n->getX() && v[i]->getY() == n->getY()) return true;
 	}
 
 	return false;
