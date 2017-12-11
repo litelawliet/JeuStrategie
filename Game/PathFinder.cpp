@@ -40,7 +40,12 @@ std::vector<Node*> PathFinder::getNodesFromTo(int** map, int map_witdh, int map_
 	// Construction d'une liste de retour
 	std::vector<Node*> result;
 
-	Node* n = to;
+	Node* n;
+
+	if (to_explore.empty()) n = to->getParent; // Le chemin est bloqué quelque part, on essaie de rapprocher le plus possible
+	else n = to; // Un chemin existe, il va direct à la destination
+
+	// * on remonte tout le chemin *
 	while (n != from) {
 		result.insert(result.begin(), n);
 		n = n->getParent();
@@ -48,7 +53,7 @@ std::vector<Node*> PathFinder::getNodesFromTo(int** map, int map_witdh, int map_
 }
 
 /**
-	Renvoie true si la valeur entière donnée est un obstacle. (valeur de map) à modifier
+	Renvoie true si la valeur entière donnée est un obstacle. (valeur de map) - Méthode à modifier si besoin
 */
 bool PathFinder::isObstacle(int value)
 {
@@ -64,25 +69,31 @@ void PathFinder::getNeighbors(Node* current, std::vector<Node*> visited, std::ve
 	int x = current->getX;
 	int y = current->getY;
 
+
+	// Pour chaque voisin
+
 	for (int i = -1; i < 2; i++) {
 		for (int j = -1; j < 2; j++) {
 
-			if (i == 0 && j == 0) continue;
-			if (x + i < 0 || y + j < 0 || x + i >= heigth || y + j >= width) continue;
-			if (isObstacle(map[x + i][y + j])) continue;
+			if (i == 0 && j == 0) continue; // C'est le nœud courant
+			if (x + i < 0 || y + j < 0 || x + i >= heigth || y + j >= width) continue; // Ce nœud n'existe pas
+			if (isObstacle(map[x + i][y + j])) continue; // C'est un obstacle
 
-			if (x + i == to->getX && y + j == to->getY) to->setParent(current);
+			if (x + i == to->getX && y + j == to->getY) to->setParent(current); 
 
 			Node* n = new Node(x+i, y+j, current, from, to);
 
+			// le nœud ne doit pas être déjà visité ni être prévu pour l'exploration
 			if(!contains(visited, n) && !contains(to_explore, n)) to_explore.push_back(n);
 		}
 	}
+	// le nœud courant est mis de côté
 	visiterNode(to_explore, current);
 	visited.push_back(current);
 
 }
 
+// Tout est dans le nom, vérifie si n est dans v
 bool PathFinder::contains(std::vector<Node*> v, Node* n)
 {
 	for (int i = 0; i < v.size(); i++) {
@@ -116,7 +127,7 @@ void PathFinder::visiterNode(std::vector<Node*> to_explore, Node* n)
 		i++;
 	}
 
-	to_explore.erase(to_explore.begin(), to_explore.begin() + pos)
+	to_explore.erase(to_explore.begin(), to_explore.begin() + pos);
 }
 
 //*************** Partie Node
