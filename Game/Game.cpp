@@ -10,7 +10,11 @@ namespace Game_n {
 
 	Game::Game()
 		:state(Enums::State::Idle)
-	{}
+	{
+		idBuilding = 0;
+		idUnit = 0;
+		idOpti = 0;
+	}
 	
 	Game::~Game() {}
 
@@ -49,16 +53,103 @@ namespace Game_n {
 		//AI
 	}
 
-	void Game::queueBuilding(Enums::Buildings codeBuilding, uint64_t keyBuilding) {
-		//Queuing buildings
+	void Game::queueBuilding(Enums::Buildings codeBuilding) {
+		Building* u;
+		switch (codeBuilding) {
+			case Enums::Buildings::CC:
+				u = new Headquarter();
+				break;
+			case Enums::Buildings::CCS:
+				u = new SecondaryHeadquarter();
+				break;
+			case Enums::Buildings::Supplying:
+				u = new Refueling();
+				break;
+			case Enums::Buildings::Drill:
+				u = new DrillingMachine();
+				break;
+			case Enums::Buildings::Factory:
+				u = new Factory();
+				break;
+			case Enums::Buildings::Barrack:
+				u = new Barrack();
+				break;
+			case Enums::Buildings::Armory:
+				u = new Armory();
+				break;
+			case Enums::Buildings::Bunker:
+				u = new Headquarter();
+				break;
+			case Enums::Buildings::Laboratory:
+				u = new Laboratory();
+				break;
+			case Enums::Buildings::Barricade:
+				u = new Headquarter();
+				break;
+			case Enums::Buildings::Wall:
+				u = new Wall();
+				break;
+			case Enums::Buildings::Door:
+				u = new Gate();
+				break;
+			case Enums::Buildings::GroundDefense:
+				u = new GroundTurret();
+				break;
+			case Enums::Buildings::AirDefense:
+				u = new AirTurret();
+				break;
+			case Enums::Buildings::Foundry:
+				u = new Headquarter();
+				break;
+			case Enums::Buildings::CyberFactory:
+				u = new CyberFactory();
+				break;
+			case Enums::Buildings::UltimateWeapon:
+				u = new UltimateWeapon();
+				break;
+			case Enums::Buildings::Airport:
+				u = new Airport();
+				break;
+		}
+		mQueueBuildings[u] = u->getTimeQueue();
 	}
 
-	void Game::queueUnit(Enums::Units codeUnit, uint64_t keyBuilding) {
-		//Queuing units
+	void Game::queueUnit(Enums::Units codeUnit) {
+		Unit* u = nullptr;
+		switch (codeUnit) {
+			case Enums::Units::LightSoldier:
+				u = new LightInfantry();
+				break;
+			case Enums::Units::HeavySoldier:
+				u = new HeavyInfantry;
+				break;
+			case Enums::Units::CleaningSoldier:
+				u = new CleaningInfantry();
+				break;
+			case Enums::Units::LightVehicle:
+				u = new LightVehicle();
+				break;
+			case Enums::Units::HeavyVehicle:
+				u = new HeavyVehicle();
+				break;
+			case Enums::Units::LightPlane:
+				u = new LightAviation;
+				break;
+			case Enums::Units::HeavyPlane:
+				u = new HeavyAviation();
+				break;
+			case Enums::Units::VCS:
+				u = new Harvester();
+				break;
+			case Enums::Units::Medics:
+				u = new Medic();
+				break;
+		}
+		mQueueUnits[u] = u->getTimeQueue();
 	}
 
-	void Game::queueOpti(Enums::Opti codeOpti, uint64_t keyBuilding) {
-		//Queuing opti
+	void Game::queueOpti(Enums::Opti codeOpti) {
+		//:ah:
 	}
 
 	void Game::createBuilding() {
@@ -81,26 +172,23 @@ namespace Game_n {
 		//set targets of all units
 	}
 
-	// !!!!! Erreur avec l'utilisation de mBuildings et mQueueBuildings (it) lors de l'affectation (typage)
 	void Game::upQueues() {
-		for (QMap<Building*, int>::iterator it = mQueueBuildings.begin(); it != mQueueBuildings.end(); it++) {
-			it.value()--;
-			if (!it.value()) 
-				mBuildings[mBuildings.end().key() + 1] = *it.key();
+		for (auto it = mQueueBuildings.begin(); it != mQueueBuildings.end(); it++) {
+			it->second--;
+			if (it->second != 0) 
+				mBuildings[mBuildings.end()->first + 1] = *(it->first);
 		}
 
-		for (QMap<Unit*, int>::iterator it = mQueueUnits.begin(); it != mQueueUnits.end(); it++) {
-			it.value()--;
-			if (!it.value())
-				mUnits[mUnits.end().key() + 1] = it.key();
+		for (auto it = mQueueUnits.begin(); it != mQueueUnits.end(); it++) {
+			it->second--;
+			if (it->second != 0)
+				mUnits[mUnits.end()->first + 1] = *(it->first);
 		}
 
-		for (QMap<Research*, int>::iterator it = mQueueResearchs.begin(); it != mQueueResearchs.end(); it++) {
-			it.value()--;
-			if (!it.value())
-				// !!!!! Deuxième paramètre doit être de type Game_n::Player& et non Game_n::Research& (*it.key() étant de type Game_n::Research&).
-				//createOpti(*it.key(), *it.key());
-				;
+		for (auto it = mQueueResearchs.begin(); it != mQueueResearchs.end(); it++) {
+			it->second--;
+			if (it->second != 0)
+				createOpti(*(it->first),it->first->getOwner());
 		}
 	}
 

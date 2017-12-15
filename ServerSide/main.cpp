@@ -1,18 +1,15 @@
-//#include "../CommunicationProtocols/commsock.h"
+#include "../CommunicationProtocols/commsock.h"
 #include "../CommunicationProtocols/Sockets.hpp"
 #include "../CommunicationProtocols/TCP/Server.hpp"
 #include "../CommunicationProtocols/Messages.hpp"
 #include "../CommunicationProtocols/Errors.hpp"
 #include "../Game/Game.hpp"
 #include "ServerSide/handler.h"
-<<<<<<< HEAD
 #include <QtSql\qsqldatabase.h>
 #include <QtSql\qsqlerror.h>
 #include <QtSql\qsqldriver.h>
-=======
 #include <QtSql/qsqldatabase.h>
 #include <QtSql/qsqlerror.h>
->>>>>>> 564b8e7cf9226152fe904a459683c20dd1f5131e
 #include <qcoreapplication.h>
 
 
@@ -38,9 +35,7 @@ int main(int argc, char** argv)
 	//Initialisation MySQL
 	//////////////////////
 	QCoreApplication app(argc,argv);
-<<<<<<< HEAD
 	QSqlDatabase mysql = QSqlDatabase::addDatabase("QSQLITE");
-=======
     /*QSqlDatabase mysql = QSqlDatabase::addDatabase("QMYSQL");
 >>>>>>> 564b8e7cf9226152fe904a459683c20dd1f5131e
 	mysql.setHostName("localhost");

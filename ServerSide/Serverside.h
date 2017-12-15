@@ -15,7 +15,7 @@
 #include <qstring.h>
 
 #include "../CommunicationProtocols/TCP/Server.hpp"
-#include "CommunicationProtocols/TCP/Client.hpp"
+#include "../CommunicationProtocols/TCP/Client.hpp"
 #include "../Game/Enums.hpp"
 #include "../Game/Game.hpp"
 

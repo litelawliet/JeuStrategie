@@ -7,8 +7,8 @@
 	\author Friday
 */
 
-#include <QMap>
-#include <QVector>
+#include <vector>
+#include <map>
 
 #include "CommunicationProtocols/TCP/Client.hpp"
 
@@ -48,9 +48,9 @@ namespace Game_n {
             void changeColor(Player& p, Enums::Colors color);
             void moveUnit(uint64_t keyUnit, int x, int y);
             void moveUnits();
-            void queueBuilding(Enums::Buildings codeBuilding, uint64_t keyBuilding);
-            void queueUnit(Enums::Units codeUnit, uint64_t keyBuilding);
-            void queueOpti(Enums::Opti codeOpti, uint64_t keyBuilding);
+            void queueBuilding(Enums::Buildings codeBuilding);
+            void queueUnit(Enums::Units codeUnit);
+            void queueOpti(Enums::Opti codeOpti);
             void createBuilding();
             void createUnit();
             void createOpti(Research& research, Player& owner);
@@ -60,13 +60,16 @@ namespace Game_n {
 			void upQueues();
 
         private:
-            QVector<Player*> mPlayers;/*!< list of players in Game*/
-            QMap<uint64_t, Unit*> mUnits;
-            QMap<uint64_t, Building&> mBuildings;
-			QMap<Building*, int> mQueueBuildings;
-			QMap<Unit*, int> mQueueUnits;
-			QMap<Research*, int> mQueueResearchs;
+            std::vector<Player*> mPlayers;/*!< list of players in Game*/
+            std::map<uint64_t, Unit&> mUnits;
+            std::map<uint64_t, Building&> mBuildings;
+			std::map<Building*, int> mQueueBuildings;
+			std::map<Unit*, int> mQueueUnits;
+			std::map<Research*, int> mQueueResearchs;
 			Enums::State state;
+			uint64_t idBuilding;
+			uint64_t idUnit;
+			uint64_t idOpti;
     };
 
 }

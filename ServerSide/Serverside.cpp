@@ -71,11 +71,11 @@ void ServerSide::startGame(Game_n::Game* game){
 }
 
 void ServerSide::changeRace(Game_n::Game* game, Game_n::Player* player, Game_n::Enums::Races race){
-    game->changeRace(player,race);
+   // game->changeRace(player,race);
 }
 
 void ServerSide::changeColor(Game_n::Game* game, Game_n::Player* player, Game_n::Enums::Colors color){
-    game->changeColor(player,color);
+   // game->changeColor(player,color);
 }
 
 void ServerSide::moveUnit(Game_n::Game* game, uint64_t hashCodeUnit, int x, int y){
@@ -103,5 +103,5 @@ void ServerSide::setGameEnd(Game_n::Game* game){
 }
 
 bool ServerSide::ended(Game_n::Game* game){
-    return game->getState() == Game_n::Game::State::End;
+    return game->getState() == Game_n::Enums::State::End;
 }

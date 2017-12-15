@@ -8,12 +8,19 @@ class Research
 {
 	public:
 		Research();
-		Research(Game_n::Player* p);
+		Research(Game_n::Player* owner, int timeQueue)
+			: mOwner(owner)
+			, mTimeQueue(timeQueue)
+		{}
 		virtual ~Research();
 
 		Game_n::Player& getOwner();
+		virtual int getTimeQueue() {
+			return mTimeQueue;
+		}
 
 	protected:
+		int mTimeQueue;
 		Game_n::Player* mOwner;
 };
 
